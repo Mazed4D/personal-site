@@ -133,7 +133,7 @@
     esbuild "^0.15.12"
     worktop "0.8.0-next.14"
 
-"@sveltejs/adapter-netlify@1.0.0-next.83":
+"@sveltejs/adapter-netlify@1.0.0-next.83", "@sveltejs/adapter-netlify@^1.0.0-next.83":
   version "1.0.0-next.83"
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.83.tgz#2d44100683b1c5304f348cc703115afc8adaf798"
   integrity sha512-4hPKs7T1v81KatpMm8AgPEe4LSvoRNWiooxbSlLL8su/nnVe2FHPlpGgRcdSsE9VUmlkyd+4YIbVFG0ZcYO4LQ==
