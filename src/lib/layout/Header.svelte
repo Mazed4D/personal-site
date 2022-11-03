@@ -3,16 +3,16 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="/">Home</a>
+				<a href="/">Home 🏠</a>
 			</li>
 			<li>
-				<a href="/about">About</a>
+				<a href="/about">About 💻</a>
 			</li>
 			<li>
-				<a href="/projects">Projects</a>
+				<a href="/projects">Projects 💼</a>
 			</li>
 			<li>
-				<a href="/contact">Contact</a>
+				<a href="/contact">Contact 📧</a>
 			</li>
 		</ul>
 	</nav>
@@ -23,6 +23,7 @@
 		display: inline-flex;
 		padding: 0 1rem;
 		color: #ffbe0b;
+		background: linear-gradient(#db2b3980, 1%, #db2b3900);
 	}
 	nav {
 		display: inline-flex;
@@ -42,15 +43,9 @@
 			font-size: 1.2rem;
 			text-decoration: none;
 			color: #819595;
-			transition: all 250ms ease-in;
 			&:active,
 			&:hover {
 				color: #ffbe0b;
-				text-shadow: 0 0 15px #ffbe0b60, 0 0 #ffbe0b60;
-				-webkit-transition: all 0.5s;
-				-moz-transition: all 0.5s;
-				-o-transition: all 0.5s;
-				transition: all 0.5s;
 			}
 		}
 	}
