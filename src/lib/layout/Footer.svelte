@@ -21,11 +21,12 @@
 		padding: 1rem;
 		border: 1px solid #ffbe0b;
 		border-radius: 50px;
-		background: #31393c;
-		box-shadow: inset 20px 20px 60px #2a3033, inset -20px -20px 60px #384245;
+		background: linear-gradient(45deg, #2c3336, #343d40);
+		box-shadow: 20px -20px 60px #2a3033, -20px 20px 60px #384245;
 	}
 
 	#coffee {
 		color: #b2675e;
+		text-shadow: 0 0 5px #b2675e, 0 0 #b2675e;
 	}
 </style>
