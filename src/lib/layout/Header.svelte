@@ -25,6 +25,15 @@
 		color: #ffbe0b;
 		background: linear-gradient(#db2b3980, 1%, #db2b3900);
 	}
+
+	h1 {
+		text-shadow: 0 0 15px #db2b3980, 0 0 #db2b3980;
+
+		transition: all 250ms ease-in;
+		&:hover {
+			transform: scale(1.025);
+		}
+	}
 	nav {
 		display: inline-flex;
 		align-items: center;

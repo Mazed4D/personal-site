@@ -1,12 +1,13 @@
 <script>
 	import Header from '$lib/layout/Header.svelte';
 	import { fade } from 'svelte/transition';
-	import { OnMount, mobile, Fractils } from 'fractils';
+	import { OnMount, mobile, Fractils, MacScrollbar } from 'fractils';
 
 	import Footer from '$lib/layout/Footer.svelte';
 	import MobileHeader from '$lib/layout/MobileHeader.svelte';
 </script>
 
+<MacScrollbar disabled={false} />
 <Fractils />
 
 {#if $mobile}

@@ -33,15 +33,26 @@
 		list-style: none;
 		flex-grow: 1;
 		justify-content: flex-end;
-		gap: 2rem;
+		gap: 1rem;
 		padding-right: 1rem;
+
+		li {
+			width: 100%;
+		}
 		a {
 			font-size: 1.2rem;
 			text-decoration: none;
 			color: #819595;
+			background-color: #ffbe0b10;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			border-radius: 10px;
+			padding: 1rem;
 			&:active,
 			&:hover {
 				color: #ffbe0b;
+				background-color: #ffbe0b30;
 			}
 		}
 	}
