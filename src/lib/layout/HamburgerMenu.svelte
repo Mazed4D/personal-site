@@ -19,7 +19,7 @@
 	nav {
 		z-index: 4;
 		position: fixed;
-		width: 80vw;
+		width: 100vw;
 		height: 100vh;
 		background-color: #31393c;
 	}
