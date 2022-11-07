@@ -11,7 +11,7 @@
 </script>
 
 <header>
-	<button on:click={handleToggleMenu}>
+	<button on:click={handleToggleMenu} name="Main Menu Button">
 		<iconify-icon icon="charm:menu-hamburger" />
 	</button>
 	<h1>Milan Paunovic</h1>
