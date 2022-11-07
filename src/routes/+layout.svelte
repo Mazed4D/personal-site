@@ -1,24 +1,34 @@
 <script>
 	import Header from '$lib/layout/Header.svelte';
-	import SvelteLogo from '$lib/layout/SvelteLogo.svelte';
+	import { fade } from 'svelte/transition';
+	import { OnMount, mobile, Fractils } from 'fractils';
+
+	import Footer from '$lib/layout/Footer.svelte';
+	import MobileHeader from '$lib/layout/MobileHeader.svelte';
 </script>
 
-<Header />
-<div class="main">
-	<slot />
+<Fractils />
+
+{#if $mobile}
+	<MobileHeader />
+{:else}
+	<Header />
+{/if}
+<div class="wrapper">
+	<OnMount>
+		<div in:fade={{ delay: 200, duration: 1000 }} class="main">
+			<slot />
+		</div>
+	</OnMount>
 </div>
-<footer>
-	<p id="footer-text">
-		Built with <span id="coffee">coffee ☕</span> &
-		<a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit <SvelteLogo /></a>
-	</p>
-</footer>
+<Footer />
 
 <style lang="scss">
 	:global(a) {
 		color: #ffbe0b;
 		text-decoration: none;
 		transition: all 250ms ease-in;
+		outline: none;
 		&:active,
 		&:hover {
 			color: #ffbe0b;
@@ -33,23 +43,11 @@
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
+		flex: 1;
 		padding: 1rem 2rem;
 	}
-	footer {
+	.wrapper {
 		display: flex;
-		justify-content: center;
-		padding: 1rem;
-		background: linear-gradient(to top, #db2b3980, 1%, #db2b3900);
-	}
-
-	#footer-text {
-		text-align: center;
-		background-color: #31393c;
-		padding: 1rem;
-		border-radius: 1rem;
-		border: 1px solid #ffbe0b;
-	}
-	#coffee {
-		color: #b2675e;
+		flex-grow: 1;
 	}
 </style>

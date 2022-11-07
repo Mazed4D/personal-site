@@ -912,6 +912,11 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
+fractils@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/fractils/-/fractils-3.0.2.tgz#534555d5cd0f7765581dc8ef77021c8e3bcd7d43"
+  integrity sha512-CnaRyH7Anq9ivRIWFeFGYNgilLZki0s4AsAFpOBuA2ChIz86ORUt7WrIORs3wywSwnWSSf+padRXOhz9lTBu3Q==
+
 fs-minipass@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-2.1.0.tgz#7f5036fdbf12c63c169190cbe4199c852271f9fb"

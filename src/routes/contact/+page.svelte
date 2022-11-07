@@ -1,0 +1,50 @@
+<article>
+	<address>
+		<strong>Milan Paunovic</strong>
+		<a href="mailto:paunovic.milan@outlook.com"
+			><iconify-icon icon="mdi:email" /> paunovic.milan@outlook.com</a
+		>
+		<a href="tel:+381629691736"><iconify-icon icon="ant-design:phone-filled" /> +381629691736</a>
+		<div class="divider" />
+		<strong>Socials</strong>
+		<a href="https://www.linkedin.com/in/milan-paunovic/" target="_blank" rel="noreferrer"
+			><iconify-icon icon="akar-icons:linkedin-box-fill" /> LinkedIn</a
+		>
+		<a href="https://gitlab.com/paunovM" target="_blank" rel="noreferrer"
+			><iconify-icon icon="fa6-brands:gitlab" /> GitLab</a
+		>
+		<a href="https://github.com/mazed4d" target="_blank" rel="noreferrer"
+			><iconify-icon icon="akar-icons:github-fill" /> GitHub</a
+		>
+
+		<p><iconify-icon icon="fa6-solid:location-dot" /> Smederevo, Serbia</p>
+	</address>
+</article>
+
+<style lang="scss">
+	p {
+		margin: 0;
+	}
+	article {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.divider {
+		height: 1px;
+		width: 100%;
+		background-color: #ffbe0b;
+	}
+	address {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		border-radius: 50px;
+		background: linear-gradient(45deg, #2c3336, #343d40);
+		box-shadow: 31px -31px 62px #2a3033, -31px 31px 62px #384245;
+	}
+</style>

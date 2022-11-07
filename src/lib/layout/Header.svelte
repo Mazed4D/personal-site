@@ -21,7 +21,7 @@
 <style lang="scss">
 	header {
 		display: inline-flex;
-		padding: 0 1rem;
+		padding: 0 2rem;
 		color: #ffbe0b;
 		background: linear-gradient(#db2b3980, 1%, #db2b3900);
 	}
