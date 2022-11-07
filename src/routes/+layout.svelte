@@ -1,7 +1,6 @@
 <script>
 	import Header from '$lib/layout/Header.svelte';
-	import { fade } from 'svelte/transition';
-	import { OnMount, mobile, Fractils, MacScrollbar } from 'fractils';
+	import { mobile, Fractils, MacScrollbar } from 'fractils';
 
 	import Footer from '$lib/layout/Footer.svelte';
 	import MobileHeader from '$lib/layout/MobileHeader.svelte';
@@ -16,11 +15,9 @@
 	<Header />
 {/if}
 <div class="wrapper">
-	<OnMount>
-		<div in:fade={{ delay: 200, duration: 1000 }} class="main">
-			<slot />
-		</div>
-	</OnMount>
+	<div class="main">
+		<slot />
+	</div>
 </div>
 <Footer />
 
