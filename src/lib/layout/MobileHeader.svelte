@@ -4,11 +4,10 @@
 
 	let showMenu: boolean = false;
 
-	$: if ($navigating) handleToggleMenu();
+	$: if ($navigating) handleCloseMenu();
 
-	const handleToggleMenu = () => {
-		showMenu = !showMenu;
-	};
+	const handleToggleMenu = () => (showMenu = !showMenu);
+	const handleCloseMenu = () => (showMenu = false);
 </script>
 
 <header>
