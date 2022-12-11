@@ -19,6 +19,9 @@
 		border-radius: 50px;
 		background: #242423;
 		box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
+		@media only screen and (max-width: 900px) {
+			margin-top: 2rem;
+		}
 	}
 
 	img {
