@@ -27,22 +27,22 @@
 				><h2>
 					<iconify-icon icon="bxs:right-arrow" /> Let's get in touch!
 					<iconify-icon icon="bxs:left-arrow" />
-				</h2></a
-			>
+				</h2>
+			</a>
 		</div>
 	</section>
 
 	<section id="my-work">
 		<h1>Take a look at some of my work!</h1>
 		<div class="hstack">
-			<div class="vstack">
+			<a href="/projects#quickdeal" class="vstack">
 				<img src="/images/talentBase.svg" alt="TalentBase" />
 				<a href="/projects#talentbase">TalentBase</a>
-			</div>
-			<div class="vstack">
+			</a>
+			<a href="/projects#quickdeal" class="vstack">
 				<img src="/images/quickdeal.png" alt="QuickDeal" />
 				<a href="/projects#quickdeal">QuickDeal</a>
-			</div>
+			</a>
 		</div>
 	</section>
 </article>
@@ -51,11 +51,11 @@
 	.page-header {
 		padding: 3rem 2rem;
 		border-radius: 50px;
-		background: #31393c;
-		box-shadow: inset 20px 20px 60px #2a3033, inset -20px -20px 60px #384245;
+		background: #242423;
+		box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
 	}
 	#frontend {
-		color: #ffbe0b;
+		color: #f5cb5c;
 	}
 
 	h1 {
@@ -83,20 +83,20 @@
 		@keyframes pulse {
 			0% {
 				transform: scale(0.95);
-				box-shadow: 0 0 0 0 #ffbe0b30;
-				background-color: #ffbe0b30;
+				box-shadow: 0 0 0 0 #f5cb5c30;
+				background-color: #f5cb5c30;
 			}
 
 			70% {
 				transform: scale(0.99);
-				box-shadow: 0 0 0 20px #ffbe0b00;
-				background-color: #ffbe0b00;
+				box-shadow: 0 0 0 20px #f5cb5c00;
+				background-color: #f5cb5c00;
 			}
 
 			100% {
 				transform: scale(0.95);
-				box-shadow: 0 0 0 0 ffbe0b00;
-				background-color: #ffbe0b00;
+				box-shadow: 0 0 0 0 F5CB5C00;
+				background-color: #f5cb5c00;
 			}
 		}
 	}
@@ -122,8 +122,8 @@
 		margin: 3rem 0;
 		padding: 3rem 2rem;
 		border-radius: 50px;
-		background: #31393c;
-		box-shadow: -31px -31px 62px #2a3033, 31px 31px 62px #384245;
+		background: #242423;
+		box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
 
 		.vstack {
 			display: flex;

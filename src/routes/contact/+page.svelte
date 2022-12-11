@@ -35,7 +35,7 @@
 	.divider {
 		height: 1px;
 		width: 100%;
-		background-color: #ffbe0b;
+		background-color: #f5cb5c;
 	}
 	address {
 		padding: 2rem;
@@ -44,7 +44,7 @@
 		justify-content: center;
 		gap: 1rem;
 		border-radius: 50px;
-		background: linear-gradient(45deg, #2c3336, #343d40);
-		box-shadow: 31px -31px 62px #2a3033, -31px 31px 62px #384245;
+		background: #242423;
+		box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
 	}
 </style>

@@ -23,8 +23,9 @@
 
 <style lang="scss">
 	button {
+		cursor: pointer;
 		z-index: 5;
-		position: absolute;
+		position: fixed;
 		top: 20px;
 		left: 20px;
 		border: none;
@@ -45,11 +46,14 @@
 	}
 
 	header {
+		z-index: 5;
+		position: fixed;
+		width: 100vw;
 		display: inline-flex;
 		justify-content: center;
 		padding: 0 1rem;
-		color: #ffbe0b;
-		background: linear-gradient(#db2b3980, 1%, #db2b3900);
+		background-color: #242423;
+		color: #f5cb5c;
 	}
 	nav {
 		display: inline-flex;

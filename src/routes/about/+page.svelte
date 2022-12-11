@@ -17,8 +17,8 @@
 		margin: auto;
 		justify-content: center;
 		border-radius: 50px;
-		background: linear-gradient(225deg, #2c3336, #343d40);
-		box-shadow: -31px 31px 62px #2a3033, 31px -31px 62px #384245;
+		background: #242423;
+		box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
 	}
 
 	img {
@@ -35,7 +35,7 @@
 		gap: 1rem;
 		align-items: center;
 		font-size: 2rem;
-		color: #ffbe0b;
+		color: #f5cb5c;
 
 		@media (max-width: 700px) {
 			padding: 1rem;

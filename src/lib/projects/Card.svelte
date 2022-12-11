@@ -42,12 +42,12 @@
 		margin-top: 3rem;
 		padding: 2rem;
 		border-radius: 50px;
-		background: linear-gradient(145deg, #343d40, #2c3336);
-		box-shadow: 31px 31px 62px #2a3033, -31px -31px 62px #384245;
+		background: #242423;
+		box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
 		z-index: 1;
 
 		&:hover {
-			color: #31393c;
+			color: #242423;
 		}
 
 		@media (max-width: 600px) {
@@ -63,7 +63,7 @@
 		bottom: 0;
 		left: 0;
 		border-radius: 50px;
-		background: linear-gradient(145deg, #ffcb0c, #e6ab0a);
+		background: linear-gradient(145deg, #f5cb5c, #e6ab0a);
 		z-index: -1;
 		transition: opacity 250ms ease-in;
 		opacity: 0;

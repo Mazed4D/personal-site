@@ -22,13 +22,10 @@
 	header {
 		display: inline-flex;
 		padding: 0 2rem;
-		color: #ffbe0b;
-		background: linear-gradient(#db2b3980, 1%, #db2b3900);
+		color: #f5cb5c;
 	}
 
 	h1 {
-		text-shadow: 0 0 15px #db2b3980, 0 0 #db2b3980;
-
 		transition: all 250ms ease-in;
 		&:hover {
 			transform: scale(1.025);
@@ -51,10 +48,10 @@
 		a {
 			font-size: 1.2rem;
 			text-decoration: none;
-			color: #819595;
+			color: #cfdbd5;
 			&:active,
 			&:hover {
-				color: #ffbe0b;
+				color: #f5cb5c;
 			}
 		}
 	}

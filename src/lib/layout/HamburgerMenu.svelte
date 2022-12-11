@@ -1,4 +1,8 @@
-<nav>
+<script>
+	import { slide } from 'svelte/transition';
+</script>
+
+<nav in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
 	<ul>
 		<li>
 			<a href="/">Home 🏠</a>
@@ -21,7 +25,9 @@
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
-		background-color: #31393c;
+		background-color: #242423;
+		animation-name: slide;
+		animation-duration: 1s;
 	}
 
 	ul {
@@ -42,8 +48,8 @@
 		a {
 			font-size: 1.2rem;
 			text-decoration: none;
-			color: #819595;
-			background-color: #ffbe0b10;
+			color: #cfdbd5;
+			background-color: #f5cb5c10;
 			display: flex;
 			text-align: center;
 			justify-content: center;
@@ -51,9 +57,18 @@
 			padding: 1rem;
 			&:active,
 			&:hover {
-				color: #ffbe0b;
-				background-color: #ffbe0b30;
+				color: #f5cb5c;
+				background-color: #f5cb5c30;
 			}
 		}
 	}
+
+	// @keyframes slide {
+	// 	0% {
+	// 		transform: translateX(-100vw);
+	// 	}
+	// 	100% {
+	// 		transform: translateX(0);
+	// 	}
+	// }
 </style>
