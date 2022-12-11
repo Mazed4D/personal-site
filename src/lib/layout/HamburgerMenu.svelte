@@ -1,8 +1,8 @@
 <script>
-	import { slide } from 'svelte/transition';
+	import { fly, slide } from 'svelte/transition';
 </script>
 
-<nav in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
+<nav in:slide={{ duration: 250 }} out:fly={{ duration: 250, delay: 50 }}>
 	<ul>
 		<li>
 			<a href="/">Home 🏠</a>
