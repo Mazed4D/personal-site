@@ -46,11 +46,6 @@
 		flex-direction: column;
 		flex-grow: 1;
 		flex: 1;
-		padding: 1rem 2rem;
-		align-items: center;
-		@media only screen and (max-width: 900px) {
-			margin-top: 3rem;
-		}
 	}
 	.wrapper {
 		display: flex;
