@@ -1,6 +1,6 @@
 <script>
 	import Header from '$lib/layout/Header.svelte';
-	import { mobile, Fractils, MacScrollbar } from 'fractils';
+	import { Fractils, MacScrollbar } from 'fractils';
 	import { navigating } from '$app/stores';
 
 	import Footer from '$lib/layout/Footer.svelte';
@@ -15,11 +15,9 @@
 <MacScrollbar disabled={false} />
 <Fractils />
 
-{#if $mobile}
-	<MobileHeader />
-{:else}
-	<Header />
-{/if}
+<MobileHeader />
+<Header />
+
 <PageTransition refresh={$navigating}>
 	<slot />
 </PageTransition>
