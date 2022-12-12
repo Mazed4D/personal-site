@@ -34,14 +34,18 @@
 		font-family: 'Fira Sans';
 		src: url(/fonts/FiraSans-Regular.woff2);
 		font-weight: normal;
-		font-display: optional;
+		font-display: swap;
 	}
 
 	@font-face {
 		font-family: 'Fira Sans';
 		src: url(/fonts/FiraSans-Bold.woff2);
 		font-weight: bold;
-		font-display: optional;
+		font-display: swap;
+	}
+
+	:global(html) {
+		font-family: 'Fira Sans', sans-serif;
 	}
 
 	:global(a) {
