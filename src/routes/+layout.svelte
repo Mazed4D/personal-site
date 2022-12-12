@@ -86,9 +86,6 @@
 		animation: gradient-animation 5s ease infinite;
 	}
 
-	.gradient-background {
-	}
-
 	@keyframes gradient-animation {
 		0% {
 			background-position: 0% 50%;
