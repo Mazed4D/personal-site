@@ -3,3 +3,5 @@ User-Agent: *
 Disallow: /contact
 
 Allow: /
+
+Sitemap: https://milanpaunovic.xyz/sitemap.xml
