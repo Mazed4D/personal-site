@@ -6,7 +6,6 @@
 	import Footer from '$lib/layout/Footer.svelte';
 	import MobileHeader from '$lib/layout/MobileHeader.svelte';
 	import PageTransition from '$lib/layout/PageTransition.svelte';
-	export const prerender = true;
 </script>
 
 <svelte:head>
