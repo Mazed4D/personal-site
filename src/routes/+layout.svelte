@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+	<script src="/script/iconify.js"></script>
 </svelte:head>
 
 <MacScrollbar disabled={false} />
