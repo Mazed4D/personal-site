@@ -5,9 +5,6 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/favicon.png" />
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=auto" rel="stylesheet" />
     <title>Milan Paunovic - Frontend Developer</title>
     <meta name="description" content="Need a frontend developer that gets things done? Click here and let's get in touch!" />
     <meta name="viewport" content="width=device-width" /> %sveltekit.head%
@@ -20,6 +17,18 @@
 </html>
 
 <style>
+    @font-face {
+        font-family: 'Fira Sans';
+        src: url(./fonts/FiraSans-Regular.woff2);
+        font-weight: normal;
+    }
+    
+    @font-face {
+        font-family: 'Fira Sans';
+        src: url(./fonts/FiraSans-Bold.woff2);
+        font-weight: bold;
+    }
+    
     html {
         color: #cfdbd5;
         font-display: optional;
@@ -34,6 +43,7 @@
         padding: 0;
         min-height: 100vh;
         min-width: 100vw;
+        background-color: #242423;
     }
     
     .global {
