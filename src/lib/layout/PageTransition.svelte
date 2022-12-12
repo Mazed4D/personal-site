@@ -1,14 +1,10 @@
-<script>
+<script lang="ts">
 	import { fly } from 'svelte/transition';
-	/**
-	 * @type {any}
-	 */
-	export let refresh;
+	export let refresh: any;
 </script>
 
 {#key refresh}
-	<!-- <main in:fly={{ y: -50, duration: 250, delay: 300 }} out:fly={{ y: -50, duration: 250 }}> -->
-	<main in:fly={{ y: -50, duration: 250, delay: 300 }} out:fly={{ y: -50, duration: 250 }}>
+	<main in:fly={{ y: -50, duration: 200, delay: 300 }} out:fly={{ y: -50, duration: 200 }}>
 		<slot />
 	</main>
 {/key}
