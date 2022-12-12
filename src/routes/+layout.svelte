@@ -20,13 +20,9 @@
 {:else}
 	<Header />
 {/if}
-<div class="wrapper">
-	<div class="main">
-		<PageTransition refresh={$navigating}>
-			<slot />
-		</PageTransition>
-	</div>
-</div>
+<PageTransition refresh={$navigating}>
+	<slot />
+</PageTransition>
 <Footer />
 
 <style lang="scss">
@@ -46,6 +42,10 @@
 
 	:global(html) {
 		font-family: 'Fira Sans', sans-serif;
+		color: #cfdbd5;
+		min-height: 100vh;
+		min-width: 100vw;
+		background-color: #242423;
 	}
 
 	:global(a) {
@@ -73,15 +73,14 @@
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 		}
 	}
-	.main {
+
+	:global(body) {
 		display: flex;
 		flex-direction: column;
-		flex-grow: 1;
-		flex: 1;
-	}
-	.wrapper {
-		display: flex;
-		flex-grow: 1;
+		margin: 0;
+		padding: 0;
 		min-height: 100vh;
+		min-width: 100vw;
+		background-color: #242423;
 	}
 </style>
