@@ -39,6 +39,16 @@
 			-moz-transition: all 0.5s;
 			-o-transition: all 0.5s;
 			transition: all 0.5s;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+	}
+
+	:global(button) {
+		outline: none;
+		cursor: pointer;
+		&:active,
+		&:hover {
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 		}
 	}
 	.main {

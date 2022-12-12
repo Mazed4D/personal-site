@@ -11,7 +11,7 @@
 </script>
 
 <header>
-	<button on:click={handleToggleMenu} aria-label="Main Menu Button">
+	<button on:click={handleToggleMenu} aria-label="Main Menu Button" class="btn">
 		<iconify-icon icon="charm:menu-hamburger" />
 	</button>
 	<h1>Milan Paunovic</h1>
@@ -23,6 +23,7 @@
 
 <style lang="scss">
 	button {
+		position: relative;
 		cursor: pointer;
 		z-index: 5;
 		position: fixed;
@@ -30,10 +31,9 @@
 		left: 20px;
 		border: none;
 		margin: 0;
-		padding: 0;
+		padding: 1rwm;
 		width: auto;
-		overflow: visible;
-		background: transparent;
+		background-color: #242423;
 		color: inherit;
 		font: inherit;
 		line-height: normal;
@@ -45,19 +45,46 @@
 		}
 	}
 
+	.btn::after {
+		display: none;
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		background-color: #f5cb5c30;
+
+		width: 100px;
+		height: 100px;
+		margin-top: -50px;
+		margin-left: -50px;
+
+		/* Center the ripple */
+		top: 50%;
+		left: 50%;
+
+		animation: ripple 500ms;
+		opacity: 0;
+	}
+	.btn:focus:not(:active)::after {
+		display: block;
+	}
+
+	@keyframes ripple {
+		from {
+			opacity: 1;
+			transform: scale(0);
+		}
+		to {
+			opacity: 0;
+			transform: scale(10);
+		}
+	}
 	header {
 		z-index: 5;
 		position: fixed;
-		width: 100vw;
+		min-width: 100vw;
 		display: inline-flex;
 		justify-content: center;
-		padding: 0 1rem;
 		background-color: #242423;
 		color: #f5cb5c;
-	}
-	nav {
-		display: inline-flex;
-		align-items: center;
-		flex-grow: 1;
 	}
 </style>
