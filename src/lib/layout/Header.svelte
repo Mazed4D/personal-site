@@ -23,6 +23,9 @@
 		display: inline-flex;
 		padding: 0 2rem;
 		color: #f5cb5c;
+		@media only screen and (max-width: 900px) {
+			display: none;
+		}
 	}
 
 	h1 {
