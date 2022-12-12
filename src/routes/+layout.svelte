@@ -81,6 +81,23 @@
 		padding: 0;
 		min-height: 100vh;
 		min-width: 100vw;
-		background-color: #242423;
+		background: linear-gradient(300deg, #313130, #242423);
+		background-size: 120% 120%;
+		animation: gradient-animation 5s ease infinite;
+	}
+
+	.gradient-background {
+	}
+
+	@keyframes gradient-animation {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
 	}
 </style>
