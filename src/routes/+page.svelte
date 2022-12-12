@@ -75,7 +75,7 @@
 		transform-origin: center;
 		animation: pulse 2s infinite;
 		@media only screen and (max-width: 900px) {
-			font-size: 1.4rem;
+			font-size: 1.3rem;
 		}
 
 		&:hover,
