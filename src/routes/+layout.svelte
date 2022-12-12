@@ -8,6 +8,10 @@
 	import PageTransition from '$lib/layout/PageTransition.svelte';
 </script>
 
+<svelte:head>
+	<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+</svelte:head>
+
 <MacScrollbar disabled={false} />
 <Fractils />
 
@@ -26,6 +30,20 @@
 <Footer />
 
 <style lang="scss">
+	@font-face {
+		font-family: 'Fira Sans';
+		src: url(/fonts/FiraSans-Regular.woff2);
+		font-weight: normal;
+		font-display: optional;
+	}
+
+	@font-face {
+		font-family: 'Fira Sans';
+		src: url(/fonts/FiraSans-Bold.woff2);
+		font-weight: bold;
+		font-display: optional;
+	}
+
 	:global(a) {
 		color: #f5cb5c;
 		text-decoration: none;
