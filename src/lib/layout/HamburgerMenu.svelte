@@ -34,7 +34,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin-top: 5rem;
+		margin-top: 7rem;
 		padding-left: 20px;
 		list-style: none;
 		flex-grow: 1;
