@@ -1,6 +1,6 @@
 <article>
 	<section class="about-header">
-		<img src="/images/pfp.jpg" alt="Milan Paunovic" />
+		<!-- <img src="/images/pfp.jpg" alt="Milan Paunovic" /> -->
 		<h1>Milan Paunovic - Frontend Developer</h1>
 	</section>
 	<section class="about-desc">
@@ -38,7 +38,7 @@
 
 	.about-header {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		padding: 1rem;
 		padding-right: 3rem;
 		gap: 1rem;
