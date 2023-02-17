@@ -17,7 +17,7 @@
 			><iconify-icon icon="akar-icons:github-fill" /> GitHub</a
 		>
 
-		<p><iconify-icon icon="fa6-solid:location-dot" /> Smederevo, Serbia</p>
+		<p><iconify-icon icon="fa6-solid:location-dot" /> Belgrade, Serbia</p>
 	</address>
 </article>
 
