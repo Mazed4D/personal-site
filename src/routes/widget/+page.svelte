@@ -16,7 +16,7 @@
 				currency: 'SEK',
 				channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
 			});
-		}, 1000);
+		}, 1500);
 	</script>
 </svelte:head>
 
