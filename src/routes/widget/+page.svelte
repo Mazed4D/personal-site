@@ -1,10 +1,16 @@
 <svelte:head>
-	<script type="text/javascript" charset="UTF-8" src=".\conference_widget.bundle.js" defer></script>
-	<script type="text/javascript">
-		setTimeout(() => {
-			let confConfig = {};
+	<script type="text/javascript" charset="UTF-8" src=".\conference_widget.bundle.js.gz" defer></script>
+</svelte:head>
+
+<script>
+	import { onMount } from "svelte";
+
+
+	onMount(() => {
+		let confConfig = {};
 			confConfig.WidgetContainerId = 'widgetContainer';
 			confConfig.CustomHeader = 'Single prop widget';
+			// @ts-ignore
 			BV.CfWidget({
 				...confConfig,
 				openOption: 'redirect',
@@ -16,8 +22,7 @@
 				currency: 'SEK',
 				channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
 			});
-		}, 1500);
-	</script>
-</svelte:head>
+	})
+</script>
 
 <div id="widgetContainer" style="width: 100%;" />
