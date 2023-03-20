@@ -1,5 +1,5 @@
 <svelte:head>
-	<script type="text/javascript" charset="UTF-8" src=".\conference_widget.bundle.js.gz" defer></script>
+	<script type="text/javascript" charset="UTF-8" src=".\conference_widget.bundle.js" defer></script>
 </svelte:head>
 
 <script>
