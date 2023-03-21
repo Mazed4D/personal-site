@@ -26,7 +26,7 @@
 						// @ts-ignore
 						BV.CfWidget({
 				...confConfig,
-				WidgetContainerId : 'widgetContainer',
+				WidgetContainerId : 'widgetContainer2',
 				openOption: 'redirect',
 				promoCode: true,
 				corpCode: false,
@@ -40,7 +40,7 @@
 						// @ts-ignore
 						BV.CfWidget({
 				...confConfig,
-				WidgetContainerId : 'widgetContainer',
+				WidgetContainerId : 'widgetContainer3',
 				openOption: 'redirect',
 				promoCode: true,
 				corpCode: false,
@@ -55,3 +55,6 @@
 </script>
 
 <div id="widgetContainer" style="width: 100%;" />
+<div id="widgetContainer2" style="width: 100%;" />
+<div id="widgetContainer3" style="width: 100%;" />
+
