@@ -18,6 +18,7 @@
 				corpCode: false,
 				agentCode: false,
 				loginLink: false,
+				type: "single_property",
 				widgetLayout: 'StandardWide',
 				currency: 'SEK',
 				channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
