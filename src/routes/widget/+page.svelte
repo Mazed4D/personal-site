@@ -8,11 +8,11 @@
 
 	onMount(() => {
 		let confConfig = {};
-			confConfig.WidgetContainerId = 'widgetContainer';
 			confConfig.CustomHeader = 'Single prop widget';
 			// @ts-ignore
 			BV.CfWidget({
 				...confConfig,
+				WidgetContainerId : 'widgetContainer',
 				openOption: 'redirect',
 				promoCode: true,
 				corpCode: false,
@@ -20,6 +20,34 @@
 				loginLink: false,
 				type: "multi_property",
 				widgetLayout: 'StandardWide',
+				currency: 'SEK',
+				channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
+			});
+						// @ts-ignore
+						BV.CfWidget({
+				...confConfig,
+				WidgetContainerId : 'widgetContainer',
+				openOption: 'redirect',
+				promoCode: true,
+				corpCode: false,
+				agentCode: false,
+				loginLink: false,
+				type: "single_property",
+				widgetLayout: 'StandardWide',
+				currency: 'SEK',
+				channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
+			});
+						// @ts-ignore
+						BV.CfWidget({
+				...confConfig,
+				WidgetContainerId : 'widgetContainer',
+				openOption: 'redirect',
+				promoCode: true,
+				corpCode: false,
+				agentCode: false,
+				loginLink: false,
+				type: "multi_property",
+				widgetLayout: 'Standard1Column',
 				currency: 'SEK',
 				channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
 			});
