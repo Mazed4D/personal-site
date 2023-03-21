@@ -14,7 +14,7 @@ const config = {
 			assets: 'build',
 			fallback: null,
 			precompress: true,
-			strict: true
+			strict: true,
 		})
 	}
 };
