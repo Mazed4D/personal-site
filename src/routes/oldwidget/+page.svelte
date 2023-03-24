@@ -6,14 +6,13 @@ var baseUrl = "https://boka.svenskamoten.se/multipropertywidget/getwidget";
 (function($) {
 $.ajax({
 dataType: 'json',
-url: baseUrl + '?multiPropertyId=35bec48d-58a7-490f-a8bc-675201d8e810&newWindow=false&culture=sv-SE&layout=Calendar2Columns&containerId=widgetContainer&currency=SEK&showAccommodationTypes=false',
+url: baseUrl + '?multiPropertyId=35bec48d-58a7-490f-a8bc-675201d8e810&newWindow=false&culture=sv-SE&layout=LinkOnly&containerId=widgetContainer&currency=SEK&showAccommodationTypes=false',
 xhrFields: { withCredentials: true },
 success: function(data) {
 $('#widgetContainer').html(data.Widget);
 }
 });
 })(bvJQuery);
-
 	});
 </script>
 
