@@ -3,6 +3,8 @@
 </svelte:head>
 
 <script>
+// @ts-nocheck
+
 	import { onMount } from 'svelte';
 	const widgetLayouts = [
 		'Standard1Column',
@@ -19,47 +21,32 @@
 		'Standard1ColumnPlate'
 	];
 
-	let selectedWidgetId = 0;
-
-	const handleCycleWidgetLayout = () => {
-		selectedWidgetId = selectedWidgetId + 1 > widgetLayouts.length ? 0 : selectedWidgetId + 1;
-	};
-
 	onMount(() => {
 		let confConfig = {};
 		confConfig.CustomHeader = 'Single prop widget';
-		// @ts-ignore
-		BV.CfWidget({
+		widgetLayouts.forEach((layout,i)=>{
+			BV.CfWidget({
 			...confConfig,
-			WidgetContainerId: 'widgetContainer',
+			WidgetContainerId: 'widgetContainer'+i,
 			openOption: 'redirect',
-			promoCode: true,
+			promoCode: "true",
 			corpCode: false,
 			agentCode: false,
 			loginLink: false,
 			type: 'multi_property',
-			widgetLayout: widgetLayouts[5],
+			widgetLayout: layout,
 			currency: 'SEK',
 			channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
 		});
-		// @ts-ignore
-		BV.CfWidget({
-			...confConfig,
-			WidgetContainerId: 'widgetContainer3',
-			openOption: 'redirect',
-			promoCode: true,
-			corpCode: false,
-			agentCode: false,
-			loginLink: false,
-			type: 'multi_property',
-			widgetLayout: widgetLayouts[selectedWidgetId],
-			currency: 'SEK',
-			channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
-		});
+		})
 	});
 </script>
 
 <div>
-	<div id="widgetContainer"/>
-	<div id="widgetContainer3"/>
+	{#each widgetLayouts as layout, i}
+	<div style="background-color: white;">
+		<p>{layout}</p>
+		<div id="widgetContainer{i}" style="padding-top: 20px;"/>
+	</div>
+		{/each}
 </div>
