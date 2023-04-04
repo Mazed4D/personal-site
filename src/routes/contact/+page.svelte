@@ -17,8 +17,8 @@
 			><iconify-icon icon="akar-icons:github-fill" /> GitHub</a
 		>
 
-		<a href="https://google.com" 
-		><iconify-icon icon="akar-icons:github-fill" /> Google Test GA</a
+		<a href="http://online.local/accommodation/list?channelId=e4586ac0-0604-48b7-b7f4-df22593d0231" 
+		><iconify-icon icon="akar-icons:github-fill" /> Test GTM</a
 	>
 
 		<p><iconify-icon icon="fa6-solid:location-dot" /> Belgrade, Serbia</p>
