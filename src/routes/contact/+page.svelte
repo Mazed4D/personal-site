@@ -17,6 +17,10 @@
 			><iconify-icon icon="akar-icons:github-fill" /> GitHub</a
 		>
 
+		<a href="https://google.com" 
+		><iconify-icon icon="akar-icons:github-fill" /> Google Test GA</a
+	>
+
 		<p><iconify-icon icon="fa6-solid:location-dot" /> Belgrade, Serbia</p>
 	</address>
 </article>
