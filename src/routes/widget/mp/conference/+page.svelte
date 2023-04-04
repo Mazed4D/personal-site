@@ -36,9 +36,7 @@
 			type: 'multi_property',
 			widgetLayout: layout,
 			currency: 'SEK',
-			// channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810',
-			// Jesper TEST ID
-			channelId: 'e4586ac0-0604-48b7-b7f4-df22593d0231',
+			channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810',
 		});
 		})
 	});
