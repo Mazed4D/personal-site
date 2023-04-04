@@ -36,7 +36,9 @@
 				type: 'single_property',
 				widgetLayout: layout,
 				currency: 'SEK',
-				channelId: '7e81c8a9-ac42-4b6a-abd6-da4bb246afca'
+				// channelId: '7e81c8a9-ac42-4b6a-abd6-da4bb246afca'
+				// JESPER TEST ID
+				channelId: 'e4586ac0-0604-48b7-b7f4-df22593d0231',
 			});
 		});
 	});
