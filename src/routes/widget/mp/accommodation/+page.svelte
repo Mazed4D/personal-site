@@ -1,5 +1,5 @@
 <svelte:head>
-<script type="text/javascript" src="//boka.svenskamoten.se/Content/widget/conference_widget.bundle.js" defer></script>
+<script type="text/javascript" src="//online.bookvisit.com/Content/widget/conference_widget.bundle.js">
 	<title>MP Accommodation Widget</title>
 </svelte:head>
 
