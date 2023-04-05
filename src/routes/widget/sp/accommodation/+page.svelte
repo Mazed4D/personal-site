@@ -1,5 +1,6 @@
 <svelte:head>
 	<script type="text/javascript" charset="UTF-8" src="/accommodation_widget.bundle.js" defer></script>
+	<title>SP Accommodation Widget</title>
 </svelte:head>
 
 <script>
