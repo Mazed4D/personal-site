@@ -37,7 +37,8 @@
 			type: 'single_property',
 			widgetLayout: layout,
 			currency: 'SEK',
-			channelId: 'b7806ce7-aaa6-425b-8a7b-bd4230d79ef0'
+			channelId: 'b7806ce7-aaa6-425b-8a7b-bd4230d79ef0',
+			languageCulture: 'sv-SE'
 		});
 		})
 	});
