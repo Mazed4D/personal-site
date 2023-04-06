@@ -1,5 +1,5 @@
 <svelte:head>
-	<script type="text/javascript" charset="UTF-8" src="/conference_widget.bundle.js" defer></script>
+	<script type="text/javascript" charset="UTF-8" src="//online.bookvisit.com/Content/widget/conference_widget.bundle.js" defer></script>
 	<title>SP Conference Widget</title>
 </svelte:head>
 
