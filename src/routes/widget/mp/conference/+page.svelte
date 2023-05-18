@@ -23,13 +23,20 @@
 	];
 
 	onMount(() => {
-		let confConfig = {};
-		confConfig.CustomHeader = 'Single prop widget';
+		const config = {};
+   config.channelId = "35bec48d-58a7-490f-a8bc-675201d8e810";
+   config.widgetLayout = "Standard2Columns";
+   config.WidgetContainerId = "widgetContainer";
+   config.openOption = "newwindow";
+   config.currency = "SEK";
+   config.languageCulture = "sv-SE";
+   config.type = "multi_property";
+   BV.CfWidget({...config})
+
 		widgetLayouts.forEach((layout,i)=>{
 			BV.CfWidget({
-			...confConfig,
+			...config,
 			WidgetContainerId: 'widgetContainer'+i,
-			openOption: 'redirect',
 			promoCode: "true",
 			corpCode: false,
 			agentCode: false,
@@ -37,7 +44,6 @@
 			type: 'multi_property',
 			widgetLayout: layout,
 			currency: 'SEK',
-			channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810',
 		});
 		})
 	});
