@@ -7,7 +7,7 @@
 			const config = {};
 			config.widgetContainerId = 'widgetContainer';
 			config.open = true;
-			config.channelId = 'fe4e6594-def3-4878-8a3c-47a99b1d6137';
+			config.channelId = '018dba75-39be-4a84-b432-23c5bd3bd4d7';
 			config.languageCulture = 'en-GB';
 			BV.TableReservationWidget({ ...config });
 		});
