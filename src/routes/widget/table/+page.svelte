@@ -7,7 +7,8 @@
 			const config = {};
 			config.widgetContainerId = 'widgetContainer';
 			config.open = true;
-			config.channelId = '018dba75-39be-4a84-b432-23c5bd3bd4d7';
+			config.channelId = '57e4223d-8b29-4a40-ac87-257922f01573';
+			config.alternativeStyleChannelId = '702b4782-6d89-4448-98b7-55dcea508f6e';
 			config.languageCulture = 'en-GB';
 			BV.TableReservationWidget({ ...config });
 		});
@@ -17,7 +18,7 @@
 <svelte:head>
 	<script
 		type="text/javascript"
-		src="//online.bookvisit.com/Content/widget/table_reservation_widget.bundle.js"
+		src="/table_reservation_widget.bundle.js"
 	></script>
 	<title>Table Reservation Script Test</title>
 </svelte:head>
