@@ -1,0 +1,55 @@
+/* .AnalyticsConversionLevel.Supplier */
+
+/* @__PURE__ */
+
+/* BodyText */
+
+/* Button */
+
+/* ContentDiv */
+
+/* MainContentContainer */
+
+/* ThumbUp */
+
+/* binding */
+
+/* harmony default export */
+
+/* harmony export */
+
+/* harmony import */
+
+/* hideConferenceFooterState */
+
+/* prepareGA4BeginCheckoutData */
+
+/* useAccommodationTranslations */
+
+/* useBooking */
+
+/* useChannel */
+
+/* useHistory */
+
+/* useParams */
+
+/* useQueryParams */
+
+/* useSetRecoilState */
+
+/* useTheme */
+
+/* useTracking */
+
+/***/
+
+// CONCATENATED MODULE: ./src/reservation/booking_confirmation/booking_confirmation_simple.tsx
+
+// ESM COMPAT FLAG
+
+// EXPORTS
+
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+
+// EXTERNAL MODULE: ./node_modules/react/index.js

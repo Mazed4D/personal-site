@@ -1,0 +1,5458 @@
+/*
+    object-assign
+    (c) Sindre Sorhus
+    @license MIT
+    */
+
+/* $FlowFixMe[prop-missing] This workaround was approved as a safer mechanism
+     * to detect if the current renderer supports useSyncExternalStore()
+     * https://fb.workplace.com/groups/reactjs/posts/9558682330846963/ */
+
+/* .Retryer */
+
+/* .Subscribable */
+
+/* .focusManager.isFocused */
+
+/* .getLogger */
+
+/* .isServer */
+
+/* .noop */
+
+/* .notifyManager.batch */
+
+/* .onlineManager.isOnline */
+
+/* .scheduleMicrotask */
+
+/* .sleep */
+
+/* @__PURE__ */
+
+/* @method eachLayer(fn: Function, context?: Object): this
+     * Iterates over the layers of the map, optionally specifying context of the iterator function.
+     * ```
+     * map.eachLayer(function(layer){
+     *     layer.bindPopup('Hello');
+     * });
+     * ```
+     */
+
+/* @method off(type: String, fn?: Function, context?: Object): this
+     * Removes a previously added listener function. If no function is specified, it will remove all the listeners of that particular event from the object. Note that if you passed a custom context to `on`, you must pass the same context to `off` in order to remove the listener.
+     *
+     * @alternative
+     * @method off(eventMap: Object): this
+     * Removes a set of type/listener pairs.
+     *
+     * @alternative
+     * @method off: this
+     * Removes all listeners to all events on the object. This includes implicitly attached events.
+     */
+
+/* @method on(type: String, fn: Function, context?: Object): this
+     * Adds a listener function (`fn`) to a particular event type of the object. You can optionally specify the context of the listener (object the this keyword will point to). You can also pass several space-separated types (e.g. `'click dblclick'`).
+     *
+     * @alternative
+     * @method on(eventMap: Object): this
+     * Adds a set of type/listener pairs, e.g. `{click: onClick, mousemove: onMouseMove}`
+     */
+
+/* @preserve
+ * Leaflet 1.9.3, a JS library for interactive maps. https://leafletjs.com
+ * (c) 2010-2022 Vladimir Agafonkin, (c) 2010-2011 CloudMade
+ */
+
+/* @section
+     *
+     * In addition to [shared layer methods](#Layer) like `addTo()` and `remove()` and [popup methods](#Popup) like bindPopup() you can also use the following methods:
+     */
+
+/* @section
+     * @aka GeoJSON options
+     *
+     * @option pointToLayer: Function = *
+     * A `Function` defining how GeoJSON points spawn Leaflet layers. It is internally
+     * called when data is added, passing the GeoJSON point feature and its `LatLng`.
+     * The default is to spawn a default `Marker`:
+     * ```js
+     * function(geoJsonPoint, latlng) {
+     * 	return L.marker(latlng);
+     * }
+     * ```
+     *
+     * @option style: Function = *
+     * A `Function` defining the `Path options` for styling GeoJSON lines and polygons,
+     * called internally when data is added.
+     * The default value is to not override any defaults:
+     * ```js
+     * function (geoJsonFeature) {
+     * 	return {}
+     * }
+     * ```
+     *
+     * @option onEachFeature: Function = *
+     * A `Function` that will be called once for each created `Feature`, after it has
+     * been created and styled. Useful for attaching events and popups to features.
+     * The default is to do nothing with the newly created layers:
+     * ```js
+     * function (feature, layer) {}
+     * ```
+     *
+     * @option filter: Function = *
+     * A `Function` that will be used to decide whether to include a feature or not.
+     * The default is to include all features:
+     * ```js
+     * function (geoJsonFeature) {
+     * 	return true;
+     * }
+     * ```
+     * Note: dynamically changing the `filter` option will have effect only on newly
+     * added data. It will _not_ re-evaluate already included features.
+     *
+     * @option coordsToLatLng: Function = *
+     * A `Function` that will be used for converting GeoJSON coordinates to `LatLng`s.
+     * The default is the `coordsToLatLng` static method.
+     *
+     * @option markersInheritOptions: Boolean = false
+     * Whether default Markers for "Point" type Features inherit from group options.
+     */
+
+/* @section
+     * @aka Icon options
+     *
+     * @option iconUrl: String = null
+     * **(required)** The URL to the icon image (absolute or relative to your script path).
+     *
+     * @option iconRetinaUrl: String = null
+     * The URL to a retina sized version of the icon image (absolute or relative to your
+     * script path). Used for Retina screen devices.
+     *
+     * @option iconSize: Point = null
+     * Size of the icon image in pixels.
+     *
+     * @option iconAnchor: Point = null
+     * The coordinates of the "tip" of the icon (relative to its top left corner). The icon
+     * will be aligned so that this point is at the marker's geographical location. Centered
+     * by default if size is specified, also can be set in CSS with negative margins.
+     *
+     * @option popupAnchor: Point = [0, 0]
+     * The coordinates of the point from which popups will "open", relative to the icon anchor.
+     *
+     * @option tooltipAnchor: Point = [0, 0]
+     * The coordinates of the point from which tooltips will "open", relative to the icon anchor.
+     *
+     * @option shadowUrl: String = null
+     * The URL to the icon shadow image. If not specified, no shadow image will be created.
+     *
+     * @option shadowRetinaUrl: String = null
+     *
+     * @option shadowSize: Point = null
+     * Size of the shadow image in pixels.
+     *
+     * @option shadowAnchor: Point = null
+     * The coordinates of the "tip" of the shadow (relative to its top left corner) (the same
+     * as iconAnchor if not specified).
+     *
+     * @option className: String = ''
+     * A custom class name to assign to both icon and shadow images. Empty by default.
+     */
+
+/* @section
+     * Classes extending L.Control will inherit the following methods:
+     *
+     * @method getPosition: string
+     * Returns the position of the control.
+     */
+
+/* @section
+     * Classes extending `L.Layer` will inherit the following methods:
+     *
+     * @method addTo(map: Map|LayerGroup): this
+     * Adds the layer to the given map or layer group.
+     */
+
+/* ADD_PAYMENT_INFO */
+
+/* ADD_TO_CART */
+
+/* BEGIN.ATTRIBUTION */
+
+/* BEGIN_CHECKOUT */
+
+/* END.ATTRIBUTION */
+
+/* INITIATE_CHECKOUT */
+
+/* Math.imul(h, m): */
+
+/* Math.imul(k, m): */
+
+/* Mutation */
+
+/* PAGE_VIEW */
+
+/* PURCHASE */
+
+/* REFUND */
+
+/* REMOVE_FROM_CART */
+
+/* Retryer */
+
+/* Subscribable */
+
+/* VIEW_ITEM */
+
+/* VIEW_ITEM_LIST */
+
+/* Z+1 */
+
+/* ["default"] */
+
+/* binding */
+
+/* default */
+
+/* default.event */
+
+/* default.initialize */
+
+/* default.isInitialized */
+
+/* ensureQueryKeyArray */
+
+/* eslint-disable react/no-array-index-key */
+
+/* faAngleDown */
+
+/* faAngleRight */
+
+/* faBedFront */
+
+/* faBox */
+
+/* faCalendar */
+
+/* faCalendarDays */
+
+/* faChampagneGlasses */
+
+/* faCheck */
+
+/* faChevronDown */
+
+/* faChevronLeft */
+
+/* faChevronRight */
+
+/* faChevronUp */
+
+/* faCircleCheck */
+
+/* faClock */
+
+/* faClose */
+
+/* faDoorOpen */
+
+/* faInfoCircle */
+
+/* faLock */
+
+/* faMinus */
+
+/* faMoonStars */
+
+/* faPenLine */
+
+/* faPeriod */
+
+/* faPlus */
+
+/* faThumbsUp */
+
+/* faTrashCan */
+
+/* faUserGroup */
+
+/* faXmarkLarge */
+
+/* focusManager.isFocused */
+
+/* focusManager.subscribe */
+
+/* functionalUpdate */
+
+/* getAbortController */
+
+/* getDefaultState */
+
+/* getLogger */
+
+/* harmony default export */
+
+/* harmony export */
+
+/* harmony import */
+
+/* harmony reexport (checked) */
+
+/* hashQueryKey */
+
+/* hashQueryKeyByOptions */
+
+/* isCancelable */
+
+/* isCancelledError */
+
+/* isServer */
+
+/* isValidTimeout */
+
+/* istanbul ignore if  */
+
+/* istanbul ignore next  */
+
+/* k >>> r: */
+
+/* matchMutation */
+
+/* matchQuery */
+
+/* module decorator */
+
+/* noop */
+
+/* notifyManager.batch */
+
+/* notifyManager.batchCalls */
+
+/* notifyManager.setBatchNotifyFunction */
+
+/* onlineManager.isOnline */
+
+/* onlineManager.subscribe */
+
+/* parseFilterArgs */
+
+/* parseMutationArgs */
+
+/* parseMutationFilterArgs */
+
+/* parseQueryArgs */
+
+/* partialMatchKey */
+
+/* reexport */
+
+/* reexport safe */
+
+/* replaceEqualDeep */
+
+/* setLogger */
+
+/* shallowEqualObjects */
+
+/* timeUntilStale */
+
+/* unused harmony export CancelledError */
+
+/* unused harmony export FocusManager */
+
+/* unused harmony export NotifyManager */
+
+/* unused harmony export OnlineManager */
+
+/* unused harmony exports difference, replaceAt, mapQueryStatusFilter, stableValueHash, partialDeepEqual, isPlainObject, isQueryKey, isError */
+
+/* webpack/runtime/compat get default export */
+
+/*#__PURE__*/
+
+/**
+      * We don't support `visible` because the intention is to have at least one scrollbar
+      * if this component is used and `visible` will behave like `auto` in that case
+      * https://developer.mozilla.org/en-US/docs/Web/CSS/overflowed#description
+      *
+      * We don't handle `auto` because the intention is for the native implementation
+      * to be hidden if using this component. We just want to ensure the node is scrollable
+      * so could have used either `scroll` or `auto` here. We picked `scroll` to prevent
+      * the browser from having to work out whether to render native scrollbars or not,
+      * we tell it to with the intention of hiding them in CSS.
+      */
+
+/**
+     * it's important we use === undefined as opposed to == null, because the
+     * resolved value of the async promise could be `null`, in which case we
+     * don't want to use syncResults[idx], which would be undefined. If async
+     * promise resolves to `undefined`, that's ok because `syncResults[idx]`
+     * will also be `undefined`. That's a little hacky, but it works.
+     */
+
+/**
+   * @param c_PHONE (optional) 
+   * @return Success
+   */
+
+/**
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * @param directConnections (optional) 
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * @param orgId (optional) 
+   * @return Success
+   */
+
+/**
+   * @param username (optional) 
+   * @param password (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * @param username (optional) 
+   * @param password (optional) 
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * @return Success
+   */
+
+/**
+   * Add a bookable alternative (accommodation room, conference room) to a basket.
+  If you do not specify a basketId, a new basket will be created.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Add a bookable alternative to a basket for an existing booking.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Add a list of bookable alternatives to the same basket.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Add a voucher number as payment to the active basket.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Apply corp code / promo code in multi property online search.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Apply promotion code and update discount to the current basket in the user session.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Cancel the current booking.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Clean applied gift vouchers for this basket, also re-apply them into basket again
+  to make sure the amount used from gift vouchers are correct.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Clear all items in the current basket in the user session.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Commit the current booking.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Create a basket for an existing booking (edit reservation).
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Create a log message.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Create an empty basket and stores basket id in user session.
+   * @return Success
+   */
+
+/**
+   * Delete the current basket in the user session.
+   * @return Success
+   */
+
+/**
+   * Emit a named entity that was not terminated with a semicolon.
+   *
+   * @returns The number of characters consumed.
+   */
+
+/**
+   * Emit a named entity.
+   *
+   * @param result The index of the entity in the decode tree.
+   * @param valueLength The number of bytes in the entity.
+   * @param consumed The number of characters consumed.
+   *
+   * @returns The number of characters consumed.
+   */
+
+/**
+   * Exchange an API key for a Json Web Token.
+  We also add the Expires ticks as a response header so that caller can easily see
+  if the token is expired without inspecting the token body.
+   * @param apiKey (optional) The api key that is used for signing in
+   * @param languageId (optional) Language Id to use in responses (default is 2/english)
+   * @param sessionId (optional) Add this if you want to sign in to a specific session
+   * @param json (optional) If you want the returned token to be serialized as json (xxx / "xxx").
+  Some generated clients might wish to use this for simplicity.
+   * @param organizationId (optional) This org id is ONLY used for org specific translations.
+   * @return Success
+   */
+
+/**
+   * Exchange an API key for a Json Web Token.
+  We also add the Expires ticks as a response header so that caller can easily see
+  if the token is expired without inspecting the token body.
+   * @param apiKey (optional) The api key that is used for signing in
+   * @param organizationId (optional) This id is used for organization specific translations.
+   * @param languageId (optional) Language Id to use in responses (default is 2/english)
+   * @param sessionId (optional) Add this if you want to sign in to a specific session
+   * @param json (optional) If you want the returned token to be serialized as json (xxx / "xxx"). Some generated clients might wish to use this for simplicity.
+   * @return Success
+   */
+
+/**
+   * Fetch list of voucher bookings in the specified period or with a booking code.
+   * @param min (optional) Minimum date (yyyy-mm-dd)
+   * @param max (optional) Maximum date (yyyy-mm-dd)
+   * @param bookingCode (optional) Booking code
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Fetch list of voucher bookings in the specified period or with a booking code.
+  Use GET /voucher/bookings instead.
+   * @param min (optional) Minimum date (yyyy-mm-dd)
+   * @param max (optional) Maximum date (yyyy-mm-dd)
+   * @param bookingCode (optional) Booking code
+   * @param channelId The id of the channel
+   * @return Success
+   * @deprecated
+   */
+
+/**
+   * Font Awesome 4 used the prefix of `fa` for all icons. With the introduction
+   * of new styles we needed to differentiate between them. Prefix `fa` is now an alias
+   * for `fas` so we'll ease the upgrade process for our users by automatically defining
+   * this as well.
+   */
+
+/**
+   * For hotels that have activated the waiting list feature, add to waiting list
+  let's a customer add information about what product they are waiting for availability
+  for so that they can be contacted by the hotel once product is available again
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Get Dan Hostel discounted card types.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get a booking by a booking code. Use GET /bookings instead.
+   * @param bookingCode (optional) 
+   * @param languageId (optional) Optionally provide a language id used for when translating booking data in the response
+   * @param bookingRequestId (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get a list of all articles.
+   * @param languageId (optional) Optionally provide a language id to be used when translating
+  the result data in the response object. Defaults to your current
+  user session language id.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get a list of all points of interest connected to your channel.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get a list of all points of interest connected to your channel.
+  Use GET /accommodation/points-of-interest instead
+   * @param channelId The id of the channel
+   * @return Success
+   * @deprecated
+   */
+
+/**
+   * Get a list of available package categories on a multi-property.
+   * @param packageCategories (optional) 
+   * @param languageId (optional) Optionally provide a language id to use when translating data in the response
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * Get a list of properties. If SearchParameters is omitted bookability will not be validated.
+  Results will be returned in the order of the channel ids sent in.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Get all add-on categories and all add-ons/ add-on packages within those categories.
+   * @param addonId (optional) If supplied only the specific add-on will be supplied and its add-on category if any
+   * @param categoryId (optional) If supplied only the specific add-on category and its add-ons will be supplied
+   * @param addOnGroupId (optional) If supplied only get addons connected to this specific add on group
+   * @param addOnPackageId (optional) If supplied only the specific add-on package will be supplied and its add-on category if any
+   * @param languageId (optional) Optionally provide a translation id to use for translating the response data.
+  Defaults to the language id of your current user session.
+   * @param includeAllAddOns (optional) If set to true all add-ons for the supplier will be returned, otherwise only the ones that are
+  sold as standalone add-ons
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all add-on groups
+   * @param searchType (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all add-ons/ add-on packages prices
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Get all available conference rooms.
+   * @param id (optional) The id of a specific conference room.
+   * @param languageId (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all booking versions by a booking code.
+   * @param bookingCode (optional) 
+   * @param languageId (optional) Optionally provide a language id used for when translating booking data in the response
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all booking versions by a booking code. Use GET /bookings/all-versions instead.
+   * @param bookingCode (optional) 
+   * @param languageId (optional) Optionally provide a language id used for when translating booking data in the response
+   * @param channelId The id of the channel
+   * @return Success
+   * @deprecated
+   */
+
+/**
+   * Get all image albums.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all images connected to instant web.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all images that either isn't connected to any album or
+  is connected to a specific album if album id is supplied.
+   * @param albumId (optional) The id of the album to get.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all optional add-ons that can be added to the booking.
+   * @param bookingCode (optional) 
+   * @param includeImageUrls (optional) 
+   * @param isInEditMode (optional) 
+   * @param roomIds (optional) 
+   * @param languageId (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all packages.
+   * @param packageId (optional) Id of the package.
+   * @param languageId (optional) Optionally provide a language id for use when translating package data in the response
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get all room upgrades that are available.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Get all sites
+   * @param req (optional) 
+   * @return Success
+   */
+
+/**
+   * Get all supported online payment methods for the current basket in the user session.
+   * @param hostUrl (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get availability information for a whole calendar month.
+   * @param year What year to use in the search.
+   * @param month What month to use in the search.
+   * @param packageCategoryId (optional) Use this to only check availability for packages in a certain category.
+   * @param packageId (optional) Use this to only check availability for a certain package.
+   * @param roomId (optional) Use this to only check availability for a certain roomtype.
+   * @param campaignId (optional) The id of the campaign if you want a calendar only for a specific campaign
+   * @param firstDayOfWeek (optional) This will help to get the full weeks in the calendar month
+   * @param cancellationPolicyId (optional) The id of the cancellation policy if you want a calendar only for a specific cancellation policy
+   * @param adults (optional) Number of adults the search will be valid for
+   * @param childAges (optional) Ages if the children the search should be valid for
+   * @param bookingCode (optional) The basketId being edit
+   * @param internalRoomIdBeingEdit (optional) The internal room id being edit, will use it to restore inventory for search majorly
+   * @param ratePlanAndPackageIdsFilter (optional) Only populate this if you want to filter the availability in the calendar.
+  This will limit the availability in the calendar. All rate plans not matching any id provided will be
+  excluded. All package not matching any id will be excluded.
+   * @param promoCode (optional) Use this to only check availability for a certain promotion code
+   * @param accommodationTypes (optional) Selected accommodation types
+   * @param typeOfSearch (optional) Type of search, default is All
+   * @param allowCalendarToMoveForward (optional) If set to true, the calendar will have the month and year that contains the next available alternative.
+   * @param availabilityCalendarForProducts (optional) If set to true, get a calendar for each room or package depending on the TypeOfSearch
+  that contains the cheapest price and available stay lengths per day.
+   * @param agentCode (optional) Traveller agent code that unlocks rate plans that are valid
+  for traveller agent to book
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get availability information for a whole conference calendar month.
+   * @param year What year to use in the search.
+   * @param month What month to use in the search.
+   * @param withAccommodation (optional) Conference search with or without accommodation, default is without accommodation
+   * @param firstDayOfWeek (optional) This will help to get the full weeks in the calendar month
+   * @param conferenceRoomId (optional) The id of the conference room id if you want a calendar only for a specific conference room
+   * @param allowCalendarToMoveForward (optional) If set to true, the calendar will have the month and year that contains the next available alternative.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get available optional cancellation insurance add-ons.
+   * @param languageId (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get booking codes of a multi-property.
+   * @param updatedSinceFilter (optional) Optionally provide a date/time that will be used
+  to filter the result and only include booking codes
+  that has been updated since this date/time
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * Get booking codes of a multi-property. Use GET /multiproperties/booking-codes instead.
+   * @param updatedSinceFilter (optional) Optionally provide a date/time that will be used
+  to filter the result and only include booking codes
+  that has been updated since this date/time
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   * @deprecated
+   */
+
+/**
+   * Get booking codes.
+   * @param updatedSinceFilter (optional) Optionally provide a date/time that will be used
+  to filter the result and only include booking codes
+  that has been updated since this date/time
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get booking codes. Use GET /bookings/booking-codes instead.
+   * @param updatedSinceFilter (optional) Optionally provide a date/time that will be used
+  to filter the result and only include booking codes
+  that has been updated since this date/time
+   * @param channelId The id of the channel
+   * @return Success
+   * @deprecated
+   */
+
+/**
+   * Get check-out conditions.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get current instant web settings.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get detail information of one or more rooms.
+   * @param getRoomConfig (optional) 
+   * @param languageId (optional) Optionally provide a language id for use when translating the response data
+   * @param roomIds (optional) The ids of rooms
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get detail of a multi-property booking.
+   * @param bookingCode (optional) 
+   * @param languageId (optional) Optionally provide a language id used for when translating booking data in the response
+   * @param bookingRequestId (optional) 
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * Get detailed information about a property.
+   * @param languageId (optional) Optionally provide a language id to be used for translating the response where available.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get edit url of a booking.
+   * @param bookingCode (optional) 
+   * @return Success
+   */
+
+/**
+   * Get edit url of a booking. Use GET /bookings/edit-url instead.
+   * @param bookingCode (optional) 
+   * @return Success
+   * @deprecated
+   */
+
+/**
+   * Get hotel information.
+   * @param languageId (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get identifiers for all campaigns.
+   * @param isHighlighted (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get info for a multi-property.
+   * @param languageId (optional) Optionally provide a language id to be used when translating
+  the result data in the response object. Defaults to your current
+  user session language id.
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * Get info of all channels owned by an organization.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get info of all channels owned by an organization. Use GET /channel/organization-channels instead.
+   * @param channelId The id of the channel
+   * @return Success
+   * @deprecated
+   */
+
+/**
+   * Get information about room groups by the provided room group ids.
+   * @param roomTypeGroupIds (optional) 
+   * @param languageId (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get information of hotels connected to a multi-property.
+   * @param packageCategoryId (optional) The id of the multi property package category.
+   * @param campaignId (optional) The id of the multi property campaign.
+   * @param languageId (optional) Optionally provide a language id to be used for translating the response where available.
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * Get information of properties connected to a multi-property.
+   * @param forConference (optional) true for conference properties
+  false for accommodation only properties
+   * @param languageId (optional) 
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * Get mandatory add-on packages from the current basket.
+   * @param internalRoomIds (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get mandatory add-on timeslot info from the current basket in the user session.
+   * @param internalBookingId (optional) 
+   * @param internalRoomIds (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get online template from an url.
+   * @param url (optional) 
+   * @return Success
+   */
+
+/**
+   * Get optional add-on timeslots from the current basket in the user session.
+   * @param addOnId (optional) 
+   * @param numberOfPersons (optional) 
+   * @param availableDates (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get places (destinations or hotels) connected to a multi-property.
+   * @param forConference (optional) true for conference properties
+  false for accommodation only properties
+   * @param brandId (optional) Filter out hotels that do not belong to a specific brand
+   * @param geoNodeId (optional) Filter out hotels that do not contain a specific geo-node
+   * @param languageId (optional) 
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * Get room configuration of the channel.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get style of a multi-property.
+   * @param multiPropertyId The id of the multi property.
+   * @return Success
+   */
+
+/**
+   * Get the availability calendar for add-ons and add-on packages
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Get the basket with basket id in the user session.
+  The Expires response header has ticks indicating the expire time of the session.
+   * @param includePaymentHistory (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Get translation phrases of the provided translation keys.
+   * @param langId (optional) 
+   * @param channelId (optional) 
+   * @param multiPropertyId (optional) 
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Gets the checkout configuration for the active basket.
+   * @param languageId (optional) 
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * List all active languages on a specific channel.
+   * @param languageId (optional) Optionally provide a language id used for translating the response object.
+  If you do not provide an id here, the default id of your session is used.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * List all countries.
+   * @param languageId (optional) Optionally provide a language id used for translating the response object.
+  If you do not provide an id here, the default id of your session is used.
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Login with email.
+   * @param email (optional) 
+   * @return Success
+   */
+
+/**
+   * MultiProperty Widget search.
+   * @param geoNodeId (optional) 
+   * @param sessionId (optional) 
+   * @param startDate (optional) 
+   * @param nrNights (optional) 
+   * @param numberOfParticipants (optional) 
+   * @param numberOfSingleRooms (optional) 
+   * @param numberOfDoubleRooms (optional) 
+   * @param mpPromoCode (optional) 
+   * @param mpCorpCode (optional) 
+   * @param mpCorpId (optional) 
+   * @param meetingOccasions (optional) 
+   * @param roomConfig (optional) 
+   * @param culture (optional) 
+   * @param _gl (optional) 
+   * @param hostName (optional) 
+   * @return Success
+   */
+
+/**
+   * Parses a decimal numeric entity.
+   *
+   * Equivalent to the `Decimal character reference state` in the HTML spec.
+   *
+   * @param str The string containing the entity (or a continuation of the entity).
+   * @param offset The current offset.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+
+/**
+   * Parses a hexadecimal numeric entity.
+   *
+   * Equivalent to the `Hexademical character reference state` in the HTML spec.
+   *
+   * @param str The string containing the entity (or a continuation of the entity).
+   * @param offset The current offset.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+
+/**
+   * Parses a named entity.
+   *
+   * Equivalent to the `Named character reference state` in the HTML spec.
+   *
+   * @param str The string containing the entity (or a continuation of the entity).
+   * @param offset The current offset.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+
+/**
+   * Redeem voucher number.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Register an user account.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Release the snapshot on the next tick.  This means the snapshot is retained
+   * during the execution of the current function using it.
+   */
+
+/**
+   * Remove a voucher number as payment to the active basket.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Remove rooms and related add-ons from the current basket in the user session.
+   * @return Success
+   * @deprecated
+   */
+
+/**
+   * Remove rooms and related add-ons from the current basket in the user session.
+   * @return Success
+   */
+
+/**
+   * Returns a list of sister hotels that are bookable for the same search period 
+  that already is searched for
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Returns custom online message for requested keys.
+   * @param onlineMessageKeys (optional) List of online message keys
+   * @param languageId (optional) Optionally provide a language id for use when translating the response data
+   * @param channelId The id of the channel
+   * @return Success
+   */
+
+/**
+   * Returns info about a channel.
+   * @param channelId (optional) 
+   * @return Success
+   */
+
+/**
+   * Returns the custom style of a channel.
+   * @param channelId (optional) 
+   * @return Success
+   */
+
+/**
+   * Returns the seo mappings of one organization.
+   * @param channelId (optional) 
+   * @return Success
+   */
+
+/**
+   * Same as "api/authentication/token", with "BV Online" key is supplied.
+  This method should be used by Online React
+   * @param apiKey (optional) The api key that is used for signing in
+   * @param languageId (optional) Language Id to use in responses (default is 2/english)
+   * @param sessionId (optional) Add this if you want to sign in to a specific session
+   * @param json (optional) If you want the returned token to be serialized as json (xxx / "xxx").
+  Some generated clients might wish to use this for simplicity.
+   * @param organizationId (optional) This org id is ONLY used for org specific translations.
+   * @return Success
+   */
+
+/**
+   * Save a customer enquiry. Limited to one room per enquiry.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Save cc info from pcibooking on a bookingcustomer in a basket.
+   * @param cardToken (optional) 
+   * @param cardType (optional) 
+   * @param cardNumber (optional) 
+   * @param expiration (optional) 
+   * @param cardHolderName (optional) 
+   * @param basketId (optional) 
+   * @param voucherBasketInfoId (optional) 
+   * @param bookingRequestId (optional) 
+   * @return Success
+   */
+
+/**
+   * Search for available accommodation rooms with search parameters from session
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Search for available conference rooms from a specific date with a number of days.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Search for conference properties on a multi-property
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Search for optional-extras which can be added to a conference basket
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Searches for available accommodations between two specific dates.
+  You need to specify search dates and at least one room configuration for the search.
+  You may also use the different filters.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Searches for available accommodations on multiple channels between two specific dates.
+  You need to specify search dates and at least one room configuration for the search.
+  You may also use the different filters.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Send the search link with search parameters to the specified email
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Signal to the parser that the end of the input was reached.
+   *
+   * Remaining data will be emitted and relevant errors will be produced.
+   *
+   * @returns The number of characters consumed.
+   */
+
+/**
+   * SingleProperty Widget search.
+   * @param promoCode (optional) 
+   * @param corpCode (optional) 
+   * @param iATACode (optional) 
+   * @param multiPropertyId (optional) 
+   * @param sessionId (optional) 
+   * @param startDate (optional) 
+   * @param nrNights (optional) 
+   * @param numberOfParticipants (optional) 
+   * @param numberOfSingleRooms (optional) 
+   * @param numberOfDoubleRooms (optional) 
+   * @param mpPromoCode (optional) 
+   * @param mpCorpCode (optional) 
+   * @param mpCorpId (optional) 
+   * @param meetingOccasions (optional) 
+   * @param roomConfig (optional) 
+   * @param culture (optional) 
+   * @param _gl (optional) 
+   * @param hostName (optional) 
+   * @return Success
+   */
+
+/**
+   * Switches between the numeric decimal and hexadecimal states.
+   *
+   * Equivalent to the `Numeric character reference state` in the HTML spec.
+   *
+   * @param str The string containing the entity (or a continuation of the entity).
+   * @param offset The current offset.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+
+/**
+   * Unlock a campaign with one or more methods: Promotion Code, Email/Password, Authentication Service.
+   * @return Success
+   */
+
+/**
+   * Update an existing basket version or create a new basket (if the basketId is null).
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Validate and emit a numeric entity.
+   *
+   * Implements the logic from the `Hexademical character reference start
+   * state` and `Numeric character reference end state` in the HTML spec.
+   *
+   * @param lastCp The last code point of the entity. Used to see if the
+   *               entity was terminated with a semicolon.
+   * @param expectedLength The minimum number of characters that should be
+   *                       consumed. Used to validate that at least one digit
+   *                       was consumed.
+   * @returns The number of characters that were consumed.
+   */
+
+/**
+   * Validate search codes (promotion code, corporation code and IATA code).
+  Set valid codes to user session
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Validate that an email address can be used to sign up a new member.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Validate voucher number.
+   * @param body (optional) 
+   * @return Success
+   */
+
+/**
+   * Verify an user account by user id.
+   * @param id (optional) 
+   * @return Success
+   */
+
+/**
+   * Write an entity to the decoder. This can be called multiple times with partial entities.
+   * If the entity is incomplete, the decoder will return -1.
+   *
+   * Mirrors the implementation of `getDecoder`, but with the ability to stop decoding if the
+   * entity is incomplete, and resume when the next string is written.
+   *
+   * @param string The string containing the entity (or a continuation of the entity).
+   * @param offset The offset at which the entity begins. Should be 0 if this is not the first call.
+   * @returns The number of characters that were consumed, or -1 if the entity is incomplete.
+   */
+
+/**
+ * # Reduce
+ *
+ * A fast object `.reduce()` implementation.
+ *
+ * @param  {Object}   subject      The object to reduce over.
+ * @param  {Function} fn           The reducer function.
+ * @param  {mixed}    initialValue The initial value for the reducer, defaults to subject[0].
+ * @param  {Object}   thisContext  The context for the reducer.
+ * @return {mixed}                 The final result.
+ */
+
+/**
+ * @internal
+ */
+
+/**
+ * @license React
+ * react-dom-server-legacy.browser.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-dom-server.browser.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * Internal helper to bind a function known to have 4 arguments
+ * to a given context.
+ */
+
+/**
+ * ucs2decode() and codePointAt() are both works of Mathias Bynens and licensed under MIT
+ *
+ * Copyright Mathias Bynens <https://mathiasbynens.be/>
+
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @type {!Array} */
+
+/** @type {!Object} */
+
+/** @type {string} */
+
+/** Resets the instance to make it reusable. */
+
+/************************************************************************/
+
+/******/
+
+/***/
+
+/**Adds to basket AND waits for new basket before returning! */
+
+/**Use this over clearBasket. This API method did not exist when clearBasket was made.  */
+
+//
+
+// 	layer.bindPopup('Hello');
+
+//  view regardless of where the mouse was.
+
+// "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
+
+// "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+
+// "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+
+// "memoized" public interface
+
+// $FlowFixMe we know it's not null
+
+// $FlowFixMe(site=recoil) Window does not have a FlowType definition https://github.com/facebook/flow/issues/6709
+
+// $FlowFixMe[prop-missing]
+
+// $FlowIssue
+
+// $FlowIssue[incompatible-call]
+
+// $FlowIssue[incompatible-return]
+
+// $FlowIssue[incompatible-type] No way to refine in Flow that property is not defined
+
+// $FlowIssue[incompatible-use]
+
+// $FlowIssue[unclear-type]
+
+// '.swipe-handler',
+
+// 'bullets' or 'progressbar' or 'fraction' or 'custom'
+
+// 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+
+// (e.g. `0.5` or `0.1`) allow for greater granularity. A value of `0`
+
+// (e.g. to validate an API token).
+
+// (unless [`L.DomEvent.stopPropagation`](#domevent-stoppropagation) is used).
+
+// **(required)** Comma-separated list of WMS layers to show.
+
+// 100% is the default since that's what's in the CSS
+
+// @aka Canvas options
+
+// @aka CircleMarker options
+
+// @aka Control Options
+
+// @aka Control.Attribution options
+
+// @aka Control.Layers options
+
+// @aka Control.Scale options
+
+// @aka Control.Zoom options
+
+// @aka DivIcon options
+
+// @aka DivOverlay options
+
+// @aka Draggable options
+
+// @aka GridLayer options
+
+// @aka ImageOverlay options
+
+// @aka Marker options
+
+// @aka Path options
+
+// @aka Polyline options
+
+// @aka Popup options
+
+// @aka Renderer options
+
+// @aka TileLayer options
+
+// @aka TileLayer.WMS options
+
+// @aka Tooltip options
+
+// @aka VideoOverlay options
+
+// @alternative
+
+// @constructor L.Draggable(el: HTMLElement, dragHandle?: HTMLElement, preventOutline?: Boolean, options?: Draggable options)
+
+// @method add(otherPoint: Point): Point
+
+// @method addAttribution(text: String): this
+
+// @method addBaseLayer(layer: Layer, name: String): this
+
+// @method addControl(control: Control): this
+
+// @method addData( <GeoJSON> data ): this
+
+// @method addEventParent(obj: Evented): this
+
+// @method addHandler(name: String, HandlerClass: Function): this
+
+// @method addHooks()
+
+// @method addLatLng(latlng: LatLng, latlngs?: LatLng[]): this
+
+// @method addLayer(layer: Layer): this
+
+// @method addOverlay(layer: Layer, name: String): this
+
+// @method addTo(map: Map): this
+
+// @method bindPopup(content: String|HTMLElement|Function|Popup, options?: Popup options): this
+
+// @method bindTooltip(content: String|HTMLElement|Function|Tooltip, options?: Tooltip options): this
+
+// @method bringToBack(): this
+
+// @method bringToBack: this
+
+// @method bringToFront(): this
+
+// @method bringToFront: this
+
+// @method ceil(): Point
+
+// @method clearLayers(): this
+
+// @method clone(): Point
+
+// @method close(): this
+
+// @method closePopup(): this
+
+// @method closePopup(popup?: Popup): this
+
+// @method closeTooltip(): this
+
+// @method closeTooltip(tooltip: Tooltip): this
+
+// @method closestLayerPoint(p: Point): Point
+
+// @method collapse(): this
+
+// @method containerPointToLatLng(point: Point): LatLng
+
+// @method containerPointToLayerPoint(point: Point): Point
+
+// @method contains (latlng: LatLng): Boolean
+
+// @method contains(otherBounds: Bounds): Boolean
+
+// @method contains(otherBounds: LatLngBounds): Boolean
+
+// @method contains(otherPoint: Point): Boolean
+
+// @method contains(point: Point): Boolean
+
+// @method createIcon(oldIcon?: HTMLElement): HTMLElement
+
+// @method createPane(name: String, container?: HTMLElement): HTMLElement
+
+// @method createShadow(oldIcon?: HTMLElement): HTMLElement
+
+// @method createTile(coords: Object, done?: Function): HTMLElement
+
+// @method disable()
+
+// @method disable(): this
+
+// @method distance(latlng1: LatLng, latlng2: LatLng): Number
+
+// @method distanceTo(otherLatLng: LatLng): Number
+
+// @method distanceTo(otherPoint: Point): Number
+
+// @method divideBy(num: Number): Point
+
+// @method eachLayer(fn: Function, context?: Object): this
+
+// @method enable()
+
+// @method enable(): this
+
+// @method enabled(): Boolean
+
+// @method equals(otherBounds: Bounds): Boolean
+
+// @method equals(otherBounds: LatLngBounds, maxMargin?: Number): Boolean
+
+// @method equals(otherLatLng: LatLng, maxMargin?: Number): Boolean
+
+// @method equals(otherPoint: Point): Boolean
+
+// @method expand(): this
+
+// @method extend(latlng: LatLng): this
+
+// @method extend(otherBounds: Bounds): this
+
+// @method extend(otherBounds: LatLngBounds): this
+
+// @method extend(point: Point): this
+
+// @method fire(type: String, data?: Object, propagate?: Boolean): this
+
+// @method fitBounds(bounds: LatLngBounds, options?: fitBounds options): this
+
+// @method fitWorld(options?: fitBounds options): this
+
+// @method floor(): Point
+
+// @method flyTo(latlng: LatLng, zoom?: Number, options?: Zoom/pan options): this
+
+// @method flyToBounds(bounds: LatLngBounds, options?: fitBounds options): this
+
+// @method getAttribution: String
+
+// @method getBottomLeft(): Point
+
+// @method getBottomRight(): Point
+
+// @method getBounds(): LatLngBounds
+
+// @method getBoundsZoom(bounds: LatLngBounds, inside?: Boolean, padding?: Point): Number
+
+// @method getCenter(): LatLng
+
+// @method getCenter(round?: Boolean): Point
+
+// @method getContainer: HTMLElement
+
+// @method getContent: String|HTMLElement
+
+// @method getEast(): Number
+
+// @method getElement(): HTMLElement
+
+// @method getElement(): HTMLVideoElement
+
+// @method getElement(): SVGElement
+
+// @method getElement: String|HTMLElement
+
+// @method getIcon: Icon
+
+// @method getLatLng(): LatLng
+
+// @method getLatLng: LatLng
+
+// @method getLatLngs(): LatLng[]
+
+// @method getLayer(id: Number): Layer
+
+// @method getLayerId(layer: Layer): Number
+
+// @method getLayers(): Layer[]
+
+// @method getMaxZoom(): Number
+
+// @method getMinZoom(): Number
+
+// @method getNorth(): Number
+
+// @method getNorthEast(): LatLng
+
+// @method getNorthWest(): LatLng
+
+// @method getPane(name? : String): HTMLElement
+
+// @method getPane(pane: String|HTMLElement): HTMLElement
+
+// @method getPanes(): Object
+
+// @method getPixelBounds(): Bounds
+
+// @method getPixelOrigin(): Point
+
+// @method getPixelWorldBounds(zoom?: Number): Bounds
+
+// @method getPopup(): Popup
+
+// @method getProjectedBounds(zoom: Number): Bounds
+
+// @method getRadius(): Number
+
+// @method getScaleZoom(scale: Number, fromZoom: Number): Number
+
+// @method getSize(): Point
+
+// @method getSouth(): Number
+
+// @method getSouthEast(): LatLng
+
+// @method getSouthWest(): LatLng
+
+// @method getTileSize: Point
+
+// @method getTileUrl(coords: Object): String
+
+// @method getTooltip(): Tooltip
+
+// @method getTopLeft(): Point
+
+// @method getTopRight(): Point
+
+// @method getWest(): Number
+
+// @method getZoom(): Number
+
+// @method getZoomScale(toZoom: Number, fromZoom: Number): Number
+
+// @method hasLayer(id: Number): Boolean
+
+// @method hasLayer(layer: Layer): Boolean
+
+// @method intersects(otherBounds: Bounds): Boolean
+
+// @method intersects(otherBounds: LatLngBounds): Boolean
+
+// @method invalidateSize(animate: Boolean): this
+
+// @method invalidateSize(options: Zoom/pan options): this
+
+// @method invoke(methodName: String, …): this
+
+// @method isEmpty(): Boolean
+
+// @method isLoading: Boolean
+
+// @method isOpen: Boolean
+
+// @method isPopupOpen(): boolean
+
+// @method isTooltipOpen(): boolean
+
+// @method isValid(): Boolean
+
+// @method latLngToContainerPoint(latlng: LatLng): Point
+
+// @method latLngToLayerPoint(latlng: LatLng): Point
+
+// @method latLngToPoint(latlng: LatLng, zoom: Number): Point
+
+// @method layerPointToContainerPoint(point: Point): Point
+
+// @method layerPointToLatLng(point: Point): LatLng
+
+// @method listens(type: String, fn: Function, context?: Object, propagate?: Boolean): Boolean
+
+// @method listens(type: String, propagate?: Boolean): Boolean
+
+// @method locate(options?: Locate options): this
+
+// @method mouseEventToContainerPoint(ev: MouseEvent): Point
+
+// @method mouseEventToLatLng(ev: MouseEvent): LatLng
+
+// @method mouseEventToLayerPoint(ev: MouseEvent): Point
+
+// @method multiplyBy(num: Number): Point
+
+// @method once(…): this
+
+// @method openOn(map: Map): this
+
+// @method openPopup(content: String|HTMLElement, latlng: LatLng, options?: Popup options): this
+
+// @method openPopup(latlng?: LatLng): this
+
+// @method openPopup(popup: Popup): this
+
+// @method openTooltip(content: String|HTMLElement, latlng: LatLng, options?: Tooltip options): this
+
+// @method openTooltip(latlng?: LatLng): this
+
+// @method openTooltip(tooltip: Tooltip): this
+
+// @method overlaps(otherBounds: Bounds): Boolean
+
+// @method overlaps(otherBounds: LatLngBounds): Boolean
+
+// @method pad(bufferRatio: Number): Bounds
+
+// @method pad(bufferRatio: Number): LatLngBounds
+
+// @method panBy(offset: Point, options?: Pan options): this
+
+// @method panInside(latlng: LatLng, options?: padding options): this
+
+// @method panInsideBounds(bounds: LatLngBounds, options?: Pan options): this
+
+// @method panTo(latlng: LatLng, options?: Pan options): this
+
+// @method pointToLatLng(point: Point, zoom: Number): LatLng
+
+// @method project(latlng: LatLng): Point
+
+// @method project(latlng: LatLng, zoom: Number): Point
+
+// @method redraw(): this
+
+// @method redraw: this
+
+// @method remove(): this
+
+// @method remove: this
+
+// @method removeAttribution(text: String): this
+
+// @method removeControl(control: Control): this
+
+// @method removeEventParent(obj: Evented): this
+
+// @method removeFrom(group: LayerGroup): this
+
+// @method removeFrom(map: Map): this
+
+// @method removeHooks()
+
+// @method removeLayer(id: Number): this
+
+// @method removeLayer(layer: Layer): this
+
+// @method resetStyle( <Path> layer? ): this
+
+// @method round(): Point
+
+// @method run(el: HTMLElement, newPos: Point, duration?: Number, easeLinearity?: Number)
+
+// @method scale(zoom: Number): Number
+
+// @method scaleBy(scale: Point): Point
+
+// @method setBounds(bounds: LatLngBounds): this
+
+// @method setBounds(latLngBounds: LatLngBounds): this
+
+// @method setContent(htmlContent: String|HTMLElement|Function): this
+
+// @method setIcon(icon: Icon): this
+
+// @method setLatLng(latLng: LatLng): this
+
+// @method setLatLng(latlng: LatLng): this
+
+// @method setLatLngs(latlngs: LatLng[]): this
+
+// @method setMaxBounds(bounds: LatLngBounds): this
+
+// @method setMaxZoom(zoom: Number): this
+
+// @method setMinZoom(zoom: Number): this
+
+// @method setOpacity(opacity: Number): this
+
+// @method setParams(params: Object, noRedraw?: Boolean): this
+
+// @method setPopupContent(content: String|HTMLElement|Popup): this
+
+// @method setPosition(position: string): this
+
+// @method setPrefix(prefix: String|false): this
+
+// @method setRadius(radius: Number): this
+
+// @method setStyle( <Function> style ): this
+
+// @method setStyle(style: Path options): this
+
+// @method setTooltipContent(content: String|HTMLElement|Tooltip): this
+
+// @method setUrl(url: String): this
+
+// @method setUrl(url: String, noRedraw?: Boolean): this
+
+// @method setView(center: LatLng, zoom: Number, options?: Zoom/pan options): this
+
+// @method setZIndex(value: Number): this
+
+// @method setZIndex(zIndex: Number): this
+
+// @method setZIndexOffset(offset: Number): this
+
+// @method setZoom(zoom: Number, options?: Zoom/pan options): this
+
+// @method setZoomAround(latlng: LatLng, zoom: Number, options: Zoom options): this
+
+// @method setZoomAround(offset: Point, zoom: Number, options: Zoom options): this
+
+// @method stop()
+
+// @method stop(): this
+
+// @method stopLocate(): this
+
+// @method subtract(otherPoint: Point): Point
+
+// @method toBBoxString(): String
+
+// @method toBounds(sizeInMeters: Number): LatLngBounds
+
+// @method toGeoJSON(precision?: Number|false): Object
+
+// @method toString(): String
+
+// @method toggle(layer?: Layer): this
+
+// @method togglePopup(): this
+
+// @method toggleTooltip(): this
+
+// @method transform(point: Point, scale?: Number): Point
+
+// @method trunc(): Point
+
+// @method unbindPopup(): this
+
+// @method unbindTooltip(): this
+
+// @method unproject(point: Point): LatLng
+
+// @method unproject(point: Point, zoom: Number): LatLng
+
+// @method unscaleBy(scale: Point): Point
+
+// @method untransform(point: Point, scale?: Number): Point
+
+// @method update: null
+
+// @method whenReady(fn: Function, context?: Object): this
+
+// @method wrap(): LatLng
+
+// @method wrapLatLng(latlng: LatLng): LatLng
+
+// @method wrapLatLngBounds(bounds: LatLngBounds): LatLngBounds
+
+// @method zoom(scale: Number): Number
+
+// @method zoomIn(delta?: Number, options?: Zoom options): this
+
+// @method zoomOut(delta?: Number, options?: Zoom options): this
+
+// @namespace DivOverlay
+
+// @namespace Map; @method getRenderer(layer: Path): Renderer
+
+// @namespace Popup
+
+// @option alt: String = ''
+
+// @option alt: String = 'Marker'
+
+// @option attribution: String = null
+
+// @option autoClose: Boolean = true
+
+// @option autoPan: Boolean = false
+
+// @option autoPan: Boolean = true
+
+// @option autoPanOnFocus: Boolean = true
+
+// @option autoPanPadding: Point = Point(5, 5)
+
+// @option autoPanPadding: Point = Point(50, 50)
+
+// @option autoPanPaddingBottomRight: Point = null
+
+// @option autoPanPaddingTopLeft: Point = null
+
+// @option autoPanSpeed: Number = 10
+
+// @option autoZIndex: Boolean = true
+
+// @option autoplay: Boolean = true
+
+// @option bgPos: Point = [0, 0]
+
+// @option bounceAtZoomLimits: Boolean = true
+
+// @option bounds: LatLngBounds = undefined
+
+// @option boxZoom: Boolean = true
+
+// @option bubblingMouseEvents: Boolean = false
+
+// @option bubblingMouseEvents: Boolean = true
+
+// @option center: LatLng = undefined
+
+// @option className: String = ''
+
+// @option clickTolerance: Number = 3
+
+// @option closeButton: Boolean = true
+
+// @option closeOnClick: Boolean = *
+
+// @option closeOnEscapeKey: Boolean = true
+
+// @option collapsed: Boolean = true
+
+// @option color: String = '#3388ff'
+
+// @option content: String|HTMLElement|Function = ''
+
+// @option crossOrigin: Boolean|String = false
+
+// @option crs: CRS = L.CRS.EPSG3857
+
+// @option crs: CRS = null
+
+// @option dashArray: String = null
+
+// @option dashOffset: String = null
+
+// @option detectRetina: Boolean = false
+
+// @option direction: String = 'auto'
+
+// @option doubleClickZoom: Boolean|String = true
+
+// @option draggable: Boolean = false
+
+// @option dragging: Boolean = true
+
+// @option easeLinearity: Number = 0.2
+
+// @option errorOverlayUrl: String = ''
+
+// @option errorTileUrl: String = ''
+
+// @option fadeAnimation: Boolean = true
+
+// @option fill: Boolean = depends
+
+// @option fillColor: String = *
+
+// @option fillOpacity: Number = 0.2
+
+// @option fillRule: String = 'evenodd'
+
+// @option format: String = 'image/jpeg'
+
+// @option hideSingleBase: Boolean = false
+
+// @option html: String|HTMLElement = ''
+
+// @option icon: Icon = *
+
+// @option imperial: Boolean = True
+
+// @option inertia: Boolean = *
+
+// @option inertiaDeceleration: Number = 3000
+
+// @option inertiaMaxSpeed: Number = Infinity
+
+// @option interactive: Boolean = false
+
+// @option keepAspectRatio: Boolean = true
+
+// @option keepBuffer: Number = 2
+
+// @option keepInView: Boolean = false
+
+// @option keyboard: Boolean = true
+
+// @option keyboardPanDelta: Number = 80
+
+// @option layers: Layer[] = []
+
+// @option layers: String = ''
+
+// @option lineCap: String= 'round'
+
+// @option lineJoin: String = 'round'
+
+// @option loop: Boolean = true
+
+// @option markerZoomAnimation: Boolean = true
+
+// @option maxBounds: LatLngBounds = null
+
+// @option maxBoundsViscosity: Number = 0.0
+
+// @option maxHeight: Number = null
+
+// @option maxNativeZoom: Number = undefined
+
+// @option maxWidth: Number = 100
+
+// @option maxWidth: Number = 300
+
+// @option maxZoom: Number = *
+
+// @option maxZoom: Number = 18
+
+// @option maxZoom: Number = undefined
+
+// @option metric: Boolean = True
+
+// @option minNativeZoom: Number = undefined
+
+// @option minWidth: Number = 50
+
+// @option minZoom: Number = *
+
+// @option minZoom: Number = 0
+
+// @option muted: Boolean = false
+
+// @option noClip: Boolean = false
+
+// @option noWrap: Boolean = false
+
+// @option offset: Point = Point(0, 0)
+
+// @option offset: Point = Point(0, 7)
+
+// @option opacity: Number = 0.9
+
+// @option opacity: Number = 1.0
+
+// @option padding: Number = 0.1
+
+// @option pane: String = 'markerPane'
+
+// @option pane: String = 'overlayPane'
+
+// @option pane: String = 'popupPane'
+
+// @option pane: String = 'tilePane'
+
+// @option pane: String = 'tooltipPane'
+
+// @option pane: String = undefined
+
+// @option permanent: Boolean = false
+
+// @option playsInline: Boolean = true
+
+// @option position: String = 'topright'
+
+// @option prefix: String|false = 'Leaflet'
+
+// @option radius: Number = 10
+
+// @option referrerPolicy: Boolean|String = false
+
+// @option renderer: Renderer = *
+
+// @option riseOffset: Number = 250
+
+// @option riseOnHover: Boolean = false
+
+// @option scrollWheelZoom: Boolean|String = true
+
+// @option shadowPane: String = 'shadowPane'
+
+// @option smoothFactor: Number = 1.0
+
+// @option sortFunction: Function = *
+
+// @option sortLayers: Boolean = false
+
+// @option sticky: Boolean = false
+
+// @option stroke: Boolean = true
+
+// @option styles: String = ''
+
+// @option subdomains: String|String[] = 'abc'
+
+// @option tapHold: Boolean
+
+// @option tapTolerance: Number = 15
+
+// @option tileSize: Number|Point = 256
+
+// @option title: String = ''
+
+// @option tms: Boolean = false
+
+// @option tolerance: Number = 0
+
+// @option touchZoom: Boolean|String = *
+
+// @option trackResize: Boolean = true
+
+// @option transform3DLimit: Number = 2^23
+
+// @option transparent: Boolean = false
+
+// @option updateInterval: Number = 200
+
+// @option updateWhenIdle: Boolean = (depends)
+
+// @option updateWhenZooming: Boolean = true
+
+// @option uppercase: Boolean = false
+
+// @option version: String = '1.1.1'
+
+// @option weight: Number = 3
+
+// @option wheelDebounceTime: Number = 40
+
+// @option wheelPxPerZoomLevel: Number = 60
+
+// @option worldCopyJump: Boolean = false
+
+// @option zIndex: Number = 1
+
+// @option zIndexOffset: Number = 0
+
+// @option zoom: Number = undefined
+
+// @option zoomAnimation: Boolean = true
+
+// @option zoomAnimationThreshold: Number = 4
+
+// @option zoomDelta: Number = 1
+
+// @option zoomInText: String = '<span aria-hidden="true">+</span>'
+
+// @option zoomInTitle: String = 'Zoom in'
+
+// @option zoomOffset: Number = 0
+
+// @option zoomOutText: String = '<span aria-hidden="true">&#x2212;</span>'
+
+// @option zoomOutTitle: String = 'Zoom out'
+
+// @option zoomReverse: Boolean = false
+
+// @option zoomSnap: Number = 1
+
+// @property code: String
+
+// @property infinite: Boolean
+
+// @property wrapLat: Number[]
+
+// @property wrapLng: Number[]
+
+// @section
+
+// @section Animation Options
+
+// @section Conversion Methods
+
+// @section Draggable marker options
+
+// @section Extension methods
+
+// @section Geolocation methods
+
+// @section Interaction Options
+
+// @section Interaction events
+
+// @section Map State Options
+
+// @section Map state change events
+
+// @section Methods for Getting Map State
+
+// @section Methods for modifying map state
+
+// @section Mouse wheel options
+
+// @section Other Methods
+
+// @section Panning Inertia Options
+
+// @section Touch interaction options
+
+// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+
+// @see https://github.com/webpack-contrib/style-loader/issues/177
+
+// @uninheritable
+
+// A [compare function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
+// A custom CSS class name to assign to the overlay.
+
+// A custom CSS class name to assign to the popup.
+
+// A custom class name to assign to the image. Empty by default.
+
+// A custom class name to assign to the tile layer. Empty by default.
+
+// A string that defines [how the inside of a shape](https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule) is determined.
+
+// A string that defines [shape to be used at the corners](https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin) of the stroke.
+
+// A string that defines [shape to be used at the end](https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap) of the stroke.
+
+// A string that defines the [distance into the dash pattern to start the dash](https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset). Doesn't work on `Canvas`-powered layers in [some old browsers](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility).
+
+// A string that defines the stroke [dash pattern](https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray). Doesn't work on `Canvas`-powered layers in [some old browsers](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility).
+
+// AM or PM
+
+// AM, PM, midnight, noon
+
+// Adds a GeoJSON object to the layer.
+
+// Adds a base layer (radio button entry) with the given name to the control.
+
+// Adds a given point to the polyline. By default, adds to the first ring of
+
+// Adds a new `Handler` to the map, given its name and constructor function.
+
+// Adds an attribution text (e.g. `'&copy; OpenStreetMap contributors'`).
+
+// Adds an event parent - an `Evented` that will receive propagated events
+
+// Adds an overlay (checkbox entry) with the given name to the control.
+
+// Adds the control to the given map.
+
+// Adds the given control to the map
+
+// Adds the given layer to the group.
+
+// Adds the given layer to the map
+
+// Adds the overlay to the map.
+
+// Adds the popup to the map and closes the previous one.
+
+// Allow a fallback from the regular style to solid if regular is not available
+
+// Allow destructing
+
+// Also `yy` always returns the last two digits of a year,
+
+// Alternative to `layer.togglePopup()`/`.toggleTooltip()`.
+
+// Alternative to `map.closePopup(popup)`/`.closeTooltip(tooltip)`
+
+// Alternative to `map.openPopup(popup)`.
+
+// Alternative to `map.openPopup(popup)`/`.openTooltip(tooltip)`.
+
+// Always clone the TreeState to isolate stores from accidental mutations.
+
+// Amount of pixels to pan when pressing an arrow key.
+
+// An array of two numbers defining whether the longitude (horizontal) coordinate
+
+// And there should be no invalid characters.
+
+// Argument may be omitted only for overlay bound to layer.
+
+// Array of layers that will be added to the map initially
+
+// ArrayBuffer.isView(x)
+
+// As `createIcon`, but for the shadow beneath it.
+
+// Atoms/Selectors
+
+// Autoheight
+
+// Because hamt.empty is not a function there is no way to introduce type
+
+// Behaves as [`on(…)`](#evented-on), except the listener will only get fired once and then removed.
+
+// Binds a popup to the layer with the passed `content` and sets up the
+
+// Binds a tooltip to the layer with the passed `content` and sets up the
+
+// Breakpoints
+
+// Brings the layer group to the back of all other layers
+
+// Brings the layer group to the top of all other layers
+
+// Brings the layer to the bottom of all overlays.
+
+// Brings the layer to the bottom of all path layers.
+
+// Brings the layer to the top of all overlays.
+
+// Brings the layer to the top of all path layers.
+
+// Brings the tile layer to the bottom of all tile layers.
+
+// Brings the tile layer to the top of all tile layers.
+
+// Brings this overlay in front of other overlays (in the same map pane).
+
+// Brings this overlay to the back of other overlays (in the same map pane).
+
+// By default the layer will be added to the map's [overlay pane](#map-overlaypane). Overriding this option will cause the layer to be placed on another pane by default.
+
+// By default this means longitude is wrapped around the dateline so its
+
+// By default this means the center longitude is wrapped around the dateline so its
+
+// By default, a smooth zoom animation (during a [touch zoom](#map-touchzoom) or a [`flyTo()`](#map-flyto)) will update grid layers every integer zoom level. Setting this option to `false` will update the grid layer only when the smooth animation ends.
+
+// By default, it sorts layers alphabetically by their name.
+
+// By default, marker images zIndex is set automatically based on its latitude. Use this option if you want to put the marker on top of all others (or below), specifying a high value like `1000` (or high negative value, respectively).
+
+// By default, the zoom level snaps to the nearest integer; lower values
+
+// C1 Unicode control character reference replacements
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+
+// CONCATENATED MODULE: ./node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js
+
+// CONCATENATED MODULE: ./node_modules/@emotion/hash/dist/emotion-hash.esm.js
+
+// CONCATENATED MODULE: ./node_modules/@emotion/memoize/dist/emotion-memoize.esm.js
+
+// CONCATENATED MODULE: ./node_modules/@emotion/react/node_modules/@babel/runtime/helpers/esm/extends.js
+
+// CONCATENATED MODULE: ./node_modules/@emotion/sheet/dist/emotion-sheet.browser.esm.js
+
+// CONCATENATED MODULE: ./node_modules/@emotion/stylis/dist/stylis.esm.js
+
+// CONCATENATED MODULE: ./node_modules/@emotion/weak-memoize/dist/emotion-weak-memoize.esm.js
+
+// CONCATENATED MODULE: ./node_modules/@floating-ui/core/dist/floating-ui.core.browser.min.mjs
+
+// CONCATENATED MODULE: ./node_modules/@floating-ui/dom/dist/floating-ui.dom.browser.min.mjs
+
+// CONCATENATED MODULE: ./node_modules/@floating-ui/react-dom/dist/floating-ui.react-dom.esm.js
+
+// CONCATENATED MODULE: ./node_modules/@floating-ui/react/dist/floating-ui.react.esm.js
+
+// CONCATENATED MODULE: ./node_modules/@fortawesome/fontawesome-svg-core/index.mjs
+
+// CONCATENATED MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/Accordion.errors.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/Accordion.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/AccordionControl/AccordionControl.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/AccordionItem.context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/AccordionItem/AccordionItem.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/AccordionPanel/AccordionPanel.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/AccordionPanel/AccordionPanel.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/AccordionProvider.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Accordion/ChevronIcon.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ActionIcon/ActionIcon.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Autocomplete/Autocomplete.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Autocomplete/Autocomplete.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Autocomplete/filter-data/filter-data.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/Box.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/style-system-props/get-responsive-value/get-responsive-value.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/style-system-props/get-system-styles/get-system-styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/style-system-props/value-getters/get-color-value.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/style-system-props/value-getters/get-default-value.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/style-system-props/value-getters/get-font-size-value.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/style-system-props/value-getters/get-spacing-value.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/style-system-props/value-getters/value-getters.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Box/use-sx/use-sx.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Button/ButtonGroup/ButtonGroup.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Card/Card.context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Card/Card.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Card/CardSection/CardSection.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Center/Center.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Center/Center.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Checkbox/Checkbox.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Checkbox/Checkbox.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Checkbox/CheckboxGroup.context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Checkbox/CheckboxGroup/CheckboxGroup.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Checkbox/CheckboxIcon.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/CloseButton/CloseButton.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/CloseButton/CloseIcon.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Collapse/Collapse.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Floating/FloatingArrow/FloatingArrow.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Floating/get-floating-position/get-floating-position.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Floating/use-floating-auto-update.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/FocusTrap/FocusTrap.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Group/Group.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Group/filter-falsy-children/filter-falsy-children.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/Input.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/Input.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/InputDescription/InputDescription.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/InputError/InputError.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/InputLabel/InputLabel.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/InputPlaceholder/InputPlaceholder.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/InputWrapper.context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/InputWrapper/InputWrapper.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Input/InputWrapper/get-input-offsets.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Loader/Loader.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Loader/loaders/Bars.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Loader/loaders/Dots.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Loader/loaders/Oval.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Modal/Modal.context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Modal/Modal.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Modal/ModalContent/ModalContent.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Modal/ModalRoot/ModalRoot.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBase.context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBase.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBase.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseBody/ModalBaseBody.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseCloseButton/ModalBaseCloseButton.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseCloseButton/ModalBaseCloseButton.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseContent/ModalBaseContent.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseContent/ModalBaseContent.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseHeader/ModalBaseHeader.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseOverlay/ModalBaseOverlay.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseOverlay/ModalBaseOverlay.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/ModalBaseTitle/ModalBaseTitle.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/NativeScrollArea/NativeScrollArea.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ModalBase/use-lock-scroll.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Overlay/Overlay.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Paper/Paper.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Popover/Popover.errors.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Popover/Popover.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Popover/PopoverDropdown/PopoverDropdown.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Popover/PopoverDropdown/PopoverDropdown.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Popover/PopoverTarget/PopoverTarget.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Popover/use-popover.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Portal/OptionalPortal.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Radio/Radio.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Radio/RadioGroup.context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Radio/RadioGroup/RadioGroup.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/ScrollArea/ScrollArea.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Select/DefaultItem/DefaultItem.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Select/SelectItems/SelectItems.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Select/SelectPopover/SelectPopover.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Select/SelectPopover/SelectPopover.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Select/SelectScrollArea/SelectScrollArea.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Skeleton/Skeleton.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Space/Space.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Stack/Stack.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Stepper/StepCompleted/StepCompleted.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Stepper/Stepper.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Text/Text.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Tooltip/Tooltip.errors.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Tooltip/Tooltip.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Tooltip/Tooltip.styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Tooltip/TooltipFloating/TooltipFloating.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Tooltip/TooltipFloating/use-floating-tooltip.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Tooltip/TooltipGroup/TooltipGroup.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Tooltip/use-tooltip.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Transition/Transition.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Transition/get-transition-styles/get-transition-styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/core/esm/Transition/use-transition.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/filter-errors/filter-errors.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/get-input-on-change/get-input-on-change.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/get-status/get-status.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/lists/change-error-indices.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/lists/clear-list-state.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/lists/reorder-errors.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/paths/get-path.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/paths/get-splitted-path.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/paths/insert-path.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/paths/remove-path.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/paths/reorder-path.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/paths/set-path.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/use-form.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/validate/should-validate-on-change.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/validate/validate-field-value.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/form/esm/validate/validate-values.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-click-outside/use-click-outside.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-did-update/use-did-update.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-focus-return/use-focus-return.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-focus-trap/create-aria-hider.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-focus-trap/scope-tab.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-focus-trap/tabbable.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-focus-trap/use-focus-trap.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-id/use-id.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-isomorphic-effect/use-isomorphic-effect.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-media-query/use-media-query.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-merged-ref/use-merged-ref.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-reduced-motion/use-reduced-motion.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-uncontrolled/use-uncontrolled.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/use-window-event/use-window-event.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/utils/assign-ref/assign-ref.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/hooks/esm/utils/random-id/random-id.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/modals/esm/ConfirmModal.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/modals/esm/ModalsProvider.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/modals/esm/context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/modals/esm/events.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/modals/esm/reducer.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/modals/esm/use-modals/use-modals.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/GlobalStyles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/MantineCssVariables.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/MantineProvider.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/NormalizeCSS.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/default-colors.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/default-theme.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/attach-functions.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/breakpoints/breakpoints.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/cover/cover.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/darken/darken.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/dimmed/dimmed.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/focus-styles/focus-styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/font-styles/font-styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/gradient/get-gradient-color-stops/get-gradient-color-stops.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/gradient/gradient.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/hover/hover.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/index.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/lighten/lighten.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/placeholder-styles/placeholder-styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/primary-color/primary-color.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/primary-shade/primary-shade.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/radius/radius.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/rgba/rgba.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/theme-color/theme-color.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/functions/fns/variant/variant.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/utils/filter-props/filter-props.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/utils/get-default-z-index/get-default-z-index.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/utils/get-size/get-size.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/utils/merge-theme/merge-theme.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/theme/utils/rem/rem.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/tss/create-styles.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/tss/default-emotion-cache.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/tss/get-styles-ref.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/tss/use-css.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/tss/utils/merge-class-names/merge-class-names.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/esm/tss/utils/use-guaranteed-memo/use-guaranteed-memo.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/styles/node_modules/clsx/dist/clsx.m.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/close-on-escape/close-on-escape.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/create-safe-context/create-safe-context.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/create-scoped-keydown-handler/create-scoped-keydown-handler.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/create-use-external-events/create-use-external-events.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/find-element-ancestor/find-element-ancestor.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/get-safe-id/get-safe-id.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/group-options/group-options.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/is-element/is-element.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/noop/noop.js
+
+// CONCATENATED MODULE: ./node_modules/@mantine/utils/esm/pack-sx/pack-sx.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/number/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/primitive/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-compose-refs/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-context/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-direction/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-presence/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-primitive/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-primitive/node_modules/@babel/runtime/helpers/esm/extends.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-scroll-area/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-scroll-area/node_modules/@babel/runtime/helpers/esm/extends.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-slot/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-slot/node_modules/@babel/runtime/helpers/esm/extends.js
+
+// CONCATENATED MODULE: ./node_modules/@radix-ui/react-use-callback-ref/dist/index.module.js
+
+// CONCATENATED MODULE: ./node_modules/@react-leaflet/core/lib/attribution.js
+
+// CONCATENATED MODULE: ./node_modules/@react-leaflet/core/lib/context.js
+
+// CONCATENATED MODULE: ./node_modules/@react-leaflet/core/lib/div-overlay.js
+
+// CONCATENATED MODULE: ./node_modules/@react-leaflet/core/lib/element.js
+
+// CONCATENATED MODULE: ./node_modules/@react-leaflet/core/lib/events.js
+
+// CONCATENATED MODULE: ./node_modules/@react-leaflet/core/lib/pane.js
+
+// CONCATENATED MODULE: ./node_modules/dangerously-set-html-content/dist/index.modern.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/addLeadingZeros/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/assign/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/format/lightFormatters/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/format/longFormatters/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/getTimezoneOffsetInMilliseconds/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/getUTCDayOfYear/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/getUTCISOWeek/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/getUTCISOWeekYear/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/getUTCWeek/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/getUTCWeekYear/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/protectedTokens/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/requiredArgs/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/setUTCDay/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/setUTCISODay/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/setUTCISOWeek/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/setUTCWeek/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/startOfUTCISOWeek/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/startOfUTCISOWeekYear/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/startOfUTCWeek/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/startOfUTCWeekYear/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/_lib/toInteger/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/add/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/addDays/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/addMilliseconds/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/addMonths/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/addWeeks/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/eachDayOfInterval/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/isAfter/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/isDate/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/isValid/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/locale/_lib/buildFormatLongFn/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/locale/_lib/buildLocalizeFn/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/locale/_lib/buildMatchFn/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/locale/en-US/_lib/formatDistance/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/locale/en-US/_lib/formatLong/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/locale/en-US/_lib/localize/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/locale/en-US/_lib/match/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/Parser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/Setter.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/AMPMMidnightParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/AMPMParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/DateParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/DayOfYearParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/DayParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/DayPeriodParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/EraParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/ExtendedYearParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/FractionOfSecondParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/Hour0To11Parser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/Hour0to23Parser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/Hour1To24Parser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/Hour1to12Parser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/ISODayParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/ISOTimezoneParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/ISOTimezoneWithZParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/ISOWeekParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/ISOWeekYearParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/LocalDayParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/LocalWeekParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/LocalWeekYearParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/MinuteParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/MonthParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/QuarterParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/SecondParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/StandAloneLocalDayParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/StandAloneMonthParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/StandAloneQuarterParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/TimestampMillisecondsParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/TimestampSecondsParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/parsers/YearParser.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/_lib/utils.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/parse/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/startOfWeek/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/subDays/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/subMilliseconds/index.js
+
+// CONCATENATED MODULE: ./node_modules/date-fns/esm/toDate/index.js
+
+// CONCATENATED MODULE: ./node_modules/dom7/dom7.esm.js
+
+// CONCATENATED MODULE: ./node_modules/entities/lib/esm/decode.js
+
+// CONCATENATED MODULE: ./node_modules/entities/lib/esm/generated/decode-data-html.js
+
+// CONCATENATED MODULE: ./node_modules/history/esm/history.js
+
+// CONCATENATED MODULE: ./node_modules/klona/full/index.mjs
+
+// CONCATENATED MODULE: ./node_modules/react-leaflet/lib/Popup.js
+
+// CONCATENATED MODULE: ./node_modules/react-loading-skeleton/dist/index.mjs
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/core/queryClient.js
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/react/QueryErrorResetBoundary.js
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/react/setBatchUpdatesFn.js
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/react/setLogger.js
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/react/useBaseQuery.js
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/react/useIsMutating.js
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/react/useMutation.js
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/react/useQuery.js
+
+// CONCATENATED MODULE: ./node_modules/react-query/es/react/utils.js
+
+// CONCATENATED MODULE: ./node_modules/react-remove-scroll-bar/dist/es2015/constants.js
+
+// CONCATENATED MODULE: ./node_modules/react-remove-scroll/dist/es2015/medium.js
+
+// CONCATENATED MODULE: ./node_modules/react-remove-scroll/dist/es2015/sidecar.js
+
+// CONCATENATED MODULE: ./node_modules/react-router/esm/react-router.js
+
+// CONCATENATED MODULE: ./node_modules/react-style-singleton/dist/es2015/singleton.js
+
+// CONCATENATED MODULE: ./node_modules/react-textarea-autosize/node_modules/@babel/runtime/helpers/esm/extends.js
+
+// CONCATENATED MODULE: ./node_modules/react-textarea-autosize/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+
+// CONCATENATED MODULE: ./node_modules/resolve-pathname/esm/resolve-pathname.js
+
+// CONCATENATED MODULE: ./node_modules/ssr-window/ssr-window.esm.js
+
+// CONCATENATED MODULE: ./node_modules/styled-components/dist/styled-components.esm.js
+
+// CONCATENATED MODULE: ./node_modules/stylis/src/Enum.js
+
+// CONCATENATED MODULE: ./node_modules/stylis/src/Parser.js
+
+// CONCATENATED MODULE: ./node_modules/stylis/src/Serializer.js
+
+// CONCATENATED MODULE: ./node_modules/stylis/src/Tokenizer.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/components-shared/get-changed-params.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/components-shared/get-params.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/components-shared/mount-swiper.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/components-shared/params-list.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/components-shared/update-swiper.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/components-shared/utils.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/breakpoints/getBreakpoint.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/breakpoints/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/breakpoints/setBreakpoint.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/check-overflow/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/classes/addClasses.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/classes/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/classes/removeClasses.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/core.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/events-emitter.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/events/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/events/onClick.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/events/onResize.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/events/onScroll.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/events/onTouchEnd.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/events/onTouchMove.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/events/onTouchStart.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/grab-cursor/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/grab-cursor/setGrabCursor.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/grab-cursor/unsetGrabCursor.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/images/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/images/loadImage.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/images/preloadImages.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/loop/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/loop/loopCreate.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/loop/loopDestroy.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/loop/loopFix.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/moduleExtendParams.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/modules/observer/observer.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/modules/resize/resize.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/slide/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/slide/slideNext.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/slide/slidePrev.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/slide/slideReset.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/slide/slideTo.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/slide/slideToClickedSlide.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/slide/slideToClosest.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/slide/slideToLoop.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/transition/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/transition/setTransition.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/transition/transitionEmit.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/transition/transitionEnd.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/transition/transitionStart.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/translate/getTranslate.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/translate/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/translate/maxTranslate.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/translate/minTranslate.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/translate/setTranslate.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/translate/translateTo.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/index.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateActiveIndex.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateAutoHeight.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateClickedSlide.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateProgress.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateSize.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateSlides.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateSlidesClasses.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateSlidesOffset.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/core/update/updateSlidesProgress.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/modules/effect-cards/effect-cards.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/modules/navigation/navigation.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/modules/pagination/pagination.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/modules/virtual/virtual.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/modules/zoom/zoom.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/react/context.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/react/get-children.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/react/loop.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/react/swiper-react.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/react/swiper-slide.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/react/swiper.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/react/use-isomorphic-layout-effect.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/react/virtual.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/shared/calc-looped-slides.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/shared/classes-to-selector.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/shared/create-element-if-not-defined.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/shared/dom.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/shared/get-support.js
+
+// CONCATENATED MODULE: ./node_modules/swiper/shared/utils.js
+
+// CONCATENATED MODULE: ./node_modules/use-callback-ref/dist/es2015/assignRef.js
+
+// CONCATENATED MODULE: ./node_modules/use-callback-ref/dist/es2015/useMergeRef.js
+
+// CONCATENATED MODULE: ./node_modules/use-callback-ref/dist/es2015/useRef.js
+
+// CONCATENATED MODULE: ./node_modules/use-isomorphic-layout-effect/dist/use-isomorphic-layout-effect.esm.js
+
+// CONCATENATED MODULE: ./node_modules/use-sidecar/dist/es2015/exports.js
+
+// CONCATENATED MODULE: ./node_modules/use-sidecar/dist/es2015/medium.js
+
+// CONCATENATED MODULE: ./src/api_context.ts
+
+// CONCATENATED MODULE: ./src/authorized_api_base.ts
+
+// CONCATENATED MODULE: ./src/edit_reservation/edit_reservation.tsx
+
+// CONCATENATED MODULE: ./src/edit_reservation/main.tsx
+
+// CONCATENATED MODULE: ./src/edit_reservation/search_context.ts
+
+// CONCATENATED MODULE: ./src/generated_api.ts
+
+// CONCATENATED MODULE: ./src/hooks/campaigns/useCampaignMutations.ts
+
+// CONCATENATED MODULE: ./src/hooks/modals/shared.ts
+
+// CONCATENATED MODULE: ./src/hooks/modals/useAddonModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/modals/useAvailableAddonsModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/modals/useConfirmModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/modals/useMultiPropertyFilterModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/modals/useMultiPropertyInfoModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/modals/usePackageInfoModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/modals/useProductInfoModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/modals/useRoomInfoModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/modals/useTermsAndConditionsModal.tsx
+
+// CONCATENATED MODULE: ./src/hooks/useBasketOperations.ts
+
+// CONCATENATED MODULE: ./src/hooks/useCalendarSearch.ts
+
+// CONCATENATED MODULE: ./src/hooks/useCurrencyFormatter.ts
+
+// CONCATENATED MODULE: ./src/hooks/useGuestRooms.ts
+
+// CONCATENATED MODULE: ./src/hooks/useMandatoryDynamicAddonPackages.ts
+
+// CONCATENATED MODULE: ./src/hooks/useSearch.ts
+
+// CONCATENATED MODULE: ./src/lib/utils/fadeOut.ts
+
+// CONCATENATED MODULE: ./src/lib/utils/filterMultiPropertyAlternatives.tsx
+
+// CONCATENATED MODULE: ./src/lib/utils/getMonthName.tsx
+
+// CONCATENATED MODULE: ./src/lib/utils/getNumberOfGuests.tsx
+
+// CONCATENATED MODULE: ./src/lib/utils/getRoomAttributes.tsx
+
+// CONCATENATED MODULE: ./src/lib/utils/getSaveAmountOrPercentage.tsx
+
+// CONCATENATED MODULE: ./src/reservation/addOns/mandatory_timeslot_addons/styles.ts
+
+// CONCATENATED MODULE: ./src/reservation/addOns/optional_addons/add_to_basket_button.tsx
+
+// CONCATENATED MODULE: ./src/reservation/addOns/optional_addons/addon_list_item.tsx
+
+// CONCATENATED MODULE: ./src/reservation/atoms/editReservationRateSelectedMethodOverrideState.ts
+
+// CONCATENATED MODULE: ./src/reservation/atoms/languageCultureState.ts
+
+// CONCATENATED MODULE: ./src/reservation/atoms/selectedLanguageIdState.ts
+
+// CONCATENATED MODULE: ./src/reservation/atoms/sessionStorageEffect.ts
+
+// CONCATENATED MODULE: ./src/reservation/context_providers/api_context.tsx
+
+// CONCATENATED MODULE: ./src/reservation/context_providers/event_tracking_context.tsx
+
+// CONCATENATED MODULE: ./src/reservation/edit_reservation/customer_info_edit.tsx
+
+// CONCATENATED MODULE: ./src/reservation/edit_reservation/styles.ts
+
+// CONCATENATED MODULE: ./src/reservation/modals/addons/add_on_footer.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/addons/addon_modal_context.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/addons/expander_button.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/addons/one_per_room.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/addons/price_per_guest.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/addons/timeslots/timeslot_addon.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/addons/timeslots/timeslot_date.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/confirm_changes/confirm_changes_modal.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/edit_room/styles.ts
+
+// CONCATENATED MODULE: ./src/reservation/modals/package_info_modal.tsx
+
+// CONCATENATED MODULE: ./src/reservation/modals/reconfigure_booking/atoms.ts
+
+// CONCATENATED MODULE: ./src/reservation/modals/styles.ts
+
+// CONCATENATED MODULE: ./src/reservation/modals/terms_and_conditions_modal.tsx
+
+// CONCATENATED MODULE: ./src/reservation/multiproperty/components/property_list/interfaces.ts
+
+// CONCATENATED MODULE: ./src/reservation/multiproperty/components/search_bar/atoms.ts
+
+// CONCATENATED MODULE: ./src/reservation/multiproperty/hooks/usePropertiesPaginationList.ts
+
+// CONCATENATED MODULE: ./src/reservation/styles.ts
+
+// CONCATENATED MODULE: ./src/shared_components/accommodation_detail_facility_item.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/basket_drawer/atoms.ts
+
+// CONCATENATED MODULE: ./src/shared_components/basket_drawer/conference_room_summary.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/booking_summary/functions.ts
+
+// CONCATENATED MODULE: ./src/shared_components/booking_summary/optional_addons.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/booking_summary/room_summary.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/button_with_popover/button_with_popover.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/calendar/calendar_day_item.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/error_boundary/error_boundary.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/helpers.ts
+
+// CONCATENATED MODULE: ./src/shared_components/icons.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/image_carousel/image_carousel_simple.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/line_text/line_text.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/list/room_list/context_provider.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/list/shared/styles.ts
+
+// CONCATENATED MODULE: ./src/shared_components/price_list/rate_selector.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/price_list/tiles/rate_card.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/product_card/plate/addon/addon_context.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/product_card/plate/addon/addon_info.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/product_card/plate/room/price_info.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/product_card/plate/room/room_info.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/product_card/plate/shared/more_info_button.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/product_card/shared/choose_button.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/product_card/shared/few_left_ribbon.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/styles/BVSkeleton.ts
+
+// CONCATENATED MODULE: ./src/shared_components/styles/BodyTextLabel.ts
+
+// CONCATENATED MODULE: ./src/shared_components/styles/BodyTextStyle.ts
+
+// CONCATENATED MODULE: ./src/shared_components/styles/Button.ts
+
+// CONCATENATED MODULE: ./src/shared_components/styles/SubtitleStyle.ts
+
+// CONCATENATED MODULE: ./src/shared_components/unlock_box/traveller_auth/traveller_auth.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/unlock_box/unlock_box.tsx
+
+// CONCATENATED MODULE: ./src/shared_components/utils/dateToServerFormat.ts
+
+// CONCATENATED MODULE: ./src/shared_components/utils/hexToHSLA.ts
+
+// CONCATENATED MODULE: ./src/translations/common.ts
+
+// CRS's `wrapLat` and `wrapLng` properties, if they are outside the CRS's bounds.
+
+// CRS's bounds.
+
+// Callbacks
+
+// Called internally when the icon has to be shown, returns a `<img>` HTML element
+
+// Called only internally, must be overridden by classes extending `GridLayer`.
+
+// Called only internally, overrides GridLayer's [`createTile()`](#gridlayer-createtile)
+
+// Called only internally, returns the URL for a tile given its coordinates.
+
+// Called when the handler is disabled, should remove the event hooks added previously.
+
+// Called when the handler is enabled, should add event hooks.
+
+// Calls `methodName` on every layer contained in this group, passing any
+
+// Calls `setZIndex` on every layer contained in this group, passing the z-index.
+
+// Canvas obviously doesn't have mouse events for individual drawn objects,
+
+// Cast T to S
+
+// Causes the layer to clear all the tiles and request them again.
+
+// Certain screen readers intercept the key event and instead send a click event
+
+// Changes styles of GeoJSON vector layers with the given style function.
+
+// Changes the URL of the image.
+
+// Changes the [opacity](#gridlayer-opacity) of the grid layer.
+
+// Changes the [zIndex offset](#marker-zindexoffset) of the marker.
+
+// Changes the [zIndex](#gridlayer-zindex) of the grid layer.
+
+// Changes the [zIndex](#imageoverlay-zindex) of the image overlay.
+
+// Changes the appearance of a Path based on the options in the `Path options` object.
+
+// Changes the marker icon.
+
+// Changes the marker position to the given point.
+
+// Changes the opacity of the marker.
+
+// Check if module is in cache
+
+// Checks if the map container size changed and updates the map if so —
+
+// Classes
+
+// Classes extending `L.Layer` will inherit the following options:
+
+// Classes extending `TileLayer` can override this function to provide custom tile URL naming schemes.
+
+// Classes inheriting from `Handler` must implement the two following methods:
+
+// Clicks
+
+// Closes the overlay.
+
+// Closes the popup bound to this layer if it is open.
+
+// Closes the popup previously opened with [openPopup](#map-openpopup) (or the given one).
+
+// Closes the tooltip bound to this layer if it is open.
+
+// Closes the tooltip given as parameter.
+
+// Collapse the control container if expanded.
+
+// Comma-separated list of WMS styles.
+
+// Compute and cache lazy property if not already done.
+
+// Concurrency Helpers for Atoms/Selectors
+
+// Controls how much the map's zoom level will change after a
+
+// Controls the presence of a close button in the popup.
+
+// Convenience Atoms/Selectors
+
+// Coordinate Reference System to use for the WMS requests, defaults to
+
+// Coordinates values are rounded with [`formatNum`](#util-formatnum) function with given `precision`.
+
+// Create a new module (and put it into the cache)
+
+// Create blank cleanup handlers for atoms so snapshots don't re-run
+
+// Creates a `Draggable` object for moving `el` when you start dragging the `dragHandle` element (equals `el` itself by default).
+
+// Creates a new [map pane](#map-pane) with the given name if it doesn't exist already,
+
+// Creates a popup with the specified content and options and opens it in the given point on a map.
+
+// Creates a tooltip with the specified content and options and open it.
+
+// Cursor
+
+// Custom HTML code to put inside the div element, empty by default. Alternatively,
+
+// DO NOT overwrite style options from the context if `propsStyleOptions`
+
+// DOM event handling
+
+// Day of the month
+
+// Day of week
+
+// Day of year
+
+// Decreases the zoom of the map by `delta` ([`zoomDelta`](#map-zoomdelta) by default).
+
+// Default may be a static value, promise, or RecoilValue
+
+// Defaults to the classic family if family is not available
+
+// Defines the maximum size of a CSS translation transform. The default
+
+// Delete the old one, since we're replacing it with a new one
+
+// Destroys the map and clears all related event listeners.
+
+// Direction where to open the tooltip. Possible values are: `right`, `left`,
+
+// Disable polyline clipping.
+
+// Disable swiper and hide navigation when container not overflow
+
+// Disables the dragging ability
+
+// Disables the handler
+
+// Distance (in pixels to the left/right and to the top/bottom) of the
+
+// Don't allow setting virtual elements using the old technique back to
+
+// Don't trust window-geometry-based delta
+
+// ESM COMPAT FLAG
+
+// EXPORTS
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faAngleDown.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faAngleRight.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faBedFront.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faBox.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faCalendar.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faCalendarDays.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faChampagneGlasses.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faCheck.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faChevronDown.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faChevronLeft.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faChevronRight.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faCircleInfo.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faDoorOpen.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faLock.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faMinus.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faMoonStars.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faPlus.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faThumbsUp.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-regular-svg-icons/faXmarkLarge.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faCalendar.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faCheck.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faChevronDown.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faChevronRight.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faClose.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faInfoCircle.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faPeriod.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faTrashCan.js
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/pro-solid-svg-icons/faXmark.js
+
+// EXTERNAL MODULE: ./node_modules/fast-deep-equal/index.js
+
+// EXTERNAL MODULE: ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+
+// EXTERNAL MODULE: ./node_modules/leaflet/dist/leaflet-src.js
+
+// EXTERNAL MODULE: ./node_modules/lodash/chunk.js
+
+// EXTERNAL MODULE: ./node_modules/lodash/debounce.js
+
+// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
+
+// EXTERNAL MODULE: ./node_modules/lodash/orderBy.js
+
+// EXTERNAL MODULE: ./node_modules/lodash/size.js
+
+// EXTERNAL MODULE: ./node_modules/lodash/sortBy.js
+
+// EXTERNAL MODULE: ./node_modules/react-dom/index.js
+
+// EXTERNAL MODULE: ./node_modules/react-dom/server.browser.js
+
+// EXTERNAL MODULE: ./node_modules/react-facebook-pixel/dist/fb-pixel.js
+
+// EXTERNAL MODULE: ./node_modules/react-ga4/dist/index.js
+
+// EXTERNAL MODULE: ./node_modules/react-gtm-module/dist/index.js
+
+// EXTERNAL MODULE: ./node_modules/react-is/index.js
+
+// EXTERNAL MODULE: ./node_modules/react-loading-skeleton/dist/skeleton.css
+
+// EXTERNAL MODULE: ./node_modules/react-query/es/core/focusManager.js
+
+// EXTERNAL MODULE: ./node_modules/react-query/es/core/logger.js
+
+// EXTERNAL MODULE: ./node_modules/react-query/es/core/notifyManager.js
+
+// EXTERNAL MODULE: ./node_modules/react-query/es/core/retryer.js
+
+// EXTERNAL MODULE: ./node_modules/react-query/es/core/utils.js
+
+// EXTERNAL MODULE: ./node_modules/react-responsive/dist/react-responsive.js
+
+// EXTERNAL MODULE: ./node_modules/react-router/node_modules/path-to-regexp/index.js
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+
+// EXTERNAL MODULE: ./node_modules/shallowequal/index.js
+
+// EXTERNAL MODULE: ./node_modules/swiper/modules/zoom/zoom.min.css
+
+// EXTERNAL MODULE: ./node_modules/swiper/swiper.min.css
+
+// Effects
+
+// Enables simulation of `contextmenu` event, default is `true` for mobile Safari.
+
+// Enables the dragging ability
+
+// Enables the handler
+
+// Equivalent of setting both top left and bottom right autopan padding to the same value.
+
+// Era
+
+// Exclamation
+
+// Execute the module function
+
+// Expand the control container if collapsed.
+
+// Exports
+
+// Extend the bounds to contain the given bounds
+
+// Extend the bounds to contain the given point
+
+// Extended year. This is a single number designating the year of this calendar system.
+
+// Extends the bounds to contain the given point.
+
+// FIXME here's a copy
+
+// Fill color. Defaults to the value of the [`color`](#path-color) option
+
+// Fill opacity.
+
+// Fires an event of the specified type. You can optionally provide a data
+
+// Flag the module as loaded
+
+// Flow doesn't know that T isn't a function, so we need to case to any
+
+// For example, a ratio of 0.5 extends the bounds by 50% in each direction.
+
+// For example, if count is 3.5, we've already added 3 full
+
+// For example, reading a selector from a cloned snapshot shouldn't cache
+
+// For old IE
+
+// For performance & cleanliness, don't add any inline styles unless we have to
+
+// For use with React "context bridging"
+
+// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+
+// Forces the map's zoom level to always be a multiple of this, particularly
+
+// Form elements to match
+
+// Fraction of second
+
+// Get the bounds that this ImageOverlay covers
+
+// Getting an empty string will occur if the attribute is set on the HTML tag but without a value
+
+// Given a MouseEvent object, returns geographical coordinate where the
+
+// Given a MouseEvent object, returns the pixel coordinate relative to
+
+// Given a MouseEvent object, returns the pixel coordinate relative to the
+
+// Given a geographical coordinate, returns the corresponding pixel coordinate
+
+// Given a pixel coordinate relative to the [origin pixel](#map-getpixelorigin),
+
+// Given a pixel coordinate relative to the map container, returns
+
+// Given a pixel coordinate relative to the map container, returns the corresponding
+
+// Given a projected coordinate returns the corresponding LatLng.
+
+// Global Recoil environment settiongs
+
+// Granularly check for `item` changes, because the `getItemProps` getter
+
+// GridLayer will only be displayed once at low zoom levels. Has no
+
+// Hooks for Atoms/Selectors
+
+// Hooks for complex operations
+
+// Hour [0-11]
+
+// Hour [0-23]
+
+// Hour [1-12]
+
+// Hour [1-24]
+
+// How many scroll pixels (as reported by [L.DomEvent.getWheelDelta](#domevent-getwheeldelta))
+
+// How much to extend the click tolerance around a path/object on the map.
+
+// How much to extend the clip area around the map view (relative to its size)
+
+// How much to simplify the polyline on each zoom level. More means
+
+// IE7 bugs out if you create a radio dynamically, so you have to do it this hacky way (see https://stackoverflow.com/a/119079)
+
+// ISO day of week
+
+// ISO week of year
+
+// ISO week-numbering year
+
+// Icon instance to use for rendering the marker.
+
+// If `latlng` is already within the (optionally padded) display bounds,
+
+// If `layer` is omitted, the style of all features in the current layer is reset.
+
+// If `maxBounds` is set, this option will control how solid the bounds
+
+// If `options.debounceMoveend` is `true`, it will delay `moveend` event so
+
+// If `true` and user is on a retina display, it will request four tiles of half the specified size and a bigger zoom level in place of one to utilize the high resolution.
+
+// If `true`, WMS request parameter keys will be uppercase.
+
+// If `true`, inverses Y axis numbering for tiles (turn this on for [TMS](https://en.wikipedia.org/wiki/Tile_Map_Service) services).
+
+// If `true`, the WMS service will return images with transparency.
+
+// If `true`, the base layers in the control will be hidden when there is only one.
+
+// If `true`, the control will assign zIndexes in increasing order to all of its layers so that the order is preserved when switching them on/off.
+
+// If `true`, the control will be collapsed into an icon and expanded on mouse hover, touch, or keyboard activation.
+
+// If `true`, the image overlay will emit [mouse events](#interactive-layer) when clicked or hovered.
+
+// If `true`, the marker will get on top of others when you hover the mouse over it.
+
+// If `zoom` is omitted, the map's current zoom level is used.
+
+// If a String is provided, all tiles will have their crossOrigin attribute set to the String provided. This is needed if you want to access tile pixel data.
+
+// If a String is provided, all tiles will have their referrerPolicy attribute set to the String provided.
+
+// If a String is provided, the image will have its crossOrigin attribute set to the String provided. This is needed if you want to access image pixel data.
+
+// If any custom options not documented here are used, they will be sent to the
+
+// If enabled, panning of the map will have an inertia effect where
+
+// If not specified and at least one `GridLayer` or `TileLayer` is in the map,
+
+// If not specified, a common instance of `L.Icon.Default` is used.
+
+// If set to true, the zoom number used in tile URLs will be reversed (`maxZoom - zoom` instead of `zoom`)
+
+// If set, creates a scrollable container of the given height
+
+// If set, tiles will only be loaded inside the set `LatLngBounds`.
+
+// If the URL does not change, the layer will not be redrawn unless
+
+// If the deps for the execution match our current state, then it's valid
+
+// If this execution was already checked to be valid with this version
+
+// If true, the coordinate space will be unbounded (infinite in both axes)
+
+// If true, the popup/tooltip will listen to the mouse events.
+
+// If true, the tooltip will follow the mouse instead of being fixed at the feature center.
+
+// If we "suspended", then try again.
+
+// If we already have a replaced node we do not want to continue nesting within it.
+
+// If we are parsing an attribute
+
+// If we have a Kit, we can't determine if regular is available since we
+
+// If we've already processed it but the current computed style does not result in a font-family,
+
+// Images
+
+// Increases the zoom of the map by `delta` ([`zoomDelta`](#map-zoomdelta) by default).
+
+// Indexes
+
+// Initial geographic center of the map
+
+// Initial map zoom level
+
+// Internals
+
+// Inverse of [`project`](#map-project).
+
+// Inverse of `scale()`, returns the zoom level corresponding to a scale
+
+// Inverse of `scaleBy`. Divide each coordinate of the current point by
+
+// It is possible to use functions in parameters if the user uses
+
+// Iterates over the layers of the group, optionally specifying context of the iterator function.
+
+// Last click time
+
+// Layers extending `GridLayer` shall reimplement the following method.
+
+// Layers extending `TileLayer` might reimplement the following method.
+
+// Legacy IE pixels
+
+// Legacy Moz lines
+
+// Legacy Moz pages
+
+// Like `wrapLng`, but for the latitude (vertical) axis.
+
+// Limits the rate at which a wheel can fire (in milliseconds). By default
+
+// Lines
+
+// Load new tiles only when panning ends.
+
+// Local day of week
+
+// Local week of year
+
+// Local week-numbering year
+
+// Locks
+
+// Makes the map focusable and allows users to navigate the map with keyboard
+
+// Match Express-style parameters and un-named parameters with a prefix
+
+// Match escaped characters that would otherwise appear in future matches.
+
+// Max speed of the inertial movement, in pixels/second.
+
+// Max width of the popup, in pixels.
+
+// Maximum width of the control in pixels. The width is set dynamically to show round values (e.g. 100, 200, 500).
+
+// Maximum zoom level of the map.
+
+// Maximum zoom number the tile source has available. If it is specified,
+
+// Mean Earth Radius, as recommended for use by
+
+// Memory Management
+
+// Merges an object with the new parameters and re-requests tiles on the current screen (unless `noRedraw` was set to true).
+
+// Milliseconds timestamp
+
+// Min width of the popup, in pixels.
+
+// Minimum zoom level of the map.
+
+// Minimum zoom number the tile source has available. If it is specified,
+
+// Minute
+
+// Mobile browsers will play the video right where it is instead of open it up in fullscreen mode.
+
+// Module
+
+// Month
+
+// Multiply each coordinate of the current point by each coordinate of
+
+// NB: PLEASE un-export applyAtomValueWrites when deleting this code
+
+// NEW
+
+// NS
+
+// Needed by the `Canvas` renderer for interactivity
+
+// Negative values will retract the bounds.
+
+// New https://developers.google.com/analytics/devguides/collection/gtagjs/cookies-user-id#cookie_update
+
+// Node.js 0.10 has enumerable non-index properties on buffers.
+
+// Normalizes the [tileSize option](#gridlayer-tilesize) into a point. Used by the `createTile()` method.
+
+// Note that, if your page doesn't use HTTPS, this method will fail in
+
+// Number of pixels the map should pan by.
+
+// Object.getOwnPropertyNames() has consistent key ordering with ES6
+
+// Old https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#cookieUpdate
+
+// On some browsers autoplay will only work with `muted: true`
+
+// Only accepts actual `L.LatLngBounds` instances, not arrays.
+
+// Only accepts actual `L.Point` instances, not arrays.
+
+// Only convert the pseudo element in this ::before/::after position into an icon if we haven't
+
+// Opacity of the tiles. Can be used in the `createTile()` function.
+
+// Opens or closes the overlay bound to layer depending on its current state.
+
+// Opens or closes the popup bound to this layer depending on its current state.
+
+// Opens or closes the tooltip bound to this layer depending on its current state.
+
+// Opens the bound popup at the specified `latlng` or at the default popup anchor if no `latlng` is passed.
+
+// Opens the bound tooltip at the specified `latlng` or at the default tooltip anchor if no `latlng` is passed.
+
+// Opens the specified popup while closing the previously opened (to make sure only one is opened at one time for usability).
+
+// Opens the specified tooltip.
+
+// Option inherited from "Interactive layer" abstract class
+
+// Optional offset of the tooltip position.
+
+// Optional relative position of the background, in pixels
+
+// Overrides
+
+// Pages
+
+// Pans the map by a given number of pixels (animated).
+
+// Pans the map the minimum amount to make the `latlng` visible. Use
+
+// Pans the map to a given center.
+
+// Pans the map to the closest view that would lie inside the given bounds (if it's not already), controlling the animation using the options specific, if any.
+
+// Pass corner sizes as CSS vars to reduce re-renders of context consumers
+
+// Passive Listeners
+
+// PhantomJS 2 has enumerable non-index properties on typed arrays.
+
+// Pixels
+
+// Precision limit of a 32-bit float
+
+// Private method to load tiles in the grid's active zoom level according to map bounds
+
+// Progress
+
+// Projects a geographical coordinate `LatLng` according to the projection
+
+// Projects geographical coordinates into coordinates in units accepted for
+
+// Projects geographical coordinates into pixel coordinates for a given zoom.
+
+// Props
+
+// Props take priority over context
+
+// Quarter
+
+// RTL
+
+// Radius of the circle marker, in pixels
+
+// Recoil Root
+
+// Recoil will attemp to detect if `useSyncExternalStore()` is supported with
+
+// Redraws the layer. Sometimes useful after you changed the coordinates that the path uses.
+
+// Redraws the rectangle with the passed bounds.
+
+// Refer to [CORS Settings](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes) for valid String values.
+
+// Refer to [HTMLImageElement.referrerPolicy](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy) for valid String values.
+
+// Relevant for supported browsers. See [browser compatibility](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+
+// Remove the given layer from the control.
+
+// Removes all the layers from the group.
+
+// Removes an attribution text.
+
+// Removes an event parent, so it will stop receiving propagated events
+
+// Removes the control from the map it is currently active on.
+
+// Removes the given control from the map
+
+// Removes the given layer from the group.
+
+// Removes the given layer from the map.
+
+// Removes the layer from the given `LayerGroup`
+
+// Removes the layer from the given map
+
+// Removes the layer from the map it is currently active on.
+
+// Removes the layer with the given internal ID from the group.
+
+// Removes the popup previously bound with `bindPopup`.
+
+// Removes the tooltip previously bound with `bindTooltip`.
+
+// Replaces all the points in the polyline with the given array of geographical points.
+
+// Report current dependencies.  If the node hasn't been evaluated, then
+
+// Reports all "current" subscribers.  Evaluating other nodes or
+
+// Resets the given vector layer's style to the original GeoJSON style, useful for resetting style after hover events.
+
+// Resistance
+
+// Restricts the map view to the given bounds (see the [maxBounds](#map-maxbounds) option).
+
+// Return the exports of the module
+
+// Returns `true` if a particular event type has any listeners attached to it.
+
+// Returns `true` if any tile in the grid layer has not finished loading.
+
+// Returns `true` if both coordinates of the given point are less than the corresponding current point coordinates (in absolute values).
+
+// Returns `true` if the Polyline has no LatLngs.
+
+// Returns `true` if the bounds are properly initialized.
+
+// Returns `true` if the given `LatLng` point is at the same position (within a small margin of error). The margin of error can be overridden by setting `maxMargin` to a small number.
+
+// Returns `true` if the given internal ID is currently added to the group.
+
+// Returns `true` if the given layer is currently added to the group.
+
+// Returns `true` if the given layer is currently added to the map
+
+// Returns `true` if the given point has the same coordinates.
+
+// Returns `true` if the handler is enabled
+
+// Returns `true` if the popup bound to this layer is currently open.
+
+// Returns `true` if the rectangle contains the given one.
+
+// Returns `true` if the rectangle contains the given point.
+
+// Returns `true` if the rectangle intersects the given bounds. Two bounds
+
+// Returns `true` if the rectangle intersects the given bounds. Two bounds intersect if they have at least one point in common.
+
+// Returns `true` if the rectangle is equivalent (within a small margin of error) to the given bounds. The margin of error can be overridden by setting `maxMargin` to a small number.
+
+// Returns `true` if the rectangle is equivalent to the given bounds.
+
+// Returns `true` if the rectangle overlaps the given bounds. Two bounds
+
+// Returns `true` if the rectangle overlaps the given bounds. Two bounds overlap if their intersection is an area.
+
+// Returns `true` if the tooltip bound to this layer is currently open.
+
+// Returns `true` when the overlay is visible on the map.
+
+// Returns a [`GeoJSON`](https://en.wikipedia.org/wiki/GeoJSON) representation of the layer group (as a GeoJSON `FeatureCollection`, `GeometryCollection`, or `MultiPoint`).
+
+// Returns a [map pane](#map-pane), given its name or its HTML element (its identity).
+
+// Returns a `LatLngBounds` with the same size as the given one, ensuring
+
+// Returns a `LatLngBounds` with the same size as the given one, ensuring that
+
+// Returns a `LatLng` where `lat` and `lng` has been wrapped according to the
+
+// Returns a `LatLng` where lat and lng has been wrapped according to the
+
+// Returns a copy of the current point with ceiled coordinates (rounded up).
+
+// Returns a copy of the current point with floored coordinates (rounded down).
+
+// Returns a copy of the current point with rounded coordinates.
+
+// Returns a copy of the current point with truncated coordinates (rounded towards zero).
+
+// Returns a copy of the current point.
+
+// Returns a new `LatLngBounds` object in which each boundary is `sizeInMeters/2` meters apart from the `LatLng`.
+
+// Returns a new `LatLng` object with the longitude wrapped so it's always between -180 and +180 degrees.
+
+// Returns a plain object containing the names of all [panes](#map-pane) as keys and
+
+// Returns a string representation of the point (for debugging purposes).
+
+// Returns a string representation of the point for debugging purposes.
+
+// Returns a string with bounding box coordinates in a 'southwest_lng,southwest_lat,northeast_lng,northeast_lat' format. Useful for sending requests to web services that return geo data.
+
+// Returns a transformed point, optionally multiplied by the given scale.
+
+// Returns an array of all the layers added to the group.
+
+// Returns an array of the points in the path, or nested arrays of points in case of multi-polyline.
+
+// Returns bounds created by extending or retracting the current bounds by a given ratio in each direction.
+
+// Returns the HTML container of the overlay.
+
+// Returns the HTML element that contains the map.
+
+// Returns the HTML element that contains the tiles for this layer.
+
+// Returns the HTMLElement that contains the control.
+
+// Returns the LatLngBounds of the Feature Group (created from bounds and coordinates of its children).
+
+// Returns the `HTMLElement` corresponding to the given `coords`. If the `done` callback
+
+// Returns the `HTMLElement` representing the named pane on the map. If `name` is omitted, returns the pane for this layer.
+
+// Returns the `LatLngBounds` of the path.
+
+// Returns the bottom-left point of the bounds.
+
+// Returns the bottom-right point of the bounds (i.e. [`this.max`](#bounds-max)).
+
+// Returns the bounds of the current map view in projected pixel
+
+// Returns the cartesian distance between the current and the given points.
+
+// Returns the center ([centroid](http://en.wikipedia.org/wiki/Centroid)) of the Polygon.
+
+// Returns the center ([centroid](https://en.wikipedia.org/wiki/Centroid)) of the polyline.
+
+// Returns the center of the ImageOverlay.
+
+// Returns the center point of the bounds.
+
+// Returns the content of the overlay.
+
+// Returns the current geographical position of the circle marker
+
+// Returns the current geographical position of the marker.
+
+// Returns the current icon used by the marker
+
+// Returns the current radius of a circle. Units are in meters.
+
+// Returns the current radius of the circle
+
+// Returns the current size of the map container (in pixels).
+
+// Returns the current zoom level of the map view
+
+// Returns the distance (in meters) to the given `LatLng` calculated using the [Spherical Law of Cosines](https://en.wikipedia.org/wiki/Spherical_law_of_cosines).
+
+// Returns the distance between two geographical coordinates according to
+
+// Returns the distance between two geographical coordinates.
+
+// Returns the east longitude of the bounds
+
+// Returns the geographical bounds visible in the current map view
+
+// Returns the geographical center of the map view
+
+// Returns the geographical point of the overlay.
+
+// Returns the instance of [`HTMLImageElement`](https://developer.mozilla.org/docs/Web/API/HTMLImageElement)
+
+// Returns the instance of [`HTMLVideoElement`](https://developer.mozilla.org/docs/Web/API/HTMLVideoElement)
+
+// Returns the instance of [`SVGElement`](https://developer.mozilla.org/docs/Web/API/SVGElement)
+
+// Returns the instance of `Renderer` that should be used to render the given
+
+// Returns the internal ID for a layer
+
+// Returns the layer with the given internal ID.
+
+// Returns the maximum zoom level of the map (if set in the `maxZoom` option of the map or of any layers).
+
+// Returns the maximum zoom level on which the given bounds fit to the map
+
+// Returns the minimum zoom level of the map (if set in the `minZoom` option of the map or of any layers), or `0` by default.
+
+// Returns the north latitude of the bounds
+
+// Returns the north-east point of the bounds.
+
+// Returns the north-west point of the bounds.
+
+// Returns the point closest to `p` on the Polyline.
+
+// Returns the popup bound to this layer.
+
+// Returns the projected pixel coordinates of the top left point of
+
+// Returns the projection's bounds scaled and transformed for the provided `zoom`.
+
+// Returns the result of addition of the current and the given points.
+
+// Returns the result of division of the current point by the given number.
+
+// Returns the result of multiplication of the current point by the given number.
+
+// Returns the result of subtraction of the given point from the current.
+
+// Returns the reverse transformation of the given point, optionally divided
+
+// Returns the scale factor to be applied to a map transition from zoom level
+
+// Returns the scale used when transforming projected coordinates into
+
+// Returns the size of the given bounds
+
+// Returns the south latitude of the bounds
+
+// Returns the south-east point of the bounds.
+
+// Returns the south-west point of the bounds.
+
+// Returns the tooltip bound to this layer.
+
+// Returns the top-left point of the bounds (i.e. [`this.min`](#bounds-min)).
+
+// Returns the top-right point of the bounds.
+
+// Returns the west longitude of the bounds
+
+// Returns the world's bounds in pixel coordinates for zoom level `zoom`.
+
+// Returns the zoom level that the map would end up at, if it is at `fromZoom`
+
+// Returns true if leaf was actually deleted from the tree
+
+// Ring
+
+// Round length
+
+// Run an animation of a given element to a new position, optionally setting
+
+// Runs the given function `fn` when the map gets initialized with
+
+// SVG does not have the concept of zIndex so we resort to changing the DOM order of elements
+
+// SVG-related properties
+
+// Safari 9 has enumerable `arguments.length` in strict mode.
+
+// Second
+
+// Seconds timestamp
+
+// See [Icon documentation](#L.Icon) for details on how to customize the marker icon.
+
+// See `Locate options` for more details.
+
+// Set it if you want to override the default behavior of the popup closing when user clicks
+
+// Set it to `false` if you don't want the map to do panning animation
+
+// Set it to `false` if you want to override the default behavior of
+
+// Set it to `true` if you want to prevent users from panning the popup
+
+// Set it to false if you don't want the map to zoom beyond min/max zoom
+
+// Set wrapper width
+
+// Sets a map view that contains the given geographical bounds with the
+
+// Sets a map view that mostly contains the whole world with the maximum
+
+// Sets the HTML content of the overlay while initializing. If a function is passed the source layer will be
+
+// Sets the HTML content of the overlay. If a function is passed the source layer will be passed to the function.
+
+// Sets the content of the popup bound to this layer.
+
+// Sets the content of the tooltip bound to this layer.
+
+// Sets the geographical point where the overlay will open.
+
+// Sets the given path options to each layer of the group that has a `setStyle` method.
+
+// Sets the lower limit for the available zoom levels (see the [minZoom](#map-minzoom) option).
+
+// Sets the opacity of the overlay.
+
+// Sets the position of a circle marker to a new location.
+
+// Sets the position of the control.
+
+// Sets the radius of a circle marker. Units are in pixels.
+
+// Sets the radius of a circle. Units are in meters.
+
+// Sets the upper limit for the available zoom levels (see the [maxZoom](#map-maxzoom) option).
+
+// Sets the view of the map (geographical center and zoom) performing a smooth
+
+// Sets the view of the map (geographical center and zoom) with the given
+
+// Sets the view of the map with a smooth animation like [`flyTo`](#map-flyto),
+
+// Sets the zoom of the map.
+
+// Short-circuit to the standard replacement
+
+// Skip horizontal/depth wheel events
+
+// Skip index properties.
+
+// Skip the "&"
+
+// Slides
+
+// Slides grid
+
+// Snapshots
+
+// Special case to return head of iframe instead of iframe itself
+
+// Stand-alone local day of week
+
+// Stand-alone month
+
+// Stand-alone quarter
+
+// Standard code name of the CRS passed into WMS services (e.g. `'EPSG:3857'`)
+
+// Stops the animation (if currently running).
+
+// Stops the currently running `panTo` or `flyTo` animation, if any.
+
+// Stops watching location previously initiated by `map.locate({watch: true})`
+
+// String to be shown in the attribution control, e.g. "© OpenStreetMap contributors". It describes the layer data and is often a legal obligation towards copyright holders and tile providers.
+
+// Stroke color
+
+// Stroke opacity
+
+// Stroke width in pixels
+
+// Subdomains of the tile service. Can be passed in the form of one string (where each letter is a subdomain name) or an array of strings.
+
+// Swiping/no swiping
+
+// TODO Appropriate docs section?
+
+// TODO Hack for now.
+
+// TODO Remove export when deprecating initialStoreState_DEPRECATED in RecoilRoot
+
+// TODO Why?
+
+// TODO can we stop doing this? We can't get the icons by 'fa-solid' any longer so this probably needs to change
+
+// TODO refactor, move to CRS
+
+// TODO snapshots shouldn't really have versions because a new version number
+
+// TODO: Check semantics - isn't the pixel origin the 0,0 coord relative to
+
+// Test for IE <= 9 as proposed by Browserhacks
+
+// Tests for existence of standard globals is to allow style-loader
+
+// Text for the `alt` attribute of the icon image.
+
+// Text for the `alt` attribute of the image (useful for accessibility).
+
+// Text for the browser tooltip that appear on marker hover (no tooltip by default).
+
+// The HTML text shown before the attributions. Pass `false` to disable.
+
+// The [Coordinate Reference System](#crs) to use. Don't change this if you're not
+
+// The default method for drawing vector layers on the map. `L.SVG`
+
+// The default was parameterized
+
+// The explicit [zIndex](https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index) of the overlay layer.
+
+// The explicit zIndex of the tile layer.
+
+// The fa prefix is not canonical. So if it has made it through until this point
+
+// The function receives both the `L.Layer` instances and their names, as in
+
+// The function should return a `String` or `HTMLElement` to be used in the overlay.
+
+// The inverse of `latLngToPoint`. Projects pixel coordinates on a given
+
+// The inverse of `project`.
+
+// The main difference between `y` and `u` localizers are B.C. years:
+
+// The margin between the popup and the bottom right corner of the map
+
+// The margin between the popup and the top left corner of the map
+
+// The max number of pixels a user can shift his finger during touch
+
+// The max number of pixels a user can shift the mouse pointer during a click
+
+// The maximum zoom level up to which this layer will be displayed (inclusive).
+
+// The minimum zoom level down to which this layer will be displayed (inclusive).
+
+// The module cache
+
+// The offset of the overlay position.
+
+// The offset of the popup position.
+
+// The opacity of the image overlay.
+
+// The opacity of the marker.
+
+// The position of the control (one of the map corners). Possible values are `'topleft'`,
+
+// The rate with which the inertial movement slows down, in pixels/second².
+
+// The require function
+
+// The scrollable container can be styled using the
+
+// The text set on the 'zoom in' button.
+
+// The text set on the 'zoom out' button.
+
+// The title set on the 'zoom in' button.
+
+// The title set on the 'zoom out' button.
+
+// The verification can optionally be propagated, it will return `true` if parents have the listener attached to it.
+
+// The z-index offset used for the `riseOnHover` feature.
+
+// The zoom number used in tile URLs will be offset with this value.
+
+// This allows the user to escape special characters that won't transform.
+
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+
+// This may be needed if your map's rendering context has a strict default but your tile provider expects a valid referrer
+
+// This method allows user to iterate keys as normal
+
+// This node is already being processed
+
+// This selector does not need to cache as it is a wrapper selector
+
+// This will throw an exception if access to iframe is blocked
+
+// Tiles will not update more than once every `updateInterval` milliseconds when panning.
+
+// Timezone (GMT)
+
+// Timezone (ISO-8601. If offset is 0, output is `'+00:00'` or equivalent)
+
+// Timezone (ISO-8601. If offset is 0, output is always `'Z'`)
+
+// Timezone (specific non-location)
+
+// To support iOS's swipe-to-go-back gesture (when being used in-app).
+
+// Tooltip container opacity.
+
+// Touch Events
+
+// Touches
+
+// Tries to locate the user using the Geolocation API, firing a [`locationfound`](#map-locationfound)
+
+// Types
+
+// UNUSED EXPORTS: Hydrate, QueryErrorResetBoundary, useHydrate, useInfiniteQuery, useQueries, useQueryErrorResetBoundary
+
+// URL to the overlay image to show in place of the overlay that failed to load.
+
+// URL to the tile image to show in place of the tile that failed to load.
+
+// Unique Navigation Elements
+
+// Update the bounds that this ImageOverlay covers
+
+// Updates the layer's URL template and redraws it (unless `noRedraw` is set to `true`).
+
+// Updates the overlay content, layout and position. Useful for updating the overlay after something inside changed, e.g. image loaded.
+
+// Used by the `attribution control`, returns the [attribution option](#gridlayer-attribution).
+
+// Values smaller than `1` (e.g. `0.5`) allow for greater granularity.
+
+// Velocities
+
+// Version of the WMS service to use
+
+// Virtual Translate
+
+// WMS image format (use `'image/png'` for layers with transparency).
+
+// WMS server as extra parameters in each request URL. This can be useful for
+
+// We shouldn't have consumed any characters after the entity,
+
+// We'll assume that this is an indication that it should be toggled to true
+
+// When `true`, a mouse event on this marker will trigger the same event on the map
+
+// When `true`, a mouse event on this path will trigger the same event on the map
+
+// When `true`, the map will pan whenever the marker is focused (via
+
+// When panning the map, keep this many rows and columns of tiles before unloading them.
+
+// When this option is set, the map restricts the view to the given
+
+// Whether markers animate their zoom with the zoom animation, if disabled
+
+// Whether the crossOrigin attribute will be added to the image.
+
+// Whether the crossOrigin attribute will be added to the tiles.
+
+// Whether the layer is wrapped around the antimeridian. If `true`, the
+
+// Whether the map automatically handles browser window resize to update itself.
+
+// Whether the map can be zoomed by touch-dragging with two fingers. If
+
+// Whether the map can be zoomed by using the mouse wheel. If passed `'center'`,
+
+// Whether the map can be zoomed in by double clicking on it and
+
+// Whether the map can be zoomed to a rectangular area specified by
+
+// Whether the map is draggable with mouse/touch or not.
+
+// Whether the map zoom animation is enabled. By default it's enabled
+
+// Whether the marker can be tabbed to with a keyboard and clicked by pressing enter.
+
+// Whether the marker is draggable with mouse/touch or not.
+
+// Whether the referrerPolicy attribute will be added to the tiles.
+
+// Whether the tile fade animation is enabled. By default it's enabled
+
+// Whether the video starts on mute when loaded.
+
+// Whether the video starts playing automatically when loaded.
+
+// Whether the video will loop back to the beginning when played.
+
+// Whether the video will save aspect ratio after the projection.
+
+// Whether to draw stroke along the path. Set it to `false` to disable borders on polygons or circles.
+
+// Whether to fill the path with color. Set it to `false` to disable filling on polygons or circles.
+
+// Whether to open the tooltip permanently or only on mouseover.
+
+// Whether to pan the map when dragging this marker near its edge or not.
+
+// Whether to show the imperial scale line (mi/ft).
+
+// Whether to show the metric scale line (m/km).
+
+// Whether to sort the layers. When `false`, layers will keep the order
+
+// Width and height of tiles in the grid. Use a number if width and height are equal, or `L.point(width, height)` otherwise.
+
+// With this option enabled, the map tracks when you pan to another "copy"
+
+// Without the <br />, the skeleton lines will all run together if
+
+// Won't animate zoom if the zoom difference exceeds this value.
+
+// Year
+
+// Zooms the map while keeping a specified geographical point on the map
+
+// Zooms the map while keeping a specified pixel on the map (relative to the top-left corner) stationary.
+
+// [Useful for accessibility](https://leafletjs.com/examples/accessibility/#markers-must-be-labelled).
+
+// [`getZoomScale`](#map-getZoomScale).
+
+// [`keepBuffer`](#gridlayer-keepbuffer) option in desktop browsers.
+
+// [`setMaxBounds`](#map-setmaxbounds) method.
+
+// [`zoomIn()`](#map-zoomin), [`zoomOut()`](#map-zoomout), pressing `+`
+
+// [non-standard vendor WMS parameters](https://docs.geoserver.org/stable/en/user/services/wms/vendor.html).
+
+// [scaling matrix](https://en.wikipedia.org/wiki/Scaling_%28geometry%29#Matrix_representation)
+
+// `'center'`, double-click zoom will zoom to the center of the
+
+// `'topright'`, `'bottomleft'` or `'bottomright'`
+
+// `0.5` by default).
+
+// `256 * 2^zoom` for Mercator-based CRS.
+
+// `Map pane` where the grid layer will be added.
+
+// `Map pane` where the markers icon will be added.
+
+// `Map pane` where the markers shadow will be added.
+
+// `Map pane` where the overlay will be added.
+
+// `Map pane` where the popup will be added.
+
+// `Map pane` where the tooltip will be added.
+
+// `Path`. It will ensure that the `renderer` options of the map and paths
+
+// `Transformation`. The result is pixel coordinate relative to
+
+// ```
+
+// ```js
+
+// `auto` will dynamically switch between `right` and `left` according to the tooltip
+
+// `false` otherwise in order to display new tiles _during_ panning, since it is easy to pan outside the
+
+// `fromZoom` to `toZoom`. Used internally to help with zoom animations.
+
+// `leaflet-popup-scrolled` CSS class selector.
+
+// `null` to support `positionReference` + an unstable `reference`
+
+// `react-three-fiber`) which do not.  While this is technically a user issue
+
+// `reactMode()` before calling it.  However, sometimes the host React
+
+// `scale`. In linear algebra terms, multiply the point by the
+
+// `sortFunction(layerA, layerB, nameA, nameB)`.
+
+// `styleProp` has the least priority out of everything
+
+// `top`, `bottom`, `center`, `auto`.
+
+// `true` by default on mobile browsers, in order to avoid too many requests and keep smooth navigation.
+
+// `width` is specified
+
+// `{setView: true}`.
+
+// a cache with reference equality thanks to the incrementing index.
+
+// a prop to many components. All `item` key values must therefore be
+
+// a specific ring as a LatLng array (that you can earlier access with [`getLatLngs`](#polyline-getlatlngs)).
+
+// a view (center and zoom) and at least one layer, or immediately
+
+// additional parameters. Has no effect if the layers contained do not
+
+// adjust center for view to get inside bounds
+
+// adjust offset for view to get inside bounds
+
+// already done so with the same prefix and iconName
+
+// also can be set through CSS
+
+// an instance of `HTMLElement`.
+
+// and `layer.closePopup()`/`.closeTooltip()`.
+
+// and aborts resetting the map view if map.locate was called with
+
+// and optional suffixes. Matches appear as:
+
+// and optionally sets the map view to the user's location with respect to
+
+// and the selector within the wrapper selector will have a cache
+
+// and then bounce back when pinch-zooming.
+
+// and we could have a special build just for that
+
+// animation options.
+
+// are respected, and that the renderers do exist on the map.
+
+// are when dragging the map around. The default value of `0.0` allows the
+
+// argument of the [cubic bezier curve](https://cubic-bezier.com/#0,0,.5,1),
+
+// arrows and `+`/`-` keys.
+
+// as a child of the main map pane if not set.
+
+// atom effects.
+
+// attach listener (without syntactic sugar now)
+
+// axis wraps around a given range and how. Defaults to `[-180, 180]` in most
+
+// because this module is primarily intended for the browser and node
+
+// better performance and smoother look, and less means more accurate representation.
+
+// browsers.
+
+// but it's also required in react native and similar environments sometimes
+
+// but only if we aren't auto-fetching SVGs
+
+// but takes a bounds parameter like [`fitBounds`](#map-fitbounds).
+
+// but this is much easier and the native packages
+
+// by the given scale. Only accepts actual `L.Point` instances, not arrays.
+
+// by using a renderer with React 18+ that doesn't fully support React 18 we
+
+// call it after you've changed the map size dynamically, also animating
+
+// callback is called when the tile has been loaded.
+
+// callback ref.
+
+// cast to any because we can't restrict T from being a function without losing support for opaque types
+
+// cast to any because we can't restrict type S from being a function itself without losing support for opaque types
+
+// change at runtime, we need to dynamically check and fallback if necessary.
+
+// charcode for b
+
+// charcode for l
+
+// class name could be used further down
+
+// className: '',
+
+// clip polyline by renderer bounds so that we have less to render for performance
+
+// contains scroll inside self
+
+// converts tile cache key to coordinates
+
+// converts tile coordinates to its geographical bounds
+
+// converts tile coordinates to key for the tile cache
+
+// coordinates (sometimes useful in layer and overlay implementations).
+
+// could be auto-fetching it. We'll have to assume that it is available.
+
+// count is not an integer and we've reached the last iteration of
+
+// create a fake namespace object
+
+// define __esModule on exports
+
+// define getter functions for harmony exports
+
+// defined by `scale`.
+
+// dependencies may be missing based on the current state.
+
+// destructive transform (faster)
+
+// detail: 1,
+
+// detection accuracy (or to the world view if geolocation failed).
+
+// devices. Enabled by default.
+
+// distance between two geographical points using spherical law of cosines approximation
+
+// don't descend into these
+
+// don't want to break users if it can be avoided. As the current renderer can
+
+// dragging the mouse while pressing the shift key.
+
+// due to cross-origin restrictions
+
+// duration in seconds (`0.25` by default) and easing linearity factor (3rd
+
+// e.g. 0.1 would be 10% of map view in each direction
+
+// e.g. invalidateQueries({ active: false }), we don't want to refetch active queries
+
+// e.g. pressing `tab` on the keyboard) to ensure the marker is
+
+// each coordinate of `scale`.
+
+// effect when the [map CRS](#map-crs) doesn't wrap around. Can be used
+
+// enabled in all browsers that support CSS3 Transitions except Android.
+
+// environment supports it but uses additional React renderers (such as with
+
+// errors and subsequent retries will be handled in 'loading' case
+
+// eslint-disable-line eqeqeq
+
+// eslint-disable-line no-useless-call
+
+// eslint-disable-next-line
+
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, node/no-unsupported-features/es-builtins
+
+// eslint-disable-next-line fb-www/extra-arrow-initializer
+
+// eslint-disable-next-line fb-www/no-uninitialized-properties
+
+// eslint-disable-next-line no-undef
+
+// eslint-disable-next-line react-hooks/exhaustive-deps
+
+// event took place.
+
+// event with location data on success or a [`locationerror`](#map-locationerror) event on failure,
+
+// factor of `scale`.
+
+// familyPrefix is deprecated as of 6.2.0 and should be removed in 7.0.0
+
+// familyPrefix is deprecated but we must still support it if present
+
+// faster (and vice versa).
+
+// flowlint-line unclear-type: off
+
+// flowlint-line unclear-type:off
+
+// flowlint-next-line unclear-type:off
+
+// for it to be considered a valid click (as opposed to a mouse drag).
+
+// for it to be considered a valid tap.
+
+// from `maxNativeZoom` level and auto-scaled.
+
+// from `minNativeZoom` level and auto-scaled.
+
+// geographical CRSs. If `undefined`, the longitude axis does not wrap around.
+
+// geographical bounds, bouncing the user back if the user tries to pan
+
+// getDefaultExport function for compatibility with non-harmony modules
+
+// getSnapshot()
+
+// group.eachLayer(function (layer) {
+
+// has properties explicity set to undefined
+
+// https://support.google.com/analytics/answer/2853546?hl=en#zippy=%2Cin-this-article
+
+// https://support.google.com/analytics/answer/9050852?hl=en
+
+// iOS VoiceOver returns 0.333• for width/height.
+
+// iconAnchor: (Point),
+
+// if filters.refetchActive is not provided and filters.active is explicitly false,
+
+// if it's already initialized, optionally passing a function context.
+
+// ignore everything but left clicks
+
+// implement `methodName`.
+
+// in all browsers that support CSS3 Transitions except Android.
+
+// in combination with [`bounds`](#gridlayer-bounds) to prevent requesting
+
+// in px
+
+// in the morning, in the afternoon, in the evening, at night
+
+// in the original treestate which may cause the original to skip
+
+// in which they were added to the control.
+
+// initialization of upstream atoms.
+
+// inside a popup if its content exceeds it.
+
+// instead returns the minimum zoom level on which the map view fits into
+
+// intersect if they have at least one point in common.
+
+// is always assigned when the snapshot is gone to.
+
+// is specified, it must be called when the tile has finished loading and drawing.
+
+// isDirection
+
+// istanbul ignore if
+
+// istanbul ignore next
+
+// it will zoom to the center of the view regardless of where the mouse was.
+
+// its center is within the CRS's bounds.
+
+// last callback
+
+// layer point of the current center
+
+// level and everything is scaled by a factor of `scale`. Inverse of
+
+// like markers and vector layers are still visible.
+
+// loop
+
+// map CRS. Don't change this if you're not sure what it means.
+
+// map container where the event took place.
+
+// map edge to start panning the map.
+
+// map initialization methods
+
+// map's CRS's `wrapLat` and `wrapLng` properties, if they are outside the
+
+// maximum zoom level possible.
+
+// mean a change of one full zoom level. Smaller values will make wheel-zooming
+
+// means that the style elements we're looking at are only Emotion 11 server-rendered style elements
+
+// means the zoom level will not be snapped after `fitBounds` or a pinch-zoom.
+
+// memoized.
+
+// methods below are called by vector layers implementations
+
+// might use a different theme context in the future anyway
+
+// mode & 16: return value when it's Promise-like
+
+// mode & 1: value is a module id, require it
+
+// mode & 2: merge all properties of value into the ns
+
+// mode & 4: return value when already ns object
+
+// mode & 8|1: behave like require
+
+// modern browsers ([Chrome 50 and newer](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins))
+
+// modules
+
+// must be in set method?
+
+// necessary event listeners. If a `Function` is passed it will receive
+
+// negative .length indicates that this rule has been already prefixed
+
+// non-standard
+
+// noop
+
+// not-not-scrollable
+
+// object — the first argument of the listener function will contain its
+
+// of state, then let's use it!
+
+// of the map's CRS, then scales it according to `zoom` and the CRS's
+
+// of the world and seamlessly jumps to the original one so that all overlays
+
+// off of the screen while it is open.
+
+// offset of the specified place to the current center in pixels
+
+// offset.left/top values are in page scale (like clientX/Y),
+
+// on the map. Defaults to the map's [`closePopupOnClick`](#map-closepopuponclick) option.
+
+// onClick prevented default
+
+// option by default
+
+// or `-` on the keyboard, or using the [zoom controls](#control-zoom).
+
+// or `L.Canvas` by default depending on browser support.
+
+// original width.
+
+// outside the view. To set the restriction dynamically, use
+
+// overlap if their intersection is an area.
+
+// overlaps the CRS's bounds.
+
+// padding options to fit the display to more restricted bounds.
+
+// pan by default.
+
+// pan by default. If `options.pan` is `false`, panning will not occur.
+
+// pan-zoom animation.
+
+// parameters on it, so empty is typed as HAMTPlusMap<string, mixed>.
+
+// passed `'center'`, it will zoom to the center of the view regardless of
+
+// passed to the function. The function should return a `String` or `HTMLElement` to be used in the overlay.
+
+// pixel coordinate relative to the [origin pixel](#map-getpixelorigin).
+
+// pixel coordinates for a particular zoom. For example, it returns
+
+// popupAnchor: (Point),
+
+// portaled content
+
+// position on the map.
+
+// positive .length indicates that this rule contains pseudo
+
+// prepare bound overlay to open: update latlng pos / content source (for FeatureGroup)
+
+// prettier-ignore
+
+// previous in-progress async evaluations may introduce new subscribers.
+
+// private methods for getting map state
+
+// private methods that modify map state
+
+// properties. The event can optionally be propagated to event parents.
+
+// px/s
+
+// px/s^2
+
+// recursively convert latlngs input into actual LatLng instances; calculate bounds along the way
+
+// recursively turns latlngs into a set of rings with projected coordinates
+
+// refetchOnMount: false,
+
+// relative to the [origin pixel](#map-getpixelorigin).
+
+// relative to the map container.
+
+// removed. So we now should delete the icon.
+
+// returns offset needed for pxBounds to get inside maxBounds at a specified zoom
+
+// returns the corresponding geographical coordinate (for the current zoom level).
+
+// returns the corresponding pixel coordinate relative to the map container.
+
+// returns the index (number) or false
+
+// rewind
+
+// right after a [`fitBounds()`](#map-fitbounds) or a pinch-zoom.
+
+// see https://rosettacode.org/wiki/Haversine_formula
+
+// self content
+
+// should be as referentially stable as possible since it may be passed as
+
+// simplify each clipped part of the polyline for performance
+
+// since there can be negative offsets.
+
+// skeletons, so now we add one more skeleton that is 0.5 times the
+
+// slow down map dragging outside bounds, and `1.0` makes the bounds fully
+
+// so we don't have to add it to registered cache.
+
+// so we emulate that by calculating what's under the mouse on mousemove/click manually
+
+// solid, preventing the user from dragging outside the bounds.
+
+// ssr
+
+// stationary (e.g. used internally for scroll zoom and double-click zoom).
+
+// stops loading all tiles in the background layer
+
+// styled according to the options.
+
+// sure what it means.
+
+// tags it will allow on a page
+
+// that it doesn't happen often even if the method is called many
+
+// that its center is within the CRS's bounds.
+
+// that probably means that a class name that was previously present to make the icon has been
+
+// that will be used for sorting the layers, when `sortLayers` is `true`.
+
+// the CRS origin.
+
+// the ESC key for closing of the popup.
+
+// the International Union of Geodesy and Geophysics,
+
+// the [origin pixel](#map-getpixelorigin) where the event took place.
+
+// the corresponding geographical coordinate (for the current zoom level).
+
+// the given bounds in its entirety.
+
+// the highest of their `maxZoom` options will be used instead.
+
+// the layer as the first argument and should return a `String` or `HTMLElement`.
+
+// the loop, so add a "fractional" skeleton.
+
+// the lowest of their `minZoom` options will be used instead.
+
+// the map builds momentum while dragging and continues moving in
+
+// the map layer (useful in custom layer and overlay implementations).
+
+// the map pane? "left point of the map layer" can be confusing, specially
+
+// the map will not be panned.
+
+// the map's CRS. By default this measures distance in meters.
+
+// the matched portion of the URL
+
+// the noRedraw parameter is set to false.
+
+// the panes as values.
+
+// the path used to match
+
+// the polyline in case of a multi-polyline, but can be overridden by passing
+
+// the popup closing when another popup is opened.
+
+// the same direction for some time. Feels especially nice on touch
+
+// the tiles on all zoom levels higher than `maxNativeZoom` will be loaded
+
+// the tiles on all zoom levels lower than `minNativeZoom` will be loaded
+
+// the tree but if it's a string tag, we know it won't
+
+// the wrong place after doing a large `panBy`.
+
+// then returns it. The pane is created as a child of `container`, or
+
+// they will disappear for the length of the animation. By default it's
+
+// this CRS (e.g. meters for EPSG:3857, for passing it to WMS services).
+
+// this improves memory usage since we can avoid storing the whole style string
+
+// this means we will ignore elements which don't have a space in them which
+
+// tiles outside the CRS limits.
+
+// times in a row.
+
+// to fit the opened popup.
+
+// to operate correctly into non-standard environments
+
+// to return an `<img>` HTML element with the appropriate image URL given `coords`. The `done`
+
+// used by this overlay.
+
+// user can't zoom via wheel more often than once per 40 ms.
+
+// user to drag outside the bounds at normal speed, higher values will
+
+// value
+
+// value is between -180 and +180 degrees, and the majority of the bounds
+
+// value is between -180 and +180 degrees.
+
+// value should not be changed unless a web browser positions layers in
+
+// view after autopanning was performed.
+
+// view in its entirety. If `inside` (optional) is set to `true`, the method
+
+// visible within the map's bounds
+
+// we only need to add the styles to the registered cache if the
+
+// we will shift it to the correct prefix.
+
+// we're doing this to avoid preconstruct's dead code elimination in this one case
+
+// webpackBootstrap
+
+// where the touch events (fingers) were. Enabled for touch-capable web
+
+// whereas clientLeft/Top (border width) values are the original values (before CSS scale applies).
+
+// whether or not we matched exactly
+
+// while `uu` pads single digit years to 2 characters and returns other years unchanged.
+
+// wrapLat: [min, max],
+
+// wrapLng: [min, max],
+
+// zoom into geographical coordinates.
+
+// zoom level possible.
+
+// zoomed out by double clicking while holding shift. If passed
+
+// | AC 1 |   1 |   1 |
+
+// | BC 1 |   1 |   0 |
+
+// | BC 2 |   2 |  -1 |
+
+// | Year | `y` | `u` |
+
+// |------|-----|-----|
+
+// });
+
+// ~> `new` bcuz `Buffer.slice` => ref
+
+//@ts-ignore
+
+//CHECKOUT
+
+//REWARDCARD BACKGROUND
+
+//REWARDCARD COLOR
+
+//TODO: Property 'children' does not exist on type 'IntrinsicAttributes'
+
+//borderRadius:theme.css.cardBorderRadius,
+
+//staleTime:20000,

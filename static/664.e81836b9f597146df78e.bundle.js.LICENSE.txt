@@ -1,0 +1,95 @@
+/* @__PURE__ */
+
+/* AddonCategoryList */
+
+/* AddonPlate */
+
+/* BVSkeleton */
+
+/* BookingSummary */
+
+/* CardText */
+
+/* CardWithArrow */
+
+/* CategoryDivider */
+
+/* ContentDiv */
+
+/* DynamicMandatoryAddOn */
+
+/* DynamicMandatoryAddOnTitle */
+
+/* FlexList */
+
+/* FontAwesomeIcon */
+
+/* GetTranslation */
+
+/* Group */
+
+/* MainContentContainer */
+
+/* Radio */
+
+/* Route */
+
+/* SidebarContainer */
+
+/* Stack */
+
+/* StatusTextState */
+
+/* Switch */
+
+/* TitleContainer */
+
+/* binding */
+
+/* default */
+
+/* faCalendar */
+
+/* getOptionalAddonPackagePrice */
+
+/* getOptionalAddonPrice */
+
+/* harmony default export */
+
+/* isNotNullOrUndefined */
+
+/* useAccommodationTranslations */
+
+/* useAvailableAddons */
+
+/* useBasket */
+
+/* useRouteMatch */
+
+/* useSetRecoilState */
+
+/* useTheme */
+
+/*#__PURE__*/
+
+/***/
+
+// CONCATENATED MODULE: ./src/reservation/addOns/mandatory_dynamic_addons/skeleton_screen.tsx
+
+// ESM COMPAT FLAG
+
+// EXPORTS
+
+// EXTERNAL MODULE: ./node_modules/lodash/orderBy.js
+
+// EXTERNAL MODULE: ./node_modules/react-responsive/dist/react-responsive.js
+
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+
+// EXTERNAL MODULE: ./src/reservation/addOns/mandatory_dynamic_addons/mandatory_dynamic_addons_content.tsx
+
+//@ts-ignore
+
+//TODO: Property 'children' does not exist on type 'IntrinsicAttributes'

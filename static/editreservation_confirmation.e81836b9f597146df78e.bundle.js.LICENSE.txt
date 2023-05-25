@@ -1,0 +1,75 @@
+/* @__PURE__ */
+
+/* binding */
+
+/* webpack/runtime/define property getters */
+
+/**
+ * @license React
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/************************************************************************/
+
+/******/
+
+/***/
+
+// CONCATENATED MODULE: ./src/edit_reservation/editreservation_confirmation.tsx
+
+// Check if module is in cache
+
+// Create a new module (and put it into the cache)
+
+// ESM COMPAT FLAG
+
+// EXPORTS
+
+// EXTERNAL MODULE: ./node_modules/react-dom/index.js
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+
+// Execute the module function
+
+// Return the exports of the module
+
+// The module cache
+
+// The require function
+
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+
+// define __esModule on exports
+
+// define getter functions for harmony exports
+
+// no module.id needed
+
+// no module.loaded needed
+
+// webpackBootstrap
