@@ -18,7 +18,7 @@
 <svelte:head>
 	<script
 		type="text/javascript"
-		src="/table_reservation_widget.bundle.js"
+		src="//online.bookvisit.com/Content/widget/table_reservation_widget.bundle.js"
 	></script>
 	<title>Table Reservation Script Test</title>
 </svelte:head>
