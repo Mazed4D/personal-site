@@ -8,8 +8,9 @@
 			config.widgetContainerId = 'widgetContainer';
 			config.open = true;
 			config.channelId = '57e4223d-8b29-4a40-ac87-257922f01573';
+			config.alternativeStyleChannelId = '702b4782-6d89-4448-98b7-55dcea508f6e';
 			config.languageCulture = 'en-GB';
-			BV.TableReservationWidget({ ...config });
+			table_reservation_widget.TableReservationWidget({ ...config });
 		});
 	});
 </script>
