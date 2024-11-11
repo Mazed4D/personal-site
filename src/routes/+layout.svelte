@@ -67,7 +67,7 @@
   :global(body) {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 100dvh;
     min-height: -webkit-fill-available; /* iOS Safari fix */
     font-family: 'Fira Sans', sans-serif;
     color: #cfdbd5;
@@ -103,6 +103,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+		min-height: 100dvh;
   }
 
   :global(a) {
