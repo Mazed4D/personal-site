@@ -10,6 +10,9 @@
 
 <svelte:head>
 	<script src="/script/iconify.js" defer></script>
+	<meta name="theme-color" content="#2a2a29">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-capable" content="yes">
 </svelte:head>
 
 <Fractils />
