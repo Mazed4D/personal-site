@@ -51,12 +51,26 @@
     }
   }
 
-  :global(html), :global(body) {
+  :global(html) {
     margin: 0;
     padding: 0;
+    min-height: 100%;
+    min-height: -webkit-fill-available; /* iOS Safari fix */
+    background: #1f1f1e; /* Fallback color */
+    background: linear-gradient(300deg, #2a2a29, #1f1f1e);
+    background-attachment: fixed; /* Prevents background shifting */
+  }
+
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* iOS Safari fix */
     font-family: 'Fira Sans', sans-serif;
     color: #cfdbd5;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background:
             url('/images/noise.svg'),
             linear-gradient(300deg, #2a2a29, #1f1f1e),
@@ -64,14 +78,24 @@
     background-size: 400px 400px, 200% 200%, 200% 200%;
     background-repeat: repeat, no-repeat, no-repeat;
     background-blend-mode: screen, darken, normal;
+    background-attachment: fixed; /* Prevents background shifting */
     scroll-behavior: smooth;
     position: relative;
     animation: gradientShift 15s ease infinite;
+    /* Fix for iOS Safari overscroll */
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
   }
 
-  :global(html) {
-    background: linear-gradient(300deg, #2a2a29, #1f1f1e);
-	}
+  /* Add this if you still see white edges */
+  :global(#svelte) {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 
   :global(body) {
     display: flex;
