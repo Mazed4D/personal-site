@@ -7,7 +7,7 @@
 		<a href="mailto:paunovic.milan@outlook.com"
 		><iconify-icon icon="mdi:email" /> paunovic.milan@outlook.com</a
 		>
-		<a href="tel:+381629691736"><iconify-icon icon="ant-design:phone-filled" /> +381 62 1429346</a>
+		<a href="tel:+381 62 1429346"><iconify-icon icon="ant-design:phone-filled" /> +381 62 1429346</a>
 
 		<div class="divider" />
 		<strong>Socials</strong>
