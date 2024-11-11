@@ -57,7 +57,6 @@
     padding: 3rem 2rem;
     border-radius: 50px;
     background: linear-gradient(145deg, #2b2b2a, #242423);
-    box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
   }
 
   #frontend {
@@ -136,7 +135,6 @@
     padding: 3rem 2rem;
     border-radius: 50px;
     background: linear-gradient(145deg, #2b2b2a, #242423);
-    box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
 
     .project-card {
       text-decoration: none;

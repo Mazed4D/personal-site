@@ -89,7 +89,6 @@
 		justify-content: center;
 		border-radius: 0 0 50px 50px;
 		background: #242423;
-		box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
 		color: #f5cb5c;
 		border-bottom: 1px solid #f5cb5c;
 		@media only screen and (min-width: 900px) {

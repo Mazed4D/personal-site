@@ -76,7 +76,6 @@
     margin-top: 3rem;
     border-radius: 50px;
     background: #242423;
-    box-shadow: -20px -20px 60px #1e1e1d, 20px 20px 60px #2a2a29;
     z-index: 1;
     transition: all 0.3s ease-out;
     transform-style: preserve-3d;
