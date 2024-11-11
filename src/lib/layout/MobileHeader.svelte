@@ -7,7 +7,7 @@
 	$: if ($navigating) handleCloseMenu();
 
 	const handleToggleMenu = () => {
-		window.navigator.vibrate(50);
+		window?.navigator?.vibrate?.(50);
 		showMenu = !showMenu;
 	};
 	const handleCloseMenu = () => (showMenu = false);

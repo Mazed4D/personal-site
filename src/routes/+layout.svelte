@@ -69,6 +69,10 @@
     animation: gradientShift 15s ease infinite;
   }
 
+  :global(html) {
+    background: linear-gradient(300deg, #2a2a29, #1f1f1e);
+	}
+
   :global(body) {
     display: flex;
     flex-direction: column;
