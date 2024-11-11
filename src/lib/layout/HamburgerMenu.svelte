@@ -20,48 +20,50 @@
 </nav>
 
 <style lang="scss">
-	nav {
-		z-index: 4;
-		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		background-color: #242423;
-		animation-name: slide;
-		animation-duration: 1s;
-	}
+  nav {
+    z-index: 4;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #242423;
+    animation-name: slide;
+    animation-duration: 1s;
+  }
 
-	ul {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		margin-top: 7rem;
-		padding-left: 20px;
-		list-style: none;
-		flex-grow: 1;
-		justify-content: flex-end;
-		gap: 1rem;
-		padding-right: 1rem;
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 7rem;
+    padding-left: 20px;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-right: 1rem;
 
-		li {
-			width: 100%;
-		}
-		a {
-			font-size: 1.2rem;
-			text-decoration: none;
-			color: #cfdbd5;
-			background-color: #f5cb5c10;
-			display: flex;
-			text-align: center;
-			justify-content: center;
-			border-radius: 10px;
-			padding: 1rem;
-			&:active,
-			&:hover {
-				color: #f5cb5c;
-				background-color: #f5cb5c30;
-			}
-		}
-	}
+    li {
+      width: 100%;
+    }
+
+    a {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #cfdbd5;
+      background-color: #f5cb5c10;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      border-radius: 10px;
+      padding: 1rem;
+
+      &:active,
+      &:hover {
+        color: #f5cb5c;
+        background-color: #f5cb5c30;
+      }
+    }
+  }
 
 
 </style>

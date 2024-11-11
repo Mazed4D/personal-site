@@ -2,7 +2,6 @@
 	version="1.1"
 	id="Layer_1"
 	xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
 	x="0px"
 	y="0px"
 	height="14"
@@ -13,11 +12,12 @@
 >
 	<style type="text/css">
 		.st0 {
-			fill: #ff3e00;
-		}
-		.st1 {
-			fill: #ffffff;
-		}
+        fill: #ff3e00;
+    }
+
+    .st1 {
+        fill: #ffffff;
+    }
 	</style>
 	<path
 		class="st0"

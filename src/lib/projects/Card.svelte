@@ -7,7 +7,7 @@
 
 	let rotateX = 0;
 	let rotateY = 0;
-	let scale =1;
+	let scale = 1;
 
 	function handleMouseMove(event: MouseEvent, element: HTMLElement) {
 		const rect = element.getBoundingClientRect();
@@ -129,7 +129,7 @@
 
   .card:hover::before {
     opacity: 1;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
   }
 
   img {

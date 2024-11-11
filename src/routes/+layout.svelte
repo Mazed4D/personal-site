@@ -74,10 +74,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background:
-            url('/images/noise.svg'),
-            linear-gradient(300deg, #2a2a29, #1f1f1e),
-            radial-gradient(circle at center, rgba(42, 42, 41, 0.8) 0%, rgba(31, 31, 30, 0.8) 100%);
+    background: url('/images/noise.svg'),
+    linear-gradient(300deg, #2a2a29, #1f1f1e),
+    radial-gradient(circle at center, rgba(42, 42, 41, 0.8) 0%, rgba(31, 31, 30, 0.8) 100%);
     background-size: 400px 400px, 200% 200%, 200% 200%;
     background-repeat: repeat, no-repeat, no-repeat;
     background-blend-mode: screen, darken, normal;

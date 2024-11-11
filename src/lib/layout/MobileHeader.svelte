@@ -25,74 +25,77 @@
 {/if}
 
 <style lang="scss">
-	button {
-		position: relative;
-		cursor: pointer;
-		z-index: 5;
-		position: fixed;
-		top: 20px;
-		left: 20px;
-		border: none;
-		margin: 0;
-		padding: 1rwm;
-		width: auto;
-		background-color: #242423;
-		color: inherit;
-		font: inherit;
-		line-height: normal;
-		-webkit-font-smoothing: inherit;
-		-moz-osx-font-smoothing: inherit;
-		-webkit-appearance: none;
-		iconify-icon {
-			font-size: 2rem;
-		}
-	}
+  button {
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border: none;
+    margin: 0;
+    padding: 1rwm;
+    width: auto;
+    background-color: #242423;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
 
-	.btn::after {
-		display: none;
-		content: '';
-		position: absolute;
-		border-radius: 50%;
-		background-color: #f5cb5c30;
+    iconify-icon {
+      font-size: 2rem;
+    }
+  }
 
-		width: 100px;
-		height: 100px;
-		margin-top: -50px;
-		margin-left: -50px;
+  .btn::after {
+    display: none;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: #f5cb5c30;
 
-		/* Center the ripple */
-		top: 50%;
-		left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
 
-		animation: ripple 500ms;
-		opacity: 0;
-	}
-	.btn:focus:not(:active)::after {
-		display: block;
-	}
+    /* Center the ripple */
+    top: 50%;
+    left: 50%;
 
-	@keyframes ripple {
-		from {
-			opacity: 1;
-			transform: scale(0);
-		}
-		to {
-			opacity: 0;
-			transform: scale(10);
-		}
-	}
-	header {
-		display: inline-flex;
-		z-index: 5;
-		position: fixed;
-		min-width: 100vw;
-		justify-content: center;
-		border-radius: 0 0 50px 50px;
-		background: #242423;
-		color: #f5cb5c;
-		border-bottom: 1px solid #f5cb5c;
-		@media only screen and (min-width: 900px) {
-			display: none;
-		}
-	}
+    animation: ripple 500ms;
+    opacity: 0;
+  }
+
+  .btn:focus:not(:active)::after {
+    display: block;
+  }
+
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale(0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(10);
+    }
+  }
+
+  header {
+    display: inline-flex;
+    z-index: 5;
+    position: fixed;
+    min-width: 100vw;
+    justify-content: center;
+    border-radius: 0 0 50px 50px;
+    background: #242423;
+    color: #f5cb5c;
+    border-bottom: 1px solid #f5cb5c;
+    @media only screen and (min-width: 900px) {
+      display: none;
+    }
+  }
 </style>

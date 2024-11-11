@@ -3,9 +3,10 @@
 </svelte:head>
 
 <script>
-// @ts-nocheck
+	// @ts-nocheck
 
 	import { onMount } from 'svelte';
+
 	const widgetLayouts = [
 		'Standard1Column',
 		'Standard1ColumnCompact',
@@ -24,29 +25,29 @@
 	onMount(() => {
 		let confConfig = {};
 		confConfig.CustomHeader = 'Single prop widget';
-		widgetLayouts.forEach((layout,i)=>{
+		widgetLayouts.forEach((layout, i) => {
 			BV.CfWidget({
-			...confConfig,
-			WidgetContainerId: 'widgetContainer'+i,
-			openOption: 'redirect',
-			promoCode: "true",
-			corpCode: false,
-			agentCode: false,
-			loginLink: false,
-			type: 'multi_property',
-			widgetLayout: layout,
-			currency: 'SEK',
-			channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
+				...confConfig,
+				WidgetContainerId: 'widgetContainer' + i,
+				openOption: 'redirect',
+				promoCode: 'true',
+				corpCode: false,
+				agentCode: false,
+				loginLink: false,
+				type: 'multi_property',
+				widgetLayout: layout,
+				currency: 'SEK',
+				channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
+			});
 		});
-		})
 	});
 </script>
 
 <div>
 	{#each widgetLayouts as layout, i}
-	<div style="background-color: white;">
-		<p>{layout}</p>
-		<div id="widgetContainer{i}" style="padding-top: 20px;"/>
-	</div>
-		{/each}
+		<div style="background-color: white;">
+			<p>{layout}</p>
+			<div id="widgetContainer{i}" style="padding-top: 20px;" />
+		</div>
+	{/each}
 </div>
