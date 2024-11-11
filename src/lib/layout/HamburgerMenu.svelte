@@ -63,12 +63,5 @@
 		}
 	}
 
-	// @keyframes slide {
-	// 	0% {
-	// 		transform: translateX(-100vw);
-	// 	}
-	// 	100% {
-	// 		transform: translateX(0);
-	// 	}
-	// }
+
 </style>

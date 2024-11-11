@@ -12,6 +12,7 @@
 <style lang="scss">
 	main {
 		display: flex;
+		min-height: 70vh;
 		flex-direction: column;
 		flex-grow: 1;
 		flex: 1;

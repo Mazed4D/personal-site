@@ -1,10 +1,14 @@
 <article>
 	<address>
-		<strong>Milan Paunovic</strong>
-		<a href="mailto:paunovic.milan@outlook.com"
-			><iconify-icon icon="mdi:email" /> paunovic.milan@outlook.com</a
+		<strong>Milan Paunović</strong>
+		<a href="mailto:contact@milanpaunovic.xyz"
+			><iconify-icon icon="mdi:email" /> contact@milanpaunovic.xyz</a
 		>
-		<a href="tel:+381629691736"><iconify-icon icon="ant-design:phone-filled" /> +381629691736</a>
+		<a href="mailto:paunovic.milan@outlook.com"
+		><iconify-icon icon="mdi:email" /> paunovic.milan@outlook.com</a
+		>
+		<a href="tel:+381629691736"><iconify-icon icon="ant-design:phone-filled" /> +381 62 1429346</a>
+
 		<div class="divider" />
 		<strong>Socials</strong>
 		<a href="https://www.linkedin.com/in/milan-paunovic/" target="_blank" rel="noreferrer"
@@ -17,11 +21,14 @@
 			><iconify-icon icon="akar-icons:github-fill" /> GitHub</a
 		>
 
-		<a href="http://online.local/accommodation/list?channelId=e4586ac0-0604-48b7-b7f4-df22593d0231" 
-		><iconify-icon icon="akar-icons:github-fill" /> Test GTM</a
-	>
+		<div class="divider" />
+		<strong>Documents</strong>
 
-		<p><iconify-icon icon="fa6-solid:location-dot" /> Belgrade, Serbia</p>
+		<a href="/files/Resume.pdf" target="_blank" rel="noreferrer"
+		><iconify-icon icon="qlementine-icons:resume-16"/> Download my resume</a
+		>
+
+		<p><iconify-icon icon="fa6-solid:location-dot" /> Smederevo, Serbia</p>
 	</address>
 </article>
 

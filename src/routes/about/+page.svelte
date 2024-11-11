@@ -4,16 +4,20 @@
 		<h1>Milan Paunovic - Frontend Developer</h1>
 	</section>
 	<section class="about-desc">
-		As a highly independent and ambitious Frontend developer, I am dedicated to delivering
-		responsive, modern, and user-friendly applications using React and React-Native. With a focus on
-		providing the best possible user experience, I am constantly seeking to improve my skills and
-		stay current with new technologies. I am open to learning new technologies and approaches to
-		software development in order to further enhance my skills and deliver exceptional results for
-		my clients. My passion for creating special user-oriented software is evident in my successful
-		track record of delivering high-quality projects, including the development of a
-		React-Native-based android application for hyper-local shopping and the creation of a platform
-		connecting businesses with remote workers using React (TypeScript) and Redux. I am eager to
-		bring my expertise and drive to a dynamic and forward-thinking team.
+		<header>
+			<h1>Passionate Frontend Developer | React & React Native Specialist</h1>
+		</header>
+		<p>
+			As a results-driven and highly independent Frontend Developer, I specialize in crafting responsive, modern, and user-friendly applications using React and React Native. My dedication to delivering exceptional user experiences is evident in my successful track record, which includes developing a React-Native-based Android application for hyper-local shopping and creating a platform connecting businesses with remote workers using React (TypeScript) and Redux.
+		</p>
+		<p>
+			I thrive in dynamic and forward-thinking environments, constantly seeking to enhance my skills and stay abreast of the latest technologies. Open to embracing new technologies and innovative approaches, I am committed to delivering high-quality projects. My passion for creating user-oriented software extends beyond individual projects, as I actively contribute to the success of teams through collaboration and a drive for excellence.
+		</p>
+		<footer>
+			<p>
+				<strong>Let’s connect</strong> and explore how my expertise and enthusiasm can contribute to your team’s success!
+			</p>
+		</footer>
 	</section>
 </article>
 

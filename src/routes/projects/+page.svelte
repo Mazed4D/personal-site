@@ -4,6 +4,13 @@
 
 <article>
 	<Card
+		link="https://bookvisit.com/"
+		id="bookvisit"
+		name="BookVisit"
+		description="A comprehensive business development platform for the hospitality industry. Contributed to transitioning the frontend from MVC to React and Next.js, enhancing user experience. Also involved in modifying backend MVC/.NET APIs to align with frontend requirements."
+		image="/images/bookvisit.jpeg"
+	/>
+	<Card
 		link="https://thetalentbase.com/"
 		id="talentbase"
 		name="TalentBase"
