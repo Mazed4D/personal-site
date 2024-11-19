@@ -28,7 +28,7 @@
   button {
     position: relative;
     cursor: pointer;
-    z-index: 5;
+    z-index: 100;
     position: fixed;
     top: 20px;
     left: 20px;
