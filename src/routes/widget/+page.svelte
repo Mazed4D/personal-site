@@ -1,5 +1,5 @@
 <svelte:head>
-	<script type="text/javascript" charset="UTF-8" src=".\conference_widget.bundle.js" defer></script>
+	<script type="text/javascript" src="//reservations.bookvisit.com/widget?type=conference&new=1"></script>
 </svelte:head>
 
 <script>
@@ -23,21 +23,24 @@
 	];
 
 	onMount(() => {
-		let confConfig = {};
-		confConfig.CustomHeader = 'Single prop widget';
+		let confConfig = {
+			CustomHeader: 'Single prop widget',
+			openOption: 'redirect',
+			promoCode: 'false',
+			corpCode: 'false',
+			agentCode: 'false',
+			loginLink: 'false',
+			currency: 'SEK',
+			channelId: 'e833e662-2970-4e6e-943f-6b6088b5e1d2',
+			languageCulture: 'sv-SE',
+			accommodationTypePicker: 'false',
+			type: 'single_property'
+		};
 		widgetLayouts.forEach((layout, i) => {
 			BV.CfWidget({
 				...confConfig,
 				WidgetContainerId: 'widgetContainer' + i,
-				openOption: 'redirect',
-				promoCode: 'true',
-				corpCode: false,
-				agentCode: false,
-				loginLink: false,
-				type: 'multi_property',
-				widgetLayout: layout,
-				currency: 'SEK',
-				channelId: '35BEC48D-58A7-490F-A8BC-675201D8E810'
+				widgetLayout: layout
 			});
 		});
 	});
