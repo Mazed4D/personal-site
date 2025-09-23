@@ -1,15 +1,77 @@
 <script>
+	import { onMount } from 'svelte';
 	import Card from '$lib/projects/Card.svelte';
+
+	let showScrollTop = false;
+	let darkMode = false;
+	let mounted = false;
+
+	onMount(() => {
+		mounted = true;
+
+		// Check for saved theme preference
+		const savedTheme = localStorage.getItem('theme');
+		darkMode = savedTheme === 'dark';
+		if (darkMode) {
+			document.documentElement.classList.add('dark-mode');
+		}
+
+		// Handle scroll for scroll-to-top button and parallax
+		let ticking = false;
+		const handleScroll = () => {
+			showScrollTop = window.scrollY > 500;
+
+			// Parallax effects with requestAnimationFrame for better performance
+			if (!ticking) {
+				window.requestAnimationFrame(() => {
+					const scrolled = window.scrollY;
+					const parallaxElements = document.querySelectorAll('.parallax');
+					parallaxElements.forEach(el => {
+						const speed = el.dataset.speed || 0.5;
+						el.style.transform = `translateY(${scrolled * speed}px)`;
+					});
+					ticking = false;
+				});
+				ticking = true;
+			}
+		};
+
+		// Intersection observer for fade-in animations
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('in-view');
+				}
+			});
+		}, { threshold: 0.1 });
+
+		document.querySelectorAll('.fade-in').forEach(el => {
+			observer.observe(el);
+		});
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	});
 
 	function scrollToSection(sectionId) {
 		document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+	}
+
+	function scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
+	function toggleDarkMode() {
+		darkMode = !darkMode;
+		document.documentElement.classList.toggle('dark-mode');
+		localStorage.setItem('theme', darkMode ? 'dark' : 'light');
 	}
 </script>
 
 <article>
 	<!-- Hero Section -->
-	<section id="hero" class="hero-section">
-		<div class="hero-content">
+	<section id="hero" class="hero-section parallax" data-speed="0.5">
+		<div class="hero-content fade-in">
 			<h1 class="hero-title">
 				<span class="name-highlight">Milan Paunovic</span>
 				<span class="role">Frontend Developer</span>
@@ -29,7 +91,7 @@
 			</div>
 		</div>
 
-		<div class="technologies-container">
+		<div class="technologies-container fade-in">
 			<div class="technologies-carousel">
 				<div class="technologies-track">
 					<!-- First set of icons -->
@@ -77,10 +139,10 @@
 
 	<!-- About Section -->
 	<section id="about" class="about-section">
-		<div class="section-container">
+		<div class="section-container fade-in">
 			<h2 class="section-title">About Me</h2>
 			<div class="about-content">
-				<div class="about-text">
+				<div class="about-text fade-in">
 					<h3>React & React Native Specialist</h3>
 					<p class="about-lead">
 						I craft <span class="highlight">responsive</span>, <span class="highlight">modern</span>, and <span class="highlight">user-focused</span> applications that deliver exceptional experiences.
@@ -104,7 +166,7 @@
 
 	<!-- Projects Section -->
 	<section id="projects" class="projects-section">
-		<div class="section-container">
+		<div class="section-container fade-in">
 			<h2 class="section-title">Featured Projects</h2>
 			<div class="projects-grid">
 				<Card
@@ -134,7 +196,7 @@
 
 	<!-- Contact Section -->
 	<section id="contact" class="contact-section">
-		<div class="section-container">
+		<div class="section-container fade-in">
 			<h2 class="section-title">Get In Touch</h2>
 			<div class="contact-content">
 				<div class="contact-card">
@@ -185,6 +247,27 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- Floating UI Elements -->
+	{#if mounted}
+		<!-- Dark Mode Toggle -->
+		<button class="theme-toggle" on:click={toggleDarkMode} aria-label="Toggle theme">
+			{#if darkMode}
+				<iconify-icon icon="ph:sun-bold" />
+			{:else}
+				<iconify-icon icon="ph:moon-bold" />
+			{/if}
+		</button>
+
+		<!-- Scroll to Top Button -->
+		<button
+			class="scroll-to-top {showScrollTop ? 'visible' : ''}"
+			on:click={scrollToTop}
+			aria-label="Scroll to top"
+		>
+			<iconify-icon icon="ph:arrow-up-bold" />
+		</button>
+	{/if}
 </article>
 
 <style lang="scss">
@@ -759,6 +842,140 @@
 		.contact-card {
 			grid-template-columns: 1fr;
 			gap: 2rem;
+		}
+	}
+
+	/* Fade-in Animation */
+	.fade-in {
+		opacity: 1; /* Start visible as fallback */
+		transform: translateY(0);
+		transition: opacity 0.8s ease, transform 0.8s ease;
+	}
+
+	/* Only apply animation when JS is working */
+	@media (prefers-reduced-motion: no-preference) {
+		.fade-in:not(.in-view) {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+
+		.fade-in.in-view {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* Scroll to Top Button */
+	.scroll-to-top {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #f5cb5c, #e6ab0a);
+		color: #242423;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(10px);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		z-index: 999;
+		box-shadow: 0 4px 20px rgba(245, 203, 92, 0.3);
+
+		&.visible {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 30px rgba(245, 203, 92, 0.5);
+		}
+
+		&:active {
+			transform: scale(0.95);
+		}
+	}
+
+	/* Theme Toggle */
+	.theme-toggle {
+		position: fixed;
+		top: 1.5rem;
+		right: 2rem;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: rgba(36, 36, 35, 0.8);
+		backdrop-filter: blur(10px);
+		color: #f5cb5c;
+		border: 1px solid rgba(245, 203, 92, 0.3);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.3rem;
+		transition: all 0.3s ease;
+		z-index: 998;
+
+		&:hover {
+			background: rgba(245, 203, 92, 0.2);
+			transform: rotate(180deg);
+		}
+
+		@media (max-width: 900px) {
+			top: 1rem;
+		}
+	}
+
+	/* Dark Mode Styles */
+	:global(html.dark-mode) {
+		:global(body) {
+			background: linear-gradient(300deg, #0a0a0a, #141414);
+			color: #e0e0e0;
+		}
+
+		:global(.hero-section) {
+			background: radial-gradient(ellipse at center, rgba(245, 203, 92, 0.02) 0%, transparent 50%);
+		}
+
+		:global(.about-content),
+		:global(.contact-card) {
+			background: linear-gradient(135deg, rgba(20, 20, 20, 0.8), rgba(30, 30, 30, 0.6));
+		}
+
+		:global(.card) {
+			background: linear-gradient(135deg, rgba(20, 20, 20, 0.8), rgba(30, 30, 30, 0.6));
+		}
+
+		:global(.technologies-container) {
+			background: linear-gradient(135deg, rgba(20, 20, 20, 0.4), rgba(30, 30, 30, 0.2));
+		}
+
+		:global(header) {
+			background: rgba(10, 10, 10, 0.9);
+
+			&.scrolled {
+				background: rgba(10, 10, 10, 0.98);
+			}
+		}
+
+		:global(.contact-link) {
+			color: #e0e0e0;
+
+			&:hover {
+				color: #f5cb5c;
+			}
+		}
+
+		:global(p) {
+			color: rgba(224, 224, 224, 0.9);
 		}
 	}
 </style>
