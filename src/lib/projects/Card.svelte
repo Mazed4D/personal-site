@@ -4,39 +4,16 @@
 	export let image: string;
 	export let description: string;
 	export let link: string;
-
-	let rotateX = 0;
-	let rotateY = 0;
-	let scale = 1;
-
-	function handleMouseMove(event: MouseEvent, element: HTMLElement) {
-		const rect = element.getBoundingClientRect();
-		const x = event.clientX - rect.left;
-		const y = event.clientY - rect.top;
-
-		rotateY = ((x / rect.width) - 0.5) * 20;
-		rotateX = ((y / rect.height) - 0.5) * -30;
-		scale = 1.05;
-	}
-
-	function handleMouseLeave() {
-		rotateX = 0;
-		rotateY = 0;
-		scale = 1;
-	}
 </script>
 
 <a
 	href={link}
 	target="_blank"
 	rel="noreferrer"
-	on:mousemove={(e) => handleMouseMove(e, e.currentTarget)}
-	on:mouseleave={handleMouseLeave}
 >
 	<section
 		{id}
 		class="card"
-		style="transform: perspective(1000px) rotateX({rotateX}deg) rotateY({rotateY}deg) scale({scale})"
 	>
 		<div class="card-content">
 			<img src={image} alt={name} />
@@ -50,103 +27,102 @@
 
 <style lang="scss">
   a {
-    color: #819595;
-    transition: none;
-    align-self: center;
-    perspective: 1000px;
+    color: #cfdbd5;
+    text-decoration: none;
     display: block;
+    width: 100%;
 
-    &:hover,
-    &:active {
-      color: #819595;
-      text-shadow: none;
+    &:hover {
+      color: #cfdbd5;
     }
   }
 
   h1 {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    transition: transform 0.3s ease-out;
+    font-size: 1.6rem;
+    margin: 0 0 0.8rem 0;
+    color: #f5cb5c;
+    font-weight: 600;
   }
 
   .card {
     margin: 0 auto;
     max-width: 900px;
     position: relative;
-    margin-top: 3rem;
-    border-radius: 50px;
-    background: #242423;
-    z-index: 1;
-    transition: all 0.3s ease-out;
-    transform-style: preserve-3d;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(36, 36, 35, 0.6), rgba(36, 36, 35, 0.4));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(245, 203, 92, 0.1);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245, 203, 92, 0.3), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
 
     &:hover {
-      color: #242423;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+                  0 0 60px rgba(245, 203, 92, 0.05);
+      border-color: rgba(245, 203, 92, 0.2);
 
-      .card-content {
-        transform: translateZ(1px) scale(1.05);
+      &::before {
+        opacity: 1;
       }
 
       img {
-        transform: translateZ(1px) scale(1.1);
+        transform: scale(1.05);
+        filter: brightness(1.1);
       }
 
       h1 {
-        transform: translateZ(1px);
-      }
-
-      p {
-        transform: translateZ(1px);
+        color: #f5cb5c;
+        text-shadow: 0 0 20px rgba(245, 203, 92, 0.3);
       }
     }
   }
 
   .card-content {
     display: flex;
-    gap: 1rem;
-    padding: 2rem;
-    transition: transform 0.3s ease-out;
-    transform-style: preserve-3d;
+    gap: 2rem;
+    padding: 2.5rem;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: 600px) {
       flex-direction: column;
+      padding: 2rem;
     }
-  }
-
-  .card::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 50px;
-    background: linear-gradient(145deg, #f5cb5c, #e6ab0a);
-    z-index: -1;
-    transition: opacity 250ms ease-in;
-    opacity: 0;
-  }
-
-  .card:hover::before {
-    opacity: 1;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
   }
 
   img {
     width: 5rem;
     height: 5rem;
     align-self: center;
-    transition: transform 0.3s ease-out;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
 
   .vstack {
     display: flex;
     flex-direction: column;
-    transform-style: preserve-3d;
+    flex: 1;
+    gap: 0.5rem;
   }
 
   p {
-    transition: transform 0.3s ease-out;
     margin: 0;
+    line-height: 1.6;
+    color: rgba(207, 219, 213, 0.9);
+    font-size: 1rem;
   }
 </style>

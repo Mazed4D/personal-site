@@ -1,178 +1,764 @@
-<article>
-	<section class="technologies" aria-label="Technologies I use">
-		<iconify-icon icon="vscode-icons:file-type-reactjs" aria-label="React" />
-		<iconify-icon icon="logos:redux" aria-label="Redux" />
-		<iconify-icon icon="logos:create-react-app" aria-label="Create React App" />
-		<iconify-icon icon="logos:nextjs-icon" aria-label="Next.js" />
-		<iconify-icon icon="logos:gatsby" aria-label="Gatsby" />
-		<iconify-icon icon="logos:svelte-icon" aria-label="Svelte" />
-		<iconify-icon icon="logos:nodejs-icon" aria-label="Node.js" />
-		<iconify-icon icon="simple-icons:express" aria-label="Express.js" />
-		<iconify-icon icon="logos:npm-icon" aria-label="npm" />
-		<iconify-icon icon="logos:javascript" aria-label="JavaScript" />
-		<iconify-icon icon="vscode-icons:file-type-typescript-official" aria-label="TypeScript" />
-		<iconify-icon icon="simple-icons:axios" aria-label="Axios" />
-		<iconify-icon icon="bi:git" aria-label="Git" />
-		<iconify-icon icon="akar-icons:github-fill" aria-label="GitHub" />
-		<iconify-icon icon="vscode-icons:file-type-gitlab" aria-label="GitLab" />
-		<iconify-icon icon="logos:firebase" aria-label="Firebase" />
-		<iconify-icon icon="vscode-icons:file-type-mongo" aria-label="MongoDB" />
-		<iconify-icon icon="vscode-icons:file-type-vscode" aria-label="VSCode" />
-	</section>
+<script>
+	import Card from '$lib/projects/Card.svelte';
 
-	<section class="page-header">
-		<h1>
-			Need a <span id="frontend">frontend developer</span> that gets things done?
-		</h1>
-		<div class="subtitle">
-			<a href="/contact" class="cta-button">
-				<iconify-icon icon="bxs:right-arrow" />
-				Let's get in touch!
-				<iconify-icon icon="bxs:left-arrow" />
-			</a>
+	function scrollToSection(sectionId) {
+		document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+	}
+</script>
+
+<article>
+	<!-- Hero Section -->
+	<section id="hero" class="hero-section">
+		<div class="hero-content">
+			<h1 class="hero-title">
+				<span class="name-highlight">Milan Paunovic</span>
+				<span class="role">Frontend Developer</span>
+			</h1>
+			<p class="hero-subtitle">
+				Need a <span class="highlight">frontend developer</span> that gets things done?
+			</p>
+			<div class="cta-container">
+				<button on:click={() => scrollToSection('contact')} class="cta-button primary">
+					<iconify-icon icon="bxs:right-arrow" />
+					Let's get in touch!
+					<iconify-icon icon="bxs:left-arrow" />
+				</button>
+				<button on:click={() => scrollToSection('projects')} class="cta-button secondary">
+					View My Work
+				</button>
+			</div>
+		</div>
+
+		<div class="technologies-container">
+			<div class="technologies-carousel">
+				<div class="technologies-track">
+					<!-- First set of icons -->
+					<iconify-icon icon="vscode-icons:file-type-reactjs" aria-label="React" />
+					<iconify-icon icon="logos:redux" aria-label="Redux" />
+					<iconify-icon icon="logos:create-react-app" aria-label="Create React App" />
+					<iconify-icon icon="logos:nextjs-icon" aria-label="Next.js" />
+					<iconify-icon icon="logos:gatsby" aria-label="Gatsby" />
+					<iconify-icon icon="logos:svelte-icon" aria-label="Svelte" />
+					<iconify-icon icon="logos:nodejs-icon" aria-label="Node.js" />
+					<iconify-icon icon="simple-icons:express" aria-label="Express.js" />
+					<iconify-icon icon="logos:npm-icon" aria-label="npm" />
+					<iconify-icon icon="logos:javascript" aria-label="JavaScript" />
+					<iconify-icon icon="vscode-icons:file-type-typescript-official" aria-label="TypeScript" />
+					<iconify-icon icon="simple-icons:axios" aria-label="Axios" />
+					<iconify-icon icon="bi:git" aria-label="Git" />
+					<iconify-icon icon="akar-icons:github-fill" aria-label="GitHub" />
+					<iconify-icon icon="vscode-icons:file-type-gitlab" aria-label="GitLab" />
+					<iconify-icon icon="logos:firebase" aria-label="Firebase" />
+					<iconify-icon icon="vscode-icons:file-type-mongo" aria-label="MongoDB" />
+					<iconify-icon icon="vscode-icons:file-type-vscode" aria-label="VSCode" />
+					<!-- Duplicate set for seamless loop -->
+					<iconify-icon icon="vscode-icons:file-type-reactjs" aria-label="React" />
+					<iconify-icon icon="logos:redux" aria-label="Redux" />
+					<iconify-icon icon="logos:create-react-app" aria-label="Create React App" />
+					<iconify-icon icon="logos:nextjs-icon" aria-label="Next.js" />
+					<iconify-icon icon="logos:gatsby" aria-label="Gatsby" />
+					<iconify-icon icon="logos:svelte-icon" aria-label="Svelte" />
+					<iconify-icon icon="logos:nodejs-icon" aria-label="Node.js" />
+					<iconify-icon icon="simple-icons:express" aria-label="Express.js" />
+					<iconify-icon icon="logos:npm-icon" aria-label="npm" />
+					<iconify-icon icon="logos:javascript" aria-label="JavaScript" />
+					<iconify-icon icon="vscode-icons:file-type-typescript-official" aria-label="TypeScript" />
+					<iconify-icon icon="simple-icons:axios" aria-label="Axios" />
+					<iconify-icon icon="bi:git" aria-label="Git" />
+					<iconify-icon icon="akar-icons:github-fill" aria-label="GitHub" />
+					<iconify-icon icon="vscode-icons:file-type-gitlab" aria-label="GitLab" />
+					<iconify-icon icon="logos:firebase" aria-label="Firebase" />
+					<iconify-icon icon="vscode-icons:file-type-mongo" aria-label="MongoDB" />
+					<iconify-icon icon="vscode-icons:file-type-vscode" aria-label="VSCode" />
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section id="my-work">
-		<h1>Take a look at some of my work!</h1>
-		<div class="hstack">
-			<a href="/projects#bookvisit" class="vstack gap-1 project-card">
-				<img src="/images/bookvisit.jpeg" alt="BookVisit project logo" />
-				<div>BookVisit</div>
-			</a>
-			<a href="/projects#talentbase" class="vstack gap-1 project-card">
-				<img src="/images/talentBase.svg" alt="TalentBase project logo" />
-				<div>TalentBase</div>
-			</a>
-			<a href="/projects#quickdeal" class="vstack gap-1 project-card">
-				<img src="/images/quickdeal.png" alt="QuickDeal project logo" />
-				<div>QuickDeal</div>
-			</a>
+	<!-- About Section -->
+	<section id="about" class="about-section">
+		<div class="section-container">
+			<h2 class="section-title">About Me</h2>
+			<div class="about-content">
+				<div class="about-text">
+					<h3>React & React Native Specialist</h3>
+					<p class="about-lead">
+						I craft <span class="highlight">responsive</span>, <span class="highlight">modern</span>, and <span class="highlight">user-focused</span> applications that deliver exceptional experiences.
+					</p>
+					<p>
+						With expertise in React, React Native, and TypeScript, I've built everything from e-commerce platforms to hyper-local shopping apps. I thrive in dynamic environments where innovation meets practical solutions.
+					</p>
+					<div class="about-skills">
+						<div class="skill-badge">Frontend Architecture</div>
+						<div class="skill-badge">Mobile Development</div>
+						<div class="skill-badge">UI/UX Implementation</div>
+						<div class="skill-badge">Performance Optimization</div>
+					</div>
+					<div class="about-cta">
+						Let's build something <strong>amazing</strong> together.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects Section -->
+	<section id="projects" class="projects-section">
+		<div class="section-container">
+			<h2 class="section-title">Featured Projects</h2>
+			<div class="projects-grid">
+				<Card
+					link="https://bookvisit.com/"
+					id="bookvisit"
+					name="BookVisit"
+					description="A comprehensive business development platform for the hospitality industry. Contributed to transitioning the frontend from MVC to React and Next.js, enhancing user experience. Also involved in modifying backend MVC/.NET APIs to align with frontend requirements."
+					image="/images/bookvisit.jpeg"
+				/>
+				<Card
+					link="https://thetalentbase.com/"
+					id="talentbase"
+					name="TalentBase"
+					description="A platform for connecting businesses with remote workers. Built using TypeScript with React, Redux, Material-UI and react-hook-forms. Consumes data from a REST API created in Java Spring Boot."
+					image="/images/talentBase.svg"
+				/>
+				<Card
+					link="https://play.google.com/store/apps/details?id=com.fishmansasha.quickdeal"
+					id="quickdeal"
+					name="QuickDeal"
+					description="An Android application for hyper-local classifieds. Developed using JavaScript with React-Native (Expo), Redux, React-Navigation, NativeBase and Formik. The backend was made in Java Spring Boot and Keycloak."
+					image="/images/quickdeal.png"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="contact-section">
+		<div class="section-container">
+			<h2 class="section-title">Get In Touch</h2>
+			<div class="contact-content">
+				<div class="contact-card">
+					<div class="contact-group">
+						<h3>Contact Information</h3>
+						<a href="mailto:contact@milanpaunovic.xyz" class="contact-link">
+							<iconify-icon icon="mdi:email" />
+							contact@milanpaunovic.xyz
+						</a>
+						<a href="mailto:paunovic.milan@outlook.com" class="contact-link">
+							<iconify-icon icon="mdi:email" />
+							paunovic.milan@outlook.com
+						</a>
+						<a href="tel:+381628334294" class="contact-link">
+							<iconify-icon icon="ant-design:phone-filled" />
+							+381 62 8334294
+						</a>
+						<p class="location">
+							<iconify-icon icon="fa6-solid:location-dot" />
+							Smederevo, Serbia
+						</p>
+					</div>
+
+					<div class="contact-group">
+						<h3>Social Media</h3>
+						<a href="https://www.linkedin.com/in/milan-paunovic/" target="_blank" rel="noreferrer" class="contact-link">
+							<iconify-icon icon="akar-icons:linkedin-box-fill" />
+							LinkedIn
+						</a>
+						<a href="https://gitlab.com/paunovM" target="_blank" rel="noreferrer" class="contact-link">
+							<iconify-icon icon="fa6-brands:gitlab" />
+							GitLab
+						</a>
+						<a href="https://github.com/mazed4d" target="_blank" rel="noreferrer" class="contact-link">
+							<iconify-icon icon="akar-icons:github-fill" />
+							GitHub
+						</a>
+					</div>
+
+					<div class="contact-group">
+						<h3>Resources</h3>
+						<a href="/files/Resume.pdf" target="_blank" rel="noreferrer" class="contact-link download">
+							<iconify-icon icon="qlementine-icons:resume-16" />
+							Download Resume
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </article>
 
 <style lang="scss">
-  .page-header {
-    padding: 3rem 2rem;
-    border-radius: 50px;
-    background: linear-gradient(145deg, #2b2b2a, #242423);
-  }
+	article {
+		scroll-behavior: smooth;
+	}
 
-  #frontend {
-    color: #f5cb5c;
-    font-weight: bold;
-  }
+	/* Hero Section */
+	.hero-section {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		position: relative;
+		background: radial-gradient(ellipse at center, rgba(245, 203, 92, 0.03) 0%, transparent 50%),
+					linear-gradient(180deg, transparent 0%, rgba(31, 31, 30, 0.3) 100%);
+		overflow: hidden;
 
-  h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 0.5rem 0;
-  }
+		&::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			right: -50%;
+			width: 200%;
+			height: 200%;
+			background: radial-gradient(circle, rgba(245, 203, 92, 0.02) 0%, transparent 70%);
+			animation: rotate 30s linear infinite;
+		}
 
-  .subtitle {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
+		@keyframes rotate {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+	}
 
-  .cta-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #f5cb5c;
-    background-color: transparent;
-    border: 2px solid #f5cb5c;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    transition: all 250ms ease-in-out;
-    animation: pulse 2s infinite;
+	.hero-content {
+		text-align: center;
+		max-width: 900px;
+		margin-bottom: 3rem;
+		z-index: 1;
+		position: relative;
+	}
 
-    &:hover {
-      background-color: #f5cb5c;
-      color: #242423;
-      transform: scale(1.1);
-    }
-  }
+	.hero-title {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: 2rem;
+	}
 
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(245, 203, 92, 0.4);
-    }
-    70% {
-      transform: scale(1.05);
-      box-shadow: 0 0 0 20px rgba(245, 203, 92, 0);
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(245, 203, 92, 0);
-    }
-  }
+	.name-highlight {
+		font-size: clamp(2.5rem, 8vw, 5rem);
+		font-weight: 700;
+		background: linear-gradient(135deg, #f5cb5c 0%, #e6ab0a 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		animation: glow 3s ease-in-out infinite;
+	}
 
-  .technologies {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    padding: 3rem 0;
-    max-width: 100%;
-    font-size: 2rem;
+	@keyframes glow {
+		0%, 100% { filter: brightness(1) drop-shadow(0 0 20px rgba(245, 203, 92, 0.3)); }
+		50% { filter: brightness(1.1) drop-shadow(0 0 30px rgba(245, 203, 92, 0.5)); }
+	}
 
-    iconify-icon {
-      transition: transform 200ms ease-in-out;
+	.role {
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
+		color: #cfdbd5;
+		font-weight: 300;
+	}
 
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
+	.hero-subtitle {
+		font-size: clamp(1.2rem, 3vw, 1.8rem);
+		color: #819595;
+		margin-bottom: 3rem;
 
-  #my-work {
-    margin: 3rem 0;
-    padding: 3rem 2rem;
-    border-radius: 50px;
-    background: linear-gradient(145deg, #2b2b2a, #242423);
+		.highlight {
+			color: #f5cb5c;
+			font-weight: 600;
+		}
+	}
 
-    .project-card {
-      text-decoration: none;
-      text-align: center;
-      transition: transform 200ms ease-in-out;
+	.cta-container {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 
-      &:hover {
-        transform: translateY(-10px);
-      }
-    }
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 1rem 2rem;
+		font-size: 1.1rem;
+		border-radius: 50px;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
 
-    img {
-      margin: 1rem 0;
-      width: 5rem;
-      height: 5rem;
-      transition: transform 200ms ease-in-out;
+		&.primary {
+			background: linear-gradient(135deg, #f5cb5c, #e6ab0a);
+			color: #242423;
+			font-weight: 600;
+			box-shadow: 0 4px 15px rgba(245, 203, 92, 0.3);
 
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
+			&:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 25px rgba(245, 203, 92, 0.5);
+			}
+		}
 
-  .hstack {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+		&.secondary {
+			background: transparent;
+			color: #f5cb5c;
+			border: 2px solid #f5cb5c;
 
-    a {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      color: #f5cb5c;
-    }
-  }
+			&:hover {
+				background: rgba(245, 203, 92, 0.1);
+				transform: translateY(-2px);
+			}
+		}
+	}
 
-  .gap-1 {
-    gap: 1rem;
-  }
+	.technologies-container {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		max-width: 900px;
+		margin: 0 auto;
+		overflow: hidden;
+		border-radius: 20px;
+		background: linear-gradient(135deg, rgba(36, 36, 35, 0.3), rgba(36, 36, 35, 0.1));
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(245, 203, 92, 0.1);
+		padding: 1.5rem 0;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100px;
+			z-index: 2;
+			pointer-events: none;
+		}
+
+		&::before {
+			left: 0;
+			background: linear-gradient(90deg, rgba(31, 31, 30, 0.8), transparent);
+		}
+
+		&::after {
+			right: 0;
+			background: linear-gradient(-90deg, rgba(31, 31, 30, 0.8), transparent);
+		}
+	}
+
+	.technologies-carousel {
+		overflow: hidden;
+		position: relative;
+	}
+
+	.technologies-track {
+		display: flex;
+		gap: 3rem;
+		animation: carousel 30s linear infinite;
+		width: fit-content;
+
+		iconify-icon {
+			font-size: 3rem;
+			min-width: 3rem;
+			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			filter: grayscale(0.3);
+			opacity: 0.8;
+			cursor: pointer;
+
+			&:hover {
+				transform: scale(1.2) translateY(-5px);
+				filter: grayscale(0) drop-shadow(0 10px 20px rgba(245, 203, 92, 0.4));
+				opacity: 1;
+			}
+		}
+	}
+
+	@keyframes carousel {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	.technologies-track:hover {
+		animation-play-state: paused;
+	}
+
+	/* Section Styles */
+	.section-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 5vw, 3rem);
+		text-align: center;
+		margin-bottom: 3rem;
+		background: linear-gradient(135deg, #f5cb5c, #e6ab0a);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		position: relative;
+		letter-spacing: -0.02em;
+		font-weight: 700;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80px;
+			height: 2px;
+			background: linear-gradient(90deg, transparent, #f5cb5c, transparent);
+			animation: shimmer 3s ease-in-out infinite;
+		}
+
+		@keyframes shimmer {
+			0%, 100% { opacity: 0.5; transform: translateX(-50%) scaleX(0.8); }
+			50% { opacity: 1; transform: translateX(-50%) scaleX(1); }
+		}
+	}
+
+	/* About Section */
+	.about-section {
+		padding: 5rem 0;
+		background: linear-gradient(180deg, transparent, rgba(36, 36, 35, 0.3), transparent);
+	}
+
+	.about-content {
+		background: linear-gradient(135deg, rgba(36, 36, 35, 0.6), rgba(36, 36, 35, 0.4));
+		border-radius: 30px;
+		padding: 3rem;
+		backdrop-filter: blur(20px);
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3),
+					inset 0 1px 0 rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(245, 203, 92, 0.1);
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: linear-gradient(90deg, transparent, rgba(245, 203, 92, 0.3), transparent);
+		}
+	}
+
+	.about-text {
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: center;
+
+		h3 {
+			background: linear-gradient(135deg, #f5cb5c, #e6ab0a);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+			font-weight: 700;
+		}
+
+		p {
+			font-size: 1.1rem;
+			line-height: 1.8;
+			color: #cfdbd5;
+			margin-bottom: 1.5rem;
+
+			&.about-lead {
+				font-size: 1.3rem;
+				font-weight: 300;
+				color: #f5cb5c;
+				opacity: 0.9;
+				margin-bottom: 2rem;
+			}
+
+			.highlight {
+				color: #f5cb5c;
+				font-weight: 600;
+			}
+		}
+	}
+
+	.about-skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: center;
+		margin: 2rem 0;
+
+		.skill-badge {
+			padding: 0.5rem 1.2rem;
+			background: rgba(245, 203, 92, 0.1);
+			border: 1px solid rgba(245, 203, 92, 0.3);
+			border-radius: 25px;
+			color: #f5cb5c;
+			font-size: 0.95rem;
+			font-weight: 500;
+			transition: all 0.3s ease;
+
+			&:hover {
+				background: rgba(245, 203, 92, 0.2);
+				transform: translateY(-2px);
+				box-shadow: 0 5px 15px rgba(245, 203, 92, 0.2);
+			}
+		}
+	}
+
+	.about-cta {
+		text-align: center;
+		font-size: 1.25rem;
+		color: #cfdbd5;
+		margin-top: 2.5rem;
+		font-weight: 300;
+		letter-spacing: 0.5px;
+
+		strong {
+			color: #f5cb5c;
+			font-weight: 700;
+			font-size: 1.3rem;
+		}
+	}
+
+	/* Projects Section */
+	.projects-section {
+		padding: 5rem 0;
+		background: linear-gradient(180deg, transparent, rgba(36, 36, 35, 0.2), transparent);
+	}
+
+	.projects-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		padding: 2rem 0;
+	}
+
+	/* Contact Section */
+	.contact-section {
+		padding: 5rem 0 3rem;
+		background: linear-gradient(180deg, transparent, rgba(36, 36, 35, 0.5));
+	}
+
+	.contact-content {
+		display: flex;
+		justify-content: center;
+	}
+
+	.contact-card {
+		background: linear-gradient(135deg, rgba(36, 36, 35, 0.8), rgba(36, 36, 35, 0.6));
+		border-radius: 30px;
+		padding: 3rem;
+		backdrop-filter: blur(20px);
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+					inset 0 1px 0 rgba(255, 255, 255, 0.05);
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 3rem;
+		width: 100%;
+		max-width: 900px;
+		border: 1px solid rgba(245, 203, 92, 0.1);
+		position: relative;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: radial-gradient(circle, rgba(245, 203, 92, 0.03) 0%, transparent 70%);
+			pointer-events: none;
+		}
+	}
+
+	.contact-group {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		h3 {
+			color: #f5cb5c;
+			font-size: 1.3rem;
+			margin-bottom: 0.5rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 2px solid rgba(245, 203, 92, 0.3);
+		}
+	}
+
+	.contact-link {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		color: #cfdbd5;
+		text-decoration: none;
+		font-size: 1rem;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		padding: 0.5rem 0.8rem;
+		border-radius: 12px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			border-radius: 12px;
+			background: linear-gradient(135deg, rgba(245, 203, 92, 0.1), rgba(245, 203, 92, 0.05));
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+
+		&:hover {
+			color: #f5cb5c;
+			transform: translateX(5px);
+
+			&::before {
+				opacity: 1;
+			}
+		}
+
+		&.download {
+			background: linear-gradient(135deg, rgba(245, 203, 92, 0.2), rgba(230, 171, 10, 0.2));
+			border: 1px solid rgba(245, 203, 92, 0.3);
+			justify-content: center;
+			padding: 1rem;
+			margin-top: 0.5rem;
+
+			&:hover {
+				background: linear-gradient(135deg, rgba(245, 203, 92, 0.3), rgba(230, 171, 10, 0.3));
+				transform: translateY(-2px);
+			}
+		}
+
+		iconify-icon {
+			font-size: 1.2rem;
+		}
+	}
+
+	.location {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		color: #819595;
+		font-size: 1rem;
+		padding: 0.5rem;
+
+		iconify-icon {
+			font-size: 1.2rem;
+			color: #f5cb5c;
+		}
+	}
+
+	/* Animations */
+	@keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+
+	@keyframes slideInLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slideInRight {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes scaleIn {
+		from {
+			opacity: 0;
+			transform: scale(0.8);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	/* Floating animation for CTAs */
+	@keyframes float {
+		0%, 100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-10px);
+		}
+	}
+
+	.cta-button.primary {
+		animation: float 3s ease-in-out infinite;
+		animation-delay: 0.5s;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: -2px;
+			background: linear-gradient(45deg, #f5cb5c, #e6ab0a, #f5cb5c);
+			border-radius: 50px;
+			z-index: -1;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			filter: blur(10px);
+		}
+
+		&:hover::before {
+			opacity: 0.7;
+		}
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.hero-section {
+			min-height: auto;
+			padding: 4rem 1rem;
+		}
+
+		.technologies {
+			font-size: 2rem;
+			gap: 1.5rem;
+		}
+
+		.about-content,
+		.contact-card {
+			padding: 2rem 1.5rem;
+		}
+
+		.contact-card {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
 </style>

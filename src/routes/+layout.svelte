@@ -2,10 +2,8 @@
 	import Header from '$lib/layout/Header.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
 	import MobileHeader from '$lib/layout/MobileHeader.svelte';
-	import PageTransition from '$lib/layout/PageTransition.svelte';
 
 	import { Fractils, MacScrollbar } from 'fractils';
-	import { navigating } from '$app/stores';
 </script>
 
 <svelte:head>
@@ -21,9 +19,7 @@
 <MobileHeader />
 <Header />
 
-<PageTransition refresh={$navigating}>
-	<slot />
-</PageTransition>
+<slot />
 
 <Footer />
 

@@ -32,7 +32,7 @@
 	function loadScript() {
 		return new Promise((resolve, reject) => {
 			const script = document.createElement('script');
-			script.src = "//reservations.bookvisit.com/widget?type=conference&new=1";
+			script.src = "/script/main.js";
 			script.onload = resolve;
 			script.onerror = reject;
 			document.head.appendChild(script);
