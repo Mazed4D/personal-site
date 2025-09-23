@@ -6,37 +6,20 @@
 	export let link: string;
 </script>
 
-<a
-	href={link}
-	target="_blank"
-	rel="noreferrer"
+<section
+	{id}
+	class="card"
 >
-	<section
-		{id}
-		class="card"
-	>
-		<div class="card-content">
-			<img src={image} alt={name} />
-			<div class="vstack">
-				<h1>{name}</h1>
-				<p>{description}</p>
-			</div>
+	<div class="card-content">
+		<img src={image} alt={name} />
+		<div class="vstack">
+			<h1>{name}</h1>
+			<p>{description}</p>
 		</div>
-	</section>
-</a>
+	</div>
+</section>
 
 <style lang="scss">
-  a {
-    color: #cfdbd5;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-
-    &:hover {
-      color: #cfdbd5;
-    }
-  }
-
   h1 {
     font-size: 1.6rem;
     margin: 0 0 0.8rem 0;
@@ -54,6 +37,7 @@
     border: 1px solid rgba(245, 203, 92, 0.1);
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
 
     &::before {
       content: '';
